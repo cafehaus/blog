@@ -1,5 +1,33 @@
 # 日常工作每日记录
 
+## 2022年8月9日
+javascript 省略花括号{}的几种表达式：
+```js
+/**
+ * if 简写
+ */
+let a = 1
+let b = 2
+if(a > b) console.log('a')
+if(a < b) console.log('b')
+/**/
+if(a > b) console.log('a')
+else console.log('b')
+
+/**
+ * for简写
+ */
+for(let i=0; i<10; ++i) console.log(i)
+
+/**
+ * while简写
+ */
+while (i > 10) console.log(i)
+```
+
+## 2022年7月29日
+一直感觉C盘老容易满，160G空间感觉也不小，之前一直觉得是不是各种开发工具装太多了，所以占硬盘比较大，但是大部分的软件都是装在D盘的，今天闲逛C盘偶然发现：C:\Users\Administrator\AppData\Local\微信开发者工具，这玩意居然占了30多个G，果断直接删了，企鹅这东西也太辣鸡了。
+
 ## 2019年9月3日
 超出可以滚动并且隐藏滚动条
 ```css
