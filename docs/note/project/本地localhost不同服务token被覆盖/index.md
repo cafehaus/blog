@@ -24,4 +24,5 @@ cookie 是不提供端口隔离的，不同的端口下的服务 cookie 是可�
 * cookie：范围仅限于当前主机名上的所有URL - 而不是绑定到端口或协议信息，domain本身以及domain下的所有子域名，需注意cookie不提供端口隔离，即同一服务器的下运行的不同端口之间的服务是可以相互读写cookie的
 
 **注意**
+
 相同浏览器下，并且是同源窗口（协议、域名、端口一致），即使不同页面也是可以共享localStorage和Cookies值，但是不能共享sessionStorage
