@@ -1,5 +1,36 @@
 ## 前端常用css样式代码
 
+### input输入框placeholder提示文字聚焦动画
+
+placeholder文字默认居中，当光标聚焦后placeholder文字移动到最左边
+
+```vue
+<template>
+  <div>
+    <input class="input" placeholder="请输入">
+  </div>
+</template>
+
+<style lang="stylus" scoped>
+.input
+  // text-align center
+  position relative
+  &::-webkit-input-placeholder
+    // color red !important
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    transition all .8s
+  &:focus
+    &::-webkit-input-placeholder
+      // color green !important
+      left 0
+      transform translate(0, -50%)
+</style>
+```
+如果想要搜索框文字居中，直接 text-align:center 就可以了，一般移动端的搜索框用得比较多
+
 ### radial-gradient 径向渐变去做外圆角
 
 适合需要外圆角的各种背景图标
