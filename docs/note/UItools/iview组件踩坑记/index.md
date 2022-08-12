@@ -1,5 +1,69 @@
 ## iview 组件踩坑记
 
+
+### select组件加了filterable选择后输入框的值前后有空格的问题
+
+可搜索 filterable 设置成 true 后，选择后输入框的值前后有空格会多出很多空格，造成显示错乱
+
+<img src="./2.png" />
+
+最后发现是代码格式化的问题，加了 filterable 后选项 Option 里的文字不要换行，只要格式化换行了就会造成前后空格：
+```vue
+<template>
+    <!-- 有问题的写法 -->
+    <Select
+        v-model="form.name"
+        :filterable="true"
+        clearable
+        transfer
+    >
+        <Option
+            v-for="(n, i) in options"
+            :value="n.value"
+            :key="i"
+        >
+            {{ n.name }}
+        </Option>
+    </Select>
+
+    <!-- 推荐显示正常的写法：版本1 -->
+    <Select
+        v-model="form.name"
+        :filterable="true"
+        clearable
+        transfer
+    >
+        <Option v-for="(n, i) in options" :value="n.value" :key="i">{{ n.name }}</Option>
+    </Select>
+
+
+    <!-- 推荐显示正常的写法：版本2 -->
+    <Select
+        v-model="form.name"
+        :filterable="true"
+        clearable
+        transfer
+    >
+        <Option v-for="(n, i) in options" :value="n.value" :key="i" :label="c.name" />
+    </Select>
+
+    <!-- 额外发现的问题 -->
+    <!-- 如果用了 Option 来自定义选项内容，记得一定要给 Option 加上 label 来制定选中后的显示值，否则选中后会出现选不中或者显示出自定义选项里面的全部内容 -->
+    <Select
+        v-model="form.name"
+        :filterable="true"
+        clearable
+        transfer
+    >
+        <Option v-for="(n, i) in options" :value="n.value" :key="i" :label="n.name">
+            <span>{{ n.name }}</span>
+            <span style="float:right;color:#ccc">{{ n.statusName }}</span>
+        </Option>
+    </Select>
+</template>
+```
+微信小程序里的 text 组件之前也遇到类似的问题，text 组件里的文字如果换行格式化，空格也会被保留，造成页面布局错乱。
+
 ### page 分页组件
 
 切换页数的 on-page-size-change 事件监听页数改变，我们一般会直接将传过来的 size 赋值给页数，然后手动载获取一下数据。但是这里 iview 有坑：在页码非第一页时会自动去触发页码改变事件获取数据，如果我们手动再去获取一次，其实会调用两次接口，如果是第一页，iview又不会主动去获取数据，通过查看组件源码：
