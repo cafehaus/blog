@@ -3,9 +3,9 @@ const { path } = require('@vuepress/utils')
 const sidebar = require('./sidebar.js')
 
 module.exports = {
-  base: '/vuepress-note/', // 部署站点的基础路径
+  base: '/blog/', // 部署站点的基础路径
   lang: 'zh-CN',
-  title: 'NOTE',
+  title: 'BLOG',
   description: '我的前端笔记',
   head: [['link', { rel: 'icon', href: '/images/logo.png' }]],
   theme: '@vuepress/theme-default',
@@ -13,7 +13,7 @@ module.exports = {
     logo: '/images/logo.png',
     repo: 'cafehaus',
     repoLabel: 'GitHub',
-    docsRepo: 'cafehaus/vuepress-note',
+    docsRepo: 'cafehaus/blog',
     docsDir: 'docs/note',
     editLink: false,
     lastUpdatedText: '最近更新',

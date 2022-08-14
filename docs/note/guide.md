@@ -1,4 +1,10 @@
 
+### UItools
+* [iview数字输入组件InputNumber](./UItools/iview数字输入组件InputNumber/index.md)
+* [iview组件踩坑记](./UItools/iview组件踩坑记/index.md)
+* [iview组件默认样式覆盖](./UItools/iview组件默认样式覆盖/index.md)
+* [前端常用css样式代码](./UItools/前端常用css样式代码/index.md)
+
 ### database
 * [mysql中执行sql语句报语法错误引出的代码空格问题](./database/mysql中执行sql语句报语法错误引出的代码空格问题/index.md)
 
@@ -36,12 +42,6 @@
 * [用Docker搭建运行本地WordPress](./project/用Docker搭建运行本地WordPress/index.md)
 * [电脑上打不开github解决办法](./project/电脑上打不开github解决办法/index.md)
 * [那些相见恨晚的工作技巧](./project/那些相见恨晚的工作技巧/index.md)
-
-### UItools
-* [iview数字输入组件InputNumber](./UItools/iview数字输入组件InputNumber/index.md)
-* [iview组件踩坑记](./UItools/iview组件踩坑记/index.md)
-* [iview组件默认样式覆盖](./UItools/iview组件默认样式覆盖/index.md)
-* [前端常用css样式代码](./UItools/前端常用css样式代码/index.md)
 
 ### uniapp
 * [各端开发打包发布完整指南](./uniapp/各端开发打包发布完整指南/index.md)
