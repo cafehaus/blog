@@ -1,5 +1,56 @@
 ## iview 组件踩坑记
 
+### Menu、MenuItem菜单组件不能自动展开和异步控制渲染当前页刷新不能选中
+
+手风琴模式，通过路由跳转到二级菜单，二级菜单不会自动展开，需要用户手动点一下，解决方式是去监听路由变化，然后调用 updateOpened 强制更新菜单展开。
+
+在当前页面选中刷新，切当前菜单有异步控制渲染，会造成不能选中，解决办法监听异步值，调用 updateActiveName 强制更新
+
+```vue
+<template>
+  <Menu ref="menu" active-name="1-2" :open-names="['1']">
+    <Submenu name="1">
+      <MenuItem name="1-1">Option 1</MenuItem>
+      <MenuItem name="1-2">Option 2</MenuItem>
+    </Submenu>
+    <Submenu name="2">
+      <MenuItem name="2-1">Option 3</MenuItem>
+      <MenuItem v-if="showMenu" name="2-2">Option 4</MenuItem>
+    </Submenu>
+    <MenuItem name="3">Option 5</MenuItem>
+  </Menu>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      showMenu: false
+    }
+  },
+  watch: {
+    $route(v) {
+      this.$nextTick(() => {
+        this.$refs.menu && this.$refs.menu.updateOpened()
+      })
+    },
+    showMenu(v) {
+      // 页面刷新会造成不能选中，异步控制造成选中的类名 ivu-menu-item-active 不能加到 MenuItem 上去
+      if (v) {
+        this.$nextTick(() => {
+          this.$refs.menu && this.$refs.menu.updateActiveName()
+        })
+      }
+    },
+  },
+  create() {
+    // 模拟异步
+    setTimeout(() => {
+      this.showMenu = true
+    }, 10000)
+  }
+}
+</script>
+```
 
 ### select组件加了filterable选择后输入框的值前后有空格的问题
 

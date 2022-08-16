@@ -73,6 +73,28 @@ flush privileges;
 
 **其他问题**
 
+1、可以连接到数据库服务器(这说明您的用户名和密码正确),但是不能选择 wordpress 数据库
+
+就是 mysql 服务器上没找到叫 wordpress 这个名字的数据库，需要自己用 navicat 这类图形化工具自己手动去新建一个，或者用下面的命令去新建
+
+```bash
+# 1.查看运行的容器
+docker ps
+
+# 2.进入mysql容器
+docker exec -it wpmysql bash
+
+# 3.登录mysql
+mysql -uroot -p
+
+# 4.自己创建一个名字为 wordpress 的数据库(要跟wordpress安装是让配置的名字一致)
+create database wordpress;
+```
+
+2、数据库连不上：Error establishing a database connection
+
+1）自己删了旧的 wordpress 容器重新根据新的 ip 新建容器
+
 因为我们本地的 ip 一般是动态 ip，过一段时间会变的，如果发现突然某一天又连不上了：
 
 <img src="./5.png">
@@ -84,6 +106,26 @@ flush privileges;
 <img src="./6.png">
 
 如果看到提示：可以连接到数据库服务器（这说明您的用户名和密码正确），但是不能选择 wpmysql 数据库...这是没有新建数据库，自己去新建一个你上面输入的数据库名同名的就行了。
+
+2）直接去修改 wordpress 程序的数据库配置地址
+
+```bash
+# 1. 进入到容器中
+docker exec -it wordpress bash
+ls
+
+# 2. 官方的 wordpress 镜像中并没有预装vim编辑器，所以要先装一下编辑器
+apt-get update
+apt-get install vim
+
+# 3. 编辑 wp-config.php 文件
+vi wp-config.php
+
+# 找到 define 'DB_HOST' 那一行修改
+# 按【i】进入输入模式，移动光标去修改
+# 按键盘左上角【退出Esc】切换到命令模式，输入【:wq 】保存后离开
+```
+
 
 **引发的连带问题**
 
