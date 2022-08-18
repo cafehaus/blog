@@ -17,6 +17,17 @@ axios.interceptors.request.use(config => {
 ```
 cookie 是不提供端口隔离的，不同的端口下的服务 cookie 是可以相互读写的，所以登录其中一个端时，其他端口下的所有服务的 token 都会被新的替换了
 
+**解决方案**
+
+1. 开不同的浏览器（chrome、firefox、edge），注意相同浏览器开不同的窗口也是不行的，要用不同的浏览器
+2. 一般本地运行的项目会有两个地址，像下面这样，如果两个项目可以一个用localhost(127.0.0.1)，一个用下面的Network那个ip地址
+
+```bash
+  App running at:
+  - Local:   http://localhost:8080/
+  - Network: http://192.168.2.123:8080/
+```
+
 **浏览器缓存作用域**
 
 * localStorage：协议、主机名以及端口
