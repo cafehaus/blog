@@ -34,6 +34,23 @@ cd test
 ```bash
 cd /d d:\test
 ```
+### %cd% 和 %~dp0% 注解
+
+%cd%：脚本执行的当前目录，需要注意的是，这里的当前目录有可能和脚本实际所在目录不一致，可以在 bat 脚本中使用，也可以在命令行窗口中使用
+
+%~dp0%：脚本文件所在的目录，注意，目录的路径为全路径，并且带结尾的\，仅可以在 bat 脚本中使用，如直接进入脚本所在目录：cd /d %~dp0
+
+```bash
+@echo off
+
+set path_cd=%cd%
+set path_dp0=%~dp0
+
+echo Value of cd: %path_cd%
+echo Value of dp0: %path_dp0%
+
+pause
+```
 
 相关：
 
