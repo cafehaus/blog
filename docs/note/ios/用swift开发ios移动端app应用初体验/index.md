@@ -44,6 +44,9 @@ var greet = "Hello, ${userName}"
 var greet2 = "Hello, $userName"
 ```
 
+### 使用系统图标
+苹果官方提供了好几千个系统符号可以直接使用，那东西叫 SF Symbols，可以直接在苹果网站下载下来安装到本地就可以直接看到所有的图标，使用的时候提供名字就行了 Image(systemName: "")
+
 ## 遇到的问题：
 
 ### 1. Creating a Card View 这个例子，卡片背景颜色死活不出来
@@ -55,7 +58,13 @@ var greet2 = "Hello, $userName"
 ### 3. 全局搜索替换内容
 点 xcode 里的放大镜只发现搜索，死活没找到像 vscode 里辣么方便的替换功能，原来默认的是搜索，自己点下搜索那的面包屑导航上的 Find，那是个下拉菜单，里面还有一个 replace。
 
+### 4. 隐藏 xcode 左边文件目录
+一个显示屏开发，有时还要对照着查看资料，开发工具就只能尽可能缩小，xcode 隐藏左边的文件目录是在左上角，点击那个书本的图标，就可以切换隐藏和显示。
+
 附录：
 * [代码仓库](https://github.com/cafehaus/wordpress-ios)
 * [swift](https://www.swift.org/)
 * [SwiftUI](https://developer.apple.com/tutorials/swiftui)
+* [SF Symbols](https://developer.apple.com/sf-symbols/)
+* [APPLE DESIGN](https://developer.apple.com/design/human-interface-guidelines/platforms/overview)
+* [SwiftUI中文文档](https://gitee.com/guangjie2021/SwiftUICn#Image)
