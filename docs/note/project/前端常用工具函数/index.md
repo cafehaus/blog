@@ -2,6 +2,37 @@
 
 收集一些项目中常用的前端工具函数
 
+**获取表单所有下拉选项公用方法**
+
+一个表单里如果需要获取多个下拉选项数据，可以直接配置接口信息全部获取
+
+```js
+getOption() {
+  let self = this
+  let list = [
+    [ 'optionList', 'api/option-list' ],
+    [ 'optionListTwo', 'api/option-list-two', { flag: '1' }, 'post' ],
+    [ 'optionListThree', 'api/option-list-three' ]
+  ]
+  list.map(m => {
+    getData(...m)
+  })
+
+  // 请求数据，注意里面的 this 指向
+  async function getData(optionList, api, params = {}, method = 'get') {
+    // $request 自己封装的请求方法，挂载到 vue.prototype 上了
+    let res = await self.$request[method](api, params)
+    if (res.code === '200') {
+      let data = res.data || []
+      self[optionList] = data
+    } else {
+      // $Message iview 的提示组件
+      self.$Message.error(res.msg || '请求失败')
+    }
+  }
+}
+```
+
 **将内容中的网址替换成可直接点击的 a 标签**
 
 ```js
