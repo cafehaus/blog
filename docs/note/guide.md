@@ -43,6 +43,7 @@
 * [用Docker搭建运行本地WordPress](./project/用Docker搭建运行本地WordPress/index.md)
 * [电脑上打不开github解决办法](./project/电脑上打不开github解决办法/index.md)
 * [编写bat文件在windows上自动执行cmd命令](./project/编写bat文件在windows上自动执行cmd命令/index.md)
+* [通过hosts文件修改本地域名映射](./project/通过hosts文件修改本地域名映射/index.md)
 * [那些相见恨晚的工作技巧](./project/那些相见恨晚的工作技巧/index.md)
 
 ### UItools
