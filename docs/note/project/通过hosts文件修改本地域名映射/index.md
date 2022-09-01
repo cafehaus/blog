@@ -1,6 +1,6 @@
 # 通过hosts文件修改本地域名映射
 
-hosts是一个没有扩展名的系统文件，windows系统里位置在 C:\Windows\System32\drivers\etc，其作用就是将一些常用的网址域名与其对应的IP地址建立一个映射关系，这样用户在浏览器中输入一个网址，浏览器会先在电脑本地的那个hosts文件里去找有没有对应的ip地址，如果有就直接去访问这个ip地址，如果没有找到，则系统会再将网址提交到DNS域名解析服务器进行IP地址的解析。
+hosts是一个没有扩展名的系统文件，windows系统里位置在 C:\Windows\System32\drivers\etc，macOS/Linux/iOS/Android位置在 /etc/hosts，其作用就是将一些常用的网址域名与其对应的IP地址建立一个映射关系，这样用户在浏览器中输入一个网址，浏览器会先在电脑本地的那个hosts文件里去找有没有对应的ip地址，如果有就直接去访问这个ip地址，如果没有找到，则系统会再将网址提交到DNS域名解析服务器进行IP地址的解析。
 
 在另一篇文章：[电脑上打不开github解决办法](../电脑上打不开github解决办法/index.md)，也是通过修改 hosts 文件实现的。
 
@@ -26,7 +26,7 @@ hosts是一个没有扩展名的系统文件，windows系统里位置在 C:\Wind
 
 到这里其实我们已经实现了通过 baidu.com 访问咱本地的服务，至于显示的 Invalid Host header 而不是咱本地的网页，其实是 webpack 的一项安全检查设置：[devServer.allowedHosts](https://webpack.js.org/configuration/dev-server/#devserverallowedhosts)，可通过如下方式解决：
 
-* 设置 disableHostCheck 为 true，但是在 webpack5 版本里已经被移除了，直接使用会报错
+* 设置 [disableHostCheck](https://v4.webpack.js.org/configuration/dev-server/#devserverdisablehostcheck) 为 true，webpack4 里可以用，在 webpack5 版本里已经被移除了，直接使用会报错
 * 通过 allowedHosts 设置允许访问开发服务器的域名白名单
 
 ```js
@@ -46,6 +46,8 @@ module.exports = {
 
 ## hosts 域名访问原理在开发和测试中的应用
 
-开发中如果需要使用到多个环境或者多台服务器，就可以设置一个自定义域名，方便切换开发测试。
+开发中如果需要使用到多个环境或者多台服务器，就可以设置一个自定义域名，方便切换开发测试。比如和后端联调接口，需要访问特定的局域网 ip 地址，或者前端请求不能直接通过ip地址发起请求时，或者运维未配置开发环境域名(即开发环境、测试环境、预发布环境、生产环境...都使用相同的域名)，就可以新增域名映射来实现访问特定的ip。
 
-移动端开发测试中也可以通过 hosts 文件，手机上设置代理到电脑上，来实现访问特定ip地址的目的。
+移动端开发测试中也可以通过 hosts 文件，手机上设置代理到电脑上，来实现访问特定ip地址的目的。比如业务需要对接第三方，测试环境外网无法访问或需要特定的ip白名单才能访问时，也可以通过域名映射来实现访问。
+
+管理和切换 hosts 文件工具：[SwitchHosts](https://github.com/oldj/SwitchHosts/releases)
