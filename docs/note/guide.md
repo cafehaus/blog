@@ -1,6 +1,25 @@
 
+### UItools
+* [iview数字输入组件InputNumber](./UItools/iview数字输入组件InputNumber/index.md)
+* [iview组件踩坑记](./UItools/iview组件踩坑记/index.md)
+* [iview组件默认样式覆盖](./UItools/iview组件默认样式覆盖/index.md)
+* [前端常用css样式代码](./UItools/前端常用css样式代码/index.md)
+
 ### buildTool
 * [探寻webpack打包vue项目特别慢问题](./buildTool/探寻webpack打包vue项目特别慢问题/index.md)
+
+### component
+* [iview动态表单Form组件校验](./component/iview动态表单Form组件校验/index.md)
+* [iview动态表单删除时防止校验出错和下拉选项禁选已选项](./component/iview动态表单删除时防止校验出错和下拉选项禁选已选项/index.md)
+* [iview多重循环表单form校验](./component/iview多重循环表单form校验/index.md)
+* [iview的Poptip组件动态获取数据封装](./component/iview的Poptip组件动态获取数据封装/index.md)
+* [iview的Table组件套FormItem表单动态校验](./component/iview的Table组件套FormItem表单动态校验/index.md)
+* [iview表格Table组件跨页勾选数据](./component/iview表格Table组件跨页勾选数据/index.md)
+* [全屏PC端侧边来浮窗工具条](./component/全屏PC端侧边来浮窗工具条/index.md)
+* [多行文字截取显示省略号和更多按钮](./component/多行文字截取显示省略号和更多按钮/index.md)
+* [步骤条和展开收起折叠面板](./component/步骤条和展开收起折叠面板/index.md)
+* [用driverjs制作用户页面操作步骤引导](./component/用driverjs制作用户页面操作步骤引导/index.md)
+* [通过component标签动态加载组件](./component/通过component标签动态加载组件/index.md)
 
 ### database
 * [mysql中执行sql语句报语法错误引出的代码空格问题](./database/mysql中执行sql语句报语法错误引出的代码空格问题/index.md)
@@ -46,11 +65,8 @@
 * [通过hosts文件修改本地域名映射](./project/通过hosts文件修改本地域名映射/index.md)
 * [那些相见恨晚的工作技巧](./project/那些相见恨晚的工作技巧/index.md)
 
-### UItools
-* [iview数字输入组件InputNumber](./UItools/iview数字输入组件InputNumber/index.md)
-* [iview组件踩坑记](./UItools/iview组件踩坑记/index.md)
-* [iview组件默认样式覆盖](./UItools/iview组件默认样式覆盖/index.md)
-* [前端常用css样式代码](./UItools/前端常用css样式代码/index.md)
+### react
+* [react和TypeScript开发项目问题记录](./react/react和TypeScript开发项目问题记录/index.md)
 
 ### uniapp
 * [各端开发打包发布完整指南](./uniapp/各端开发打包发布完整指南/index.md)
@@ -61,6 +77,7 @@
 
 ### vue
 * [ES模块导入引发的vue未定义变量报错](./vue/ES模块导入引发的vue未定义变量报错/index.md)
+* [vue中文本字符串实现换行](./vue/vue中文本字符串实现换行/index.md)
 * [vue中的v-model刨根问底](./vue/vue中的v-model刨根问底/index.md)
 * [用vuepress2搭建自己的github网站](./vue/用vuepress2搭建自己的github网站/index.md)
 
