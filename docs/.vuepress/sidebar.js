@@ -5,7 +5,7 @@ const path = require('path')
 let guideContent = ''
 let readmeContent = `
 # BLOG
-周小黑的前端博客，记录工作和生活日常
+周小黑的[前端博客](https://cafehaus.github.io/blog/)，记录工作和生活日常
 
 ## 加个好友
 * 微信：cafe-haus

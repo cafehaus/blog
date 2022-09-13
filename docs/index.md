@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: /images/logo.png
-heroText: NOTE BLOG
-tagline: 学习笔记
+heroText: CAFEHAUS
+tagline: 工作和生活日常
 actions:
   - text: 进入博客 →
     link: /note/guide.md
