@@ -32,6 +32,55 @@
 ```
 这种情况就是有请求到路由，但是路由的回调函数有问题，我这里是在类 class 里注册的路由，路由自身的方法要用 $this->funcName 这样去调用
 
+**3. WP_Error类的第一个参数不能设为0**
+
+接口校验不通过时，我们会选择直接 return 一个 WP_Error 对象，但是要注意 WP_Error 的第一个状态码如果是字符串数字会被直接转成数字，切记不能设置为数字或字符串 0，这样会导致前端不能抛出错误提示，啥也收不到
+```php
+if (empty($username)) {
+    return new WP_Error(10001, "用户名不能为空", "");
+}
+```
+
+**4. get_post_format 获取文章形式一直返回false**
+
+WP_Query 里查出来无 format 和 sticky 这两个字段，所以只能自己额外获取，但是要注意默认的 standard 标准形式get_post_format 也会返false，所以记得自己要设置一个默认值
+
+```php
+$format = get_post_format($postId) ?: 'standard';
+```
+
+**5. 函数参数没设置默认值，接口调用会报错**
+
+获取用户信息时定义了一个格式化用户信息的方法，第二个参数 $t 开始没设置默认值，调用时不需要的就不会传，但是当方法里用到 $t 去判断为假时接口会直接崩了，自己设置一个默认值就好了。
+
+```php
+private function fmt_user_info($u, $t = "") {
+    $role_info = array(
+        administrator =>  '管理员',
+        editor        =>  '编辑',
+        author        =>  '作者',
+        contributor   =>  '贡献者',
+        subscriber    =>  '订阅者',
+    );
+    $roleId = $u->roles[0];
+
+    $user = array(
+        "id" => $u->ID,
+        "userName" => $u->data->user_login,
+        "nickname" => $u->data->display_name ?: $u->$data->user_nicename,
+        "date" => $u->data->user_registered,
+        "roleId" => $roleId,
+        "roleName" => $role_info[$roleId],
+    );
+
+    // 列表页不返回用户邮箱
+    if ($t === 'login') {
+        $user['email'] = $u->data->user_email;
+    }
+    return $user;
+}
+```
+
 ## 知识点
 
 **1. 变量设置默认值**
@@ -92,3 +141,47 @@ WP_User_Query 里也有个同样的参数，不过名字叫 count_total，默认
 [WP_Comment_Query 文档](https://developer.wordpress.org/reference/classes/WP_Comment_Query/__construct/)
 
 [WP_User_Query 文档](https://developer.wordpress.org/reference/classes/wp_user_query/)
+
+**5. 获取总数**
+
+* 获取页面总数：wp_count_posts('page');
+* 获取分类总数：wp_count_terms('category');
+* 获取标签总数：wp_count_terms('post_tag');
+* 获取用户总数：$wpdb->get_var("SELECT COUNT(ID) FROM $wpdb->users");
+
+[wp_count_terms](https://developer.wordpress.org/reference/functions/wp_count_terms/) 方法也可以传递参数进行统计，比如统计标签，获取标签列表里的设置了是否隐藏空文章标签 hide_empty 为 true，wp_count_terms 方法里也要传进去 hide_empty 为 true，否则统计出来的总数不对。
+
+**6. 获取请求参数**
+
+```php
+<?php
+function my_awesome_func( WP_REST_Request $request ) {
+  // You can access parameters via direct array access on the object:
+  $param = $request['some_param'];
+
+  // Or via the helper method:
+  $param = $request->get_param( 'some_param' );
+
+  // You can get the combined, merged set of parameters:
+  $parameters = $request->get_params();
+
+  // The individual sets of parameters are also available, if needed:
+  $parameters = $request->get_url_params();
+  $parameters = $request->get_query_params();
+  $parameters = $request->get_body_params();
+  $parameters = $request->get_json_params();
+  $parameters = $request->get_default_params();
+
+  // Uploads aren't merged in, but can be accessed separately:
+  $parameters = $request->get_file_params();
+}
+```
+
+[Adding Custom Endpoints](https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints)
+
+
+## 参考资料
+* [WordPress Developers](https://developer.wordpress.org)
+* [REST API Handbook](https://developer.wordpress.org/rest-api)
+* [WordPress：注册新的 REST 接口](https://ninghao.net/blog/5492)
+* [WordPress开发手册](https://www.kancloud.cn/jabber/wordpress/296846)
