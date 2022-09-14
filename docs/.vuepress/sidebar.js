@@ -23,10 +23,12 @@ menuList.map(m => {
   if (m !== 'guide.md') {
     let posts = fs.readdirSync(path.join(__dirname, '../note/' + m))
     guideContent += `\n### ${m}\n`
+    readmeContent += `\n### ${m}\n`
 
     let children = []
     posts.map(n => {
       guideContent += `* [${n}](./${m}/${n}/index.md)\n`
+      readmeContent += `* [${n}](./docs/note/${m}/${n}/index.md)\n`
 
       children.push({
         text: n,
@@ -42,7 +44,6 @@ menuList.map(m => {
   }
 })
 
-readmeContent += guideContent
 fs.writeFileSync(path.join(__dirname, '../../README.md'), readmeContent)
 fs.writeFileSync(path.join(__dirname, '../note/guide.md'), guideContent)
 
