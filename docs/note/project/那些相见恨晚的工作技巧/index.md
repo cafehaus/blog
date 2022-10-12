@@ -33,9 +33,13 @@
 // 其他页面引入时只需像下面这样
 // import Comp from '@components/comp'
 
+// 写法一
 // index.js
 import Comp from './comp.vue'
 export default Comp
+
+// 写法二：连写方式
+// export { default } from './comp.vue'
 ```
 * 注意在uniapp的vue组件中，用上面的简写方式会导致在小程序中加载不到组件，需要写成完整的路径：import Comp from '@components/comp/comp'
 
