@@ -27,6 +27,9 @@
 ### flutter
 * [flutter初体验demo踩坑指南](./flutter/flutter初体验demo踩坑指南/index.md)
 
+### html
+* [前端框架中index.html中的变量语法](./html/前端框架中index.html中的变量语法/index.md)
+
 ### ios
 * [用swift开发ios移动端app应用初体验](./ios/用swift开发ios移动端app应用初体验/index.md)
 
