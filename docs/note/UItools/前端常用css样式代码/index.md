@@ -1,5 +1,37 @@
 ## 前端常用css样式代码
 
+### 半透明提示框变形小箭头
+
+版型三角形用 css 样式 border 实现，变形利用 skewY
+
+```vue
+<template>
+  <div>
+    <div class="pop"></div>
+  </div>
+</template>
+
+<style lang="stylus" scoped>
+.pop
+  position position
+  height 100px
+  width 200px
+  background rgba(255, 255, 255, .9)
+  border-radius 6px
+  padding 10px
+  &:before
+    content ''
+    position absolute
+    left -16px
+    top 40%
+    border-width 0px 0px 16px 16px
+    border-style solid
+    border-bottom-color rgba(255, 255, 255, .9)
+    border-left-color transparent
+    transform skewY(-20deg)
+</style>
+```
+
 ### input输入框placeholder提示文字聚焦动画
 
 placeholder文字默认居中，当光标聚焦后placeholder文字移动到最左边
