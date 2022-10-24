@@ -39,6 +39,7 @@ react + vite build 打包后的文件，js 和 css 资源引用路径都是绝�
 渲染进程使用 node 模块，需要额外配置 webPreferences
 
 ```js
+// main.js
 const { app, BrowserWindow } = require('electron')
 
 let win = null
@@ -47,8 +48,14 @@ app.on('ready', () => {
     width: 800,
     height: 800,
     webPreferences: { // 在渲染进程中使用node, 需要配置 webPreferences属性
-      nodeIntegration: true,
-      contextIsolation: false  //Electron 12.0以上版本需要的额外设置此项}
+      nodeIntegration: true, // 使渲染进程拥有node环境
+      contextIsolation: false, // 设置此项为false后，才可在渲染进程中使用 electron api，https://www.electronjs.org/zh/docs/latest/tutorial/context-isolation
+      preload: path.join(__dirname, 'preload.js')
   })
 })
+
+// preload.js
+window.require = require
 ```
+
+注意需要用 preload 预加载脚本去设置下 window.require，这样才能在 vue、react 项目中用 require 去导入 node 相关模块，当然你也可以往 window 上挂载其他需要挂载的，注意这样挂载了不能直接在浏览器中调试，会报错的，要在 electron 中去调试。
