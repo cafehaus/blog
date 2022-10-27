@@ -49,7 +49,7 @@ app.on('ready', () => {
     height: 800,
     webPreferences: { // 在渲染进程中使用node, 需要配置 webPreferences属性
       nodeIntegration: true, // 使渲染进程拥有node环境
-      contextIsolation: false, // 设置此项为false后，才可在渲染进程中使用 electron api，https://www.electronjs.org/zh/docs/latest/tutorial/context-isolation
+      contextIsolation: false, // 设置此项为false后，才可在渲染进程中使用 electron api，https://www.electronjs.org/zh/docs/latest/api/browser-window
       preload: path.join(__dirname, 'preload.js')
   })
 })
@@ -59,3 +59,13 @@ window.require = require
 ```
 
 注意需要用 preload 预加载脚本去设置下 window.require，这样才能在 vue、react 项目中用 require 去导入 node 相关模块，当然你也可以往 window 上挂载其他需要挂载的，注意这样挂载了不能直接在浏览器中调试，会报错的，要在 electron 中去调试。
+
+### 主进程和渲染进程通信
+
+ipcRenderer 和 ipcMain 通过 send 和 on 事件监听通信，如果一方收到信息后还要回复另一方，只能通过 event.reply 发送给对方另一个事件实现回复通信。
+
+不过还可以通过 ipcMain.handle 用 promise 来 return 数据实现回复，主进程 ipcMain.handle，渲染进程 ipcRenderer.invoke。
+
+### 数据传递
+
+vue3 中如果用的 reactive 定义的数据，其实是一个 Proxy 代理对象，直接往主进程传递会报错，要自己 JSON.parse(JSON.stringify(xx)) 或者将数据复制到普通对象进行传递。
