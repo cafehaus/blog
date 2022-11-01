@@ -1,5 +1,40 @@
 ## 前端常用css样式代码
 
+### “好孩子”缺角小旗标
+
+跟小时候的好孩子小贴纸一样的图标，唯一不足的地方宽度要写成固定的，不能动态宽度
+
+```vue
+<template>
+  <div>
+    <span class="tag">好孩子</span>
+  </div>
+</template>
+
+<style lang="stylus" scoped>
+.tag
+  background #57bc78
+  position relative
+  display inline-block
+  width 60px
+  padding 4px 0 0
+  color #FFF
+  line-height 1
+  text-align center
+  &::before
+    content ''
+    height 0
+    width 0
+    border-top 4px solid #57bc78
+    border-right 30px solid #57bc78
+    border-bottom 4px solid transparent
+    border-left 30px solid #57bc78
+    position absolute
+    left 0
+    right 0
+    bottom -8px
+</style>
+```
 ### 半透明提示框变形小箭头
 
 版型三角形用 css 样式 border 实现，变形利用 skewY
