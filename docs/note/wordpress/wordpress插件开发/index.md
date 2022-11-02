@@ -179,6 +179,14 @@ function my_awesome_func( WP_REST_Request $request ) {
 
 [Adding Custom Endpoints](https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints)
 
+**7. self 和 $this**
+
+self调用的是类，而$this调用的则是实例化的对象。
+
+能用$this的地方一定使用self，能用self的地方不一定能用$this，静态的方法中不能使用$this，静态方法给类访问的。
+
+注意访问不一样，注意 $ 的有无，self::$变量名，$this->变量名。
+
 
 ## 参考资料
 * [WordPress Developers](https://developer.wordpress.org)
