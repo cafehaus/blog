@@ -13,3 +13,5 @@
 ## homepage 主页设置
 
 vuepress 或者网上 vitepress 的一些教程都写的设置 home: true，就可以设置成主页，试了好久没效果，最后看文档人家的是要设置 layout: home 才行，一试文档诚不骗我，perfect！
+
+这一点 vitepress 官方文档里的版本迁移 [Migration from VitePress 0.x](https://vitepress.vuejs.org/guide/migration-from-vitepress-0) 里其实已经有说明。
