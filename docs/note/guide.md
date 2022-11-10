@@ -1,10 +1,4 @@
 
-### UItools
-* [iview数字输入组件InputNumber](./UItools/iview数字输入组件InputNumber/index.md)
-* [iview组件踩坑记](./UItools/iview组件踩坑记/index.md)
-* [iview组件默认样式覆盖](./UItools/iview组件默认样式覆盖/index.md)
-* [前端常用css样式代码](./UItools/前端常用css样式代码/index.md)
-
 ### buildTool
 * [探寻webpack打包vue项目特别慢问题](./buildTool/探寻webpack打包vue项目特别慢问题/index.md)
 
@@ -15,14 +9,20 @@
 * [iview的Poptip组件动态获取数据封装](./component/iview的Poptip组件动态获取数据封装/index.md)
 * [iview的Table组件套FormItem表单动态校验](./component/iview的Table组件套FormItem表单动态校验/index.md)
 * [iview表格Table组件跨页勾选数据](./component/iview表格Table组件跨页勾选数据/index.md)
-* [全屏PC端侧边来浮窗工具条](./component/全屏PC端侧边来浮窗工具条/index.md)
+* [全屏PC端侧边栏浮窗工具条](./component/全屏PC端侧边栏浮窗工具条/index.md)
 * [多行文字截取显示省略号和更多按钮](./component/多行文字截取显示省略号和更多按钮/index.md)
 * [步骤条和展开收起折叠面板](./component/步骤条和展开收起折叠面板/index.md)
 * [用driverjs制作用户页面操作步骤引导](./component/用driverjs制作用户页面操作步骤引导/index.md)
 * [通过component标签动态加载组件](./component/通过component标签动态加载组件/index.md)
 
+### css
+* [用css径向渐变制作优惠券内圆角](./css/用css径向渐变制作优惠券内圆角/index.md)
+
 ### database
 * [mysql中执行sql语句报语法错误引出的代码空格问题](./database/mysql中执行sql语句报语法错误引出的代码空格问题/index.md)
+
+### electron
+* [用electron打包前端应用初体验](./electron/用electron打包前端应用初体验/index.md)
 
 ### flutter
 * [flutter初体验demo踩坑指南](./flutter/flutter初体验demo踩坑指南/index.md)
@@ -46,11 +46,15 @@
 * [在微信小程序里使用自定义字体](./miniapp/在微信小程序里使用自定义字体/index.md)
 * [短信链接直接打开微信小程序踩坑](./miniapp/短信链接直接打开微信小程序踩坑/index.md)
 
+### node
+* [node学习笔记记录](./node/node学习笔记记录/index.md)
+
 ### project
 * [Docker踩坑记录](./project/Docker踩坑记录/index.md)
 * [Git使用技巧](./project/Git使用技巧/index.md)
 * [PATH系统环境变量](./project/PATH系统环境变量/index.md)
 * [vscode编辑器Volar插件导致vue自定义标签不变颜色](./project/vscode编辑器Volar插件导致vue自定义标签不变颜色/index.md)
+* [windows中cmd和PowerShell批处理命令](./project/windows中cmd和PowerShell批处理命令/index.md)
 * [windows系统开发常用cmd命令学习](./project/windows系统开发常用cmd命令学习/index.md)
 * [win右键菜单vscode打开当前目录](./project/win右键菜单vscode打开当前目录/index.md)
 * [前端常用vue组件代码](./project/前端常用vue组件代码/index.md)
@@ -68,8 +72,20 @@
 * [通过hosts文件修改本地域名映射](./project/通过hosts文件修改本地域名映射/index.md)
 * [那些相见恨晚的工作技巧](./project/那些相见恨晚的工作技巧/index.md)
 
+### python
+* [python学习笔记记录](./python/python学习笔记记录/index.md)
+
 ### react
 * [react和TypeScript开发项目问题记录](./react/react和TypeScript开发项目问题记录/index.md)
+
+### test
+* [用JMeter做接口压力测试](./test/用JMeter做接口压力测试/index.md)
+
+### UItools
+* [iview数字输入组件InputNumber](./UItools/iview数字输入组件InputNumber/index.md)
+* [iview组件踩坑记](./UItools/iview组件踩坑记/index.md)
+* [iview组件默认样式覆盖](./UItools/iview组件默认样式覆盖/index.md)
+* [前端常用css样式代码](./UItools/前端常用css样式代码/index.md)
 
 ### uniapp
 * [各端开发打包发布完整指南](./uniapp/各端开发打包发布完整指南/index.md)
@@ -82,6 +98,7 @@
 * [ES模块导入引发的vue未定义变量报错](./vue/ES模块导入引发的vue未定义变量报错/index.md)
 * [vue中文本字符串实现换行](./vue/vue中文本字符串实现换行/index.md)
 * [vue中的v-model刨根问底](./vue/vue中的v-model刨根问底/index.md)
+* [用vitepress搭建文档网站踩坑记录](./vue/用vitepress搭建文档网站踩坑记录/index.md)
 * [用vuepress2搭建自己的github网站](./vue/用vuepress2搭建自己的github网站/index.md)
 
 ### wordpress
