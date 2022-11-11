@@ -1,4 +1,10 @@
 
+### UItools
+* [iview数字输入组件InputNumber](./UItools/iview数字输入组件InputNumber/index.md)
+* [iview组件踩坑记](./UItools/iview组件踩坑记/index.md)
+* [iview组件默认样式覆盖](./UItools/iview组件默认样式覆盖/index.md)
+* [前端常用css样式代码](./UItools/前端常用css样式代码/index.md)
+
 ### buildTool
 * [探寻webpack打包vue项目特别慢问题](./buildTool/探寻webpack打包vue项目特别慢问题/index.md)
 
@@ -80,12 +86,6 @@
 
 ### test
 * [用JMeter做接口压力测试](./test/用JMeter做接口压力测试/index.md)
-
-### UItools
-* [iview数字输入组件InputNumber](./UItools/iview数字输入组件InputNumber/index.md)
-* [iview组件踩坑记](./UItools/iview组件踩坑记/index.md)
-* [iview组件默认样式覆盖](./UItools/iview组件默认样式覆盖/index.md)
-* [前端常用css样式代码](./UItools/前端常用css样式代码/index.md)
 
 ### uniapp
 * [各端开发打包发布完整指南](./uniapp/各端开发打包发布完整指南/index.md)
