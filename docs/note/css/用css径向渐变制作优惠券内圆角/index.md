@@ -93,7 +93,7 @@ background: radial-gradient(circle at top left, red 0%, blue 30px, yellow 40%, g
   radial-gradient(circle at top right, transparent 15px, blue 0) top right,
   radial-gradient(circle at bottom right, transparent 15px,green 0) bottom right,
   radial-gradient(circle at bottom left, transparent 15px, orange 0) bottom left;
-  background-size: 50% 50%;
+  background-size: 70px 50%;
   background-repeat: no-repeat;
 }
 
