@@ -7,7 +7,7 @@
 * css 用个跟背景色一样的圆盖在上面：背景色改变，盖在上面的圆颜色也需要改变，如果后面不是纯色背景，容易露馅儿
 * css 径向渐变：最优解决方案
 
-之前也用径向渐变做过类似的圆角，但是一直对齐原理不是很明白，这次又遇到优惠券需求，看到别人制作的一个背景渐变的 demo 很不错，看了一下就明白了的实现原理了。
+之前也用径向渐变做过类似的圆角，但是一直对其原理不是很明白，这次又遇到优惠券需求，看到别人制作的一个背景渐变的 demo 很不错，看了一下就明白了实现原理。
 
 ### 矩形斜切角
 <p>利用了 css 的线性渐变 linear-gradient 样式，线性渐变其实就是沿着一条直线分布你设置的颜色值，实现斜切角实际上就是把角度正好设置在对折线上（也就是 135° 、45°上），让渐变沿着对折线分布。</p>
@@ -63,6 +63,10 @@ background: radial-gradient(circle at top left, red 0%, blue 30px, yellow 40%, g
   </div>
 </div>
 
+### 参考资料
+* [10个demo示例学会CSS3 radial-gradient径向渐变
+](https://www.zhangxinxu.com/wordpress/2017/11/css3-radial-gradient-syntax-example/)
+
 <style>
 /* 矩形斜切角 */
 .chamfer {
@@ -72,7 +76,7 @@ background: radial-gradient(circle at top left, red 0%, blue 30px, yellow 40%, g
   linear-gradient(-135deg, transparent 15px, blue 0) top right,
   linear-gradient(-45deg, transparent 15px, green 0) bottom right,
   linear-gradient(45deg, transparent 15px, orange 0) bottom left;
-  background-size: 50px 50px;
+  background-size: 50px 50%;
   background-repeat: no-repeat;
 }
 
