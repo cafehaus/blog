@@ -105,9 +105,8 @@ background: radial-gradient(circle at top left, red 0%, blue 30px, yellow 40%, g
   width: 160px;
   height: 160px;
   border: 1px solid #CCC;
-  background: radial-gradient(circle at top left, red 0%, blue 30px, yellow 40%, green 0, orange 60%, pink 0, purple) top center;
+  background: radial-gradient(circle at top left, red 0%, blue 30px, yellow 40%, green 0, orange 60%, pink 0, purple) top center no-repeat;
   background-size: 50% 50%;
-  background-repeat: no-repeat;
 }
 
 /* 内圆角优惠券 */
