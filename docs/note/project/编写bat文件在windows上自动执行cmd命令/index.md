@@ -52,6 +52,10 @@ echo Value of dp0: %path_dp0%
 pause
 ```
 
-相关：
+### 相关：
 
-Flutter SDK 包里的 flutter_console.bat 文件就是跟这个类似的，点一下就可以直接自动在打开 cmd 小黑窗，然后可直接输入 flutter 命令
+* Flutter SDK 包里的 flutter_console.bat 文件就是跟这个类似的，点一下就可以直接自动在打开 cmd 小黑窗，然后可直接输入 flutter 命令。
+
+* bat文件和cmd文件类似，本质上没有区别，都是简单的文本编码方式，都可以用记事本创建、编辑和查看，两者所用的命令行代码也可以共用，只是cmd文件中允许使用的命令要比bat文件多。
+
+* npm script 中用到的命令，windows系统 node_modules/.bin 目录下存的就是 cmd 文件。
