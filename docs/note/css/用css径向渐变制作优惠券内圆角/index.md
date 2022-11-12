@@ -84,9 +84,8 @@ background: radial-gradient(circle at top left, red 0%, blue 30px, yellow 40%, g
   width: 120px;
   height: 120px;
   border: 1px solid #CCC;
-  background: linear-gradient(135deg, blue 0, green 30%, red 30%, pink 50%, yellow 0, orange) bottom center;
+  background: linear-gradient(135deg, blue 0, green 30%, red 30%, pink 50%, yellow 0, orange) bottom center no-repeat;
   background-size: 50% 50%;
-  background-repeat: no-repeat;
 }
 
 /* 矩形斜切内圆角 */
