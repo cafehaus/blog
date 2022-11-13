@@ -3,7 +3,7 @@ const { path } = require('@vuepress/utils')
 const sidebar = require('./sidebar.js')
 
 module.exports = {
-  base: '/blog/', // 部署站点的基础路径
+  // base: '/blog/', // 部署站点的基础路径
   lang: 'zh-CN',
   title: 'BLOG',
   description: '我的前端笔记',
