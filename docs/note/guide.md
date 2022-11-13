@@ -22,6 +22,7 @@
 * [通过component标签动态加载组件](./component/通过component标签动态加载组件/index.md)
 
 ### css
+* [用css制作头像渐变边框](./css/用css制作头像渐变边框/index.md)
 * [用css径向渐变制作优惠券内圆角](./css/用css径向渐变制作优惠券内圆角/index.md)
 
 ### database
