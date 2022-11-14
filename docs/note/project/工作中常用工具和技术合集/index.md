@@ -111,3 +111,33 @@
 21. 测试工具：Mocha、Jasmine、Jest、Karma
 22. 抓包工具：Wireshark、Chalers、Fidder
 23. 监控：sentry
+
+## 前端常见易错易混单词
+* form 和 from
+* handle 和 handel
+* model、modle、modal
+* params 和 pramas
+* route 和 router
+* title 和 tittle
+* label 和 lable
+* month 和 mouth
+
+## node 第三方包
+* 删除文件和目录：rimraf
+* 图片处理：sharp、Jimp
+* 操控浏览器：puppeteer(谷歌出的)、playwright(微软出的)
+* node版本管理：nvm
+* node服务启动：nodemon
+* 命令行带颜色输出：chalk
+* 任务调度和定时任务：node-schedule
+* 桌面自动化：robot
+* 接口压测：autocannon（* 还有Java写的JMeter）
+* JsDoc 注释：jsdoc
+
+查看本地全局安装的包 npm list -g，查看本地安装的所有 node 版本 nvm list
+
+## 前端团队协作
+* z-index 规范
+* 公用组件/样式/方法
+* 公用的业务组件都喜欢直接复制出来改下，后期维护成本大，也容易出问题
+* 尽量不要一次 commit 所有文件，跟模块化开发一样的，拆分成细小的修改，然后每一个点一次 commit
