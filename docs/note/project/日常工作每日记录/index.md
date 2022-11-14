@@ -1,5 +1,19 @@
 # 日常工作每日记录
 
+## 2022年11月14日
+* vscode 插件安装目录：C:\Users\Administrator\.vscode\extensions
+* 阿里云效 git 添加的 ssh 密钥配置文件夹：C:\Users\Administrator\.ssh，里面有这2个文件 id_rsa、id_rsa.pub
+* git bash 操作的历史命令在这儿：C:\Users\Administrator\.bash_history
+* 后端 post 接口用 postman 调用，如果没有文件上传，一般都用的 Body-raw-JSON，有文件上传才用的 form-data
+* uniapp 中 ref 属性非 H5 端只能用于获取自定义组件，不能用于获取内置组件（如：view、text），文档上有写：https://uniapp.dcloud.net.cn/tutorial/vue-components.html#ref
+* 字符编码问题，php-jwt 封装 token 时，测试解码 JWT::decode 一直报错，因为 token 字符我直接复制粘贴的在控制台打印出来的字符，可能编码不同，换成直接获取到 token 变量就好了，在小黑窗和PowerShell中右键 -属性 -选项，可以看到下面的当前代码页：936（ANSI/OEM - 简体中文 GBK），所以不能直接复制终端命令里的字符瞎用呀。
+* 微信小程序开发者工具从下面“固定任务栏”打开时，有时有各种奇奇怪怪的问题，比如：调试控制台下面的 Wxml、Console ... 这些菜单一直出不来，尽量自己直接从开始菜单打开
+* vuepress 的 markdown 文件中你可以直接写 html、script 和 style，对于 style 你还可以直接写 stylus 语法，因为 vuepress 已经内置了 stylus 和 stylus-loader(注意是1.x版本才内置了，最新的2.x版本木有)，https://vuepress.vuejs.org/zh/guide/using-vue.html#使用预处理器
+* 【此问题最后项目排查不是谷歌浏览器的设置问题，此笔记有误】异步代码中用 window.open 打开新页面，最新的谷歌浏览器会阻止打开，要在浏览器右上角 ... - 设置 - 隐私设置和安全 - 网站设置 - 弹出式窗口和重定向 - 网站可以发送弹出式窗口并使用重定向，当然这只是个临时方案。一般通过用户的点击事件触发的在新标签页中打开链接，浏览器是不会拦截的，因为这种形式打开新窗口浏览器会认为是用户自己需要的，ajax异步请求成功后需要在新窗口中打开返回的url地址，使用window.open()会被拦截，因为这种情况下浏览器认为该操作不是用户主动触发的，所以会拦截
+* uniapp 中 <component :is="MyComp" /> 这种动态组件写法，只有 H5 和 APP 支持，微信小程序不支持，https://uniapp.dcloud.net.cn/tutorial/vue3-api.html#%E5%86%85%E7%BD%AE%E7%BB%84%E4%BB%B6
+* input type="radio" 取消选中要放在 setTimeout 或 $nextTick 中才有效
+* 基于 async-validator 插件的表单的重置校验方法 this.$refs['form'].resetFields()，会对整个表单进行重置，将【所有字段值重置为空】并移除校验结果，所以新增的时候其实不用自己在手动重置一遍表单数据了，直接 resetFields 重置校验就可以了
+
 ## 2022年11月02日
 * 前端路径参数超过3个让后端存库，最好都只携带一个 id 参数，否则后期就是给自己埋坑
 * 查询get请求参数超过2个改用 post 请求，参数放 body 里
