@@ -10,6 +10,12 @@
 
 ## 文章目录
 
+### UItools
+* [iview数字输入组件InputNumber](./docs/note/UItools/iview数字输入组件InputNumber/index.md)
+* [iview组件踩坑记](./docs/note/UItools/iview组件踩坑记/index.md)
+* [iview组件默认样式覆盖](./docs/note/UItools/iview组件默认样式覆盖/index.md)
+* [前端常用css样式代码](./docs/note/UItools/前端常用css样式代码/index.md)
+
 ### buildTool
 * [探寻webpack打包vue项目特别慢问题](./docs/note/buildTool/探寻webpack打包vue项目特别慢问题/index.md)
 
@@ -27,6 +33,7 @@
 * [通过component标签动态加载组件](./docs/note/component/通过component标签动态加载组件/index.md)
 
 ### css
+* [用css制作头像渐变边框](./docs/note/css/用css制作头像渐变边框/index.md)
 * [用css径向渐变制作优惠券内圆角](./docs/note/css/用css径向渐变制作优惠券内圆角/index.md)
 
 ### database
@@ -91,12 +98,6 @@
 
 ### test
 * [用JMeter做接口压力测试](./docs/note/test/用JMeter做接口压力测试/index.md)
-
-### UItools
-* [iview数字输入组件InputNumber](./docs/note/UItools/iview数字输入组件InputNumber/index.md)
-* [iview组件踩坑记](./docs/note/UItools/iview组件踩坑记/index.md)
-* [iview组件默认样式覆盖](./docs/note/UItools/iview组件默认样式覆盖/index.md)
-* [前端常用css样式代码](./docs/note/UItools/前端常用css样式代码/index.md)
 
 ### uniapp
 * [各端开发打包发布完整指南](./docs/note/uniapp/各端开发打包发布完整指南/index.md)
