@@ -2,19 +2,57 @@
 
 一些项目中常用的代码片段，提高开发效率
 
-**vue 模板**
+**vue 代码片段**
 
 ```json
 {
-	"Print to console": {
+	"vue template": {
         "prefix": "vue",
+        "body": [
+            "<template>",
+            "  <div class=\"view\">",
+			"  </div>",
+            "</template>",
+            "",
+            "<script>",
+			"  export default {",
+			"    props: {",
+			"    },",
+			"    data() {",
+			"      return {",
+			"      }",
+			"    },",
+			"    computed: {",
+			"    },",
+			"    watch: {",
+			"    },",
+			"    filters: {",
+			"    },",
+			"    created() {",
+			"    },",
+			"    methods: {",
+			"    },",
+			"  }",
+			"</script>",
+            "<style lang='stylus' scoped>",
+			"",
+			".view",
+            "  width 100%",
+            "  height 100%",
+            "",
+            "</style>"
+        ],
+        "description": "vue 页面模板"
+    },
+	"vue table and modal template": {
+        "prefix": "vue-table",
         "body": [
             "<template>",
             "  <div class=\"view\">",
 			"    <div class=\"table-box\">",
 			"      <Table class=\"table\" :data=\"tableData\" :columns=\"columns\">",
 			"        <template slot=\"action\" slot-scope=\"{ row }\">",
-			"          <Button type=\"primary\" size=\"small\" style=\"margin-right: 5px\">编辑</Button>",
+			"          <Button type=\"primary\" size=\"small\" style=\"margin-right: 5px\">编辑{{ row }}</Button>",
             "          <Button size=\"small\">详情</Button>",
 			"        </template>",
 			"      </Table>",
@@ -93,19 +131,20 @@
             "  width 100%",
             "  height 100%",
             "",
-            "</style>"
+            "</style>",
+			"",
         ],
-        "description": "vue 模板"
+        "description": "vue 带表格和弹窗页面模板"
     }
 }
 ```
 
-**代码备注 模板**
+**javascript 代码片段**
 
 ```json
 {
-  "Print to console": {
-		"prefix": "mark",
+  	"comment": {
+		"prefix": "comment",
 		"body": [
 		   "/**",
 		   "*  判断取值范围",
@@ -114,8 +153,36 @@
 		   "*  @param {string} arr 数据列表",
 		   "*/",
 		],
-		"description": "Log output to console"
-	}
+		"description": "生成 jsDoc 规范注释"
+	},
+	"pc request": {
+        "prefix": "req",
+        "body": [
+            "async func() {",
+            "  const res = await this.\\$api.name()",
+			"  if (res.code === '200') {",
+            "  } else {",
+            "    this.\\$Message.error(res.msg)",
+            "  }",
+            "},",
+			"",
+        ],
+        "description": "vue pc 端异步请求通用格式"
+    },
+	"mobile request": {
+        "prefix": "req-m",
+        "body": [
+            "async func() {",
+            "  const res = await this.\\$api.name()",
+			"  if (res.code === '200') {",
+            "  } else {",
+            "    this.\\$tips.toast(res.msg)",
+            "  }",
+            "},",
+			"",
+        ],
+        "description": "vue 移动端异步请求通用格式"
+    }
 }
 ```
 
