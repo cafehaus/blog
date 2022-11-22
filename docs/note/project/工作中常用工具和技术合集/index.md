@@ -112,6 +112,16 @@
 22. 抓包工具：Wireshark、Chalers、Fidder
 23. 监控：sentry
 
+浏览器兼容性测试
+* [turbo](https://hub.turbo.net/browsers)
+* [Browserstack](https://www.browserstack.com)
+* [LambdaTest](https://www.lambdatest.com)
+* [smartbear](https://smartbear.com)
+* [virtuoso](https://www.virtuoso.qa)
+* [testgrid](https://www.testgrid.io)
+
+需收费，可免费试用，貌似用处不大
+
 ## 前端常见易错易混单词
 * form 和 from
 * handle 和 handel
@@ -121,6 +131,7 @@
 * title 和 tittle
 * label 和 lable
 * month 和 mouth
+* useable 和 usable (两个都表示：adj. 能用的，可用的，适用的)
 
 ## node 第三方包
 * 删除文件和目录：rimraf
@@ -140,4 +151,15 @@
 * z-index 规范
 * 公用组件/样式/方法
 * 公用的业务组件都喜欢直接复制出来改下，后期维护成本大，也容易出问题
-* 尽量不要一次 commit 所有文件，跟模块化开发一样的，拆分成细小的修改，然后每一个点一次 commit
+* git commit 规范，尽量不要一次 commit 所有文件，跟模块化开发一样的，拆分成细小的修改，然后每一个点一次 commit
+* 代码 jsDoc 注释
+* 模块化：js 代码逻辑抽离、css样式抽离（变量、函数、单独的样式文件）、组件抽离、mixins 混入、composition API
+* 公用方法封装命名规范，如pc端 this.$Message.success('成功')，移动端又是  this.$tips.toast('成功')，开发时同样的功能逻辑可能都是直接复制过来该，像这种公用方法命名不同就很容易误用
+* 提高开发效率：公用封装、代码片段、造数据开发流程小工具
+
+## 全栈项目
+
+* 原型图：Axure、mastergo、Figma
+* UI设计：Photoshop、Sketch、蓝湖(设计稿标注)
+* 前端：vue、react、angular、svelte、uni、flutter、electron
+* 后端：wp、nodejs、java、python
