@@ -24,7 +24,7 @@
     },
     computed: {
       bgImg() {
-        return bg || defImg
+        return this.bg || this.defImg
       }
     },
     created() {
@@ -43,9 +43,9 @@
 
 各种能想到的方法都用上了，$set、watch 强制更新...还是没用，而且明明图片数据已经拿到最新的了，直接用 img 标签在页面上显示没问题。
 
-### 最终原因
+### 原因
 
-最终在图片的链接里才找到原因，图片路径中带了括号，如下：
+最终在图片的链接里才找到原因，图片路径中带了英文括号，如下：
 
 ```js
 const img = 'https://xxx.oss-cn-shenzhen.aliyuncs.com/1594608689685983234_1593551517779288065_1635854539(1) (1).jpg'
