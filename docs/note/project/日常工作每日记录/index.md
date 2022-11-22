@@ -1,5 +1,28 @@
 # 日常工作每日记录
 
+## 2022年11月22日
+* 开发：历史问题不用管，脏数据不用管，测试：一天都是不用管，这也不用管那也不用管
+* 命令行输入 winver 可以弹出 windows 版本，查看系统信息 systeminfo
+* vscode 里的终端命令可以右下角终端面板的 + 图标，同时开启多个服务，也可以选择不同的终端命令，如果windows安装了wsl，还可以直接用 linux 命令（不过要配置对应的node环境这些才能用），对于用 uniapp 这种多端框架比较有用，比如同时开启小程序打包和H5打包，可以同时调试两个端，一次修改，端端调试
+* iview select 组件单选，如果值是 number，初始值为 null，resetFields 重置表单会有bug
+* iview 的 Table 里有异步操作项，可以直接用 Table 的 loading 来让整个表格处于加载状态中，防止用户多次操作，Table 也有提供 loading 的 slot 可以自定义加载提示内容
+* const 常量建议采用全大写的命名，单词以_分割
+* v-if 里面判断有 + 号，uni打包到微信小程序里会报错：Bad attr `wx:if` with message: unexpected token `+`
+```vue
+<template>
+  <p v-if="+status === 6" >周小黑</p>
+</template>
+<script>
+  export default {
+    data() {
+      return {
+        status: '6'
+      }
+    }
+  }
+</script>
+```
+
 ## 2022年11月14日
 * vscode 插件安装目录：C:\Users\Administrator\.vscode\extensions
 * 阿里云效 git 添加的 ssh 密钥配置文件夹：C:\Users\Administrator\.ssh，里面有这2个文件 id_rsa、id_rsa.pub
