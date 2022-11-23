@@ -69,3 +69,10 @@ ipcRenderer 和 ipcMain 通过 send 和 on 事件监听通信，如果一方收�
 ### 数据传递
 
 vue3 中如果用的 reactive 定义的数据，其实是一个 Proxy 代理对象，直接往主进程传递会报错，要自己 JSON.parse(JSON.stringify(xx)) 或者将数据复制到普通对象进行传递。
+
+### 查看相关版本号
+
+* electron 版本：process.versions.electron
+* NODE版本：process.versions.node
+* V8 引擎版本：process.versions.v8
+* chrome版本：process.versions.chrome
