@@ -7,7 +7,13 @@
 * 注意 git clone 和 git checkout\pull\fetch ... 这些命令的操作目录，后面的这些都要先进入项目目录才能操作，否则会报错
 * 渐变样式 UI 在 sketch 软件中拉渐变时，渐变轴可能不会按照边界拉，往往会超出形状边界，但是蓝湖里标注图上的渐变样式会直接按照整个渐变轴来取色，可能中造成最终渐变样式差异较大，所以最好前端自己去吸边界上的色值，太复杂的渐变可以找UI提供更详细的一整个形状为边界的色值
 * 微信小程序静态资源会被缓存，明明服务器上已经更新了，但是小程序里还是老的，解决办法资源路径后面带时间戳，或者自己清理微信小陈新股缓存：我 - 设置 - 通用 - 储存空间
-* slot 插槽简要写法：<template #action="{ row }">，对应之前的 <template slot="action" slot-scope="{ row }">
+* slot 插槽简要写法：
+```vue
+<template #action="{ row }"></template>
+
+<!-- 对应之前的 -->
+<template slot="action" slot-scope="{ row }"></template>
+```
 * uni 项目中容易误用的方法，pc端常用的$router(这个已经被uni官方占用了，所以其他路由插件都大写R) 和其他插件的 $Router，$Message 和 $tips 封装的提示组件
 
 ## 2022年11月22日
