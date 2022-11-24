@@ -1,5 +1,14 @@
 # 日常工作每日记录
 
+## 2022年11月24日
+* 小程序动态 style 以对象形式绑定 uni 编译到微信小程序会变成 <view style="[object Object]"></view>，uni 文档上有说：小程序端不支持 classObject 和 styleObject 语法 https://uniapp.dcloud.net.cn/tutorial/vue-basics.html#class-%E4%B8%8E-style-%E7%BB%91%E5%AE%9A
+* uniapp 开发工具 HBuilderX 云打包安卓app时，manifest.json 配置文件里 加上 "ios" : { "dSYMs" : false } 这个后，打包一直无反应，去掉就好了
+* 有时一不小心会把 vscode 搞成全屏模式，windows 上直接按 F11 就可以退出全屏
+* 注意 git clone 和 git checkout\pull\fetch ... 这些命令的操作目录，后面的这些都要先进入项目目录才能操作，否则会报错
+* 渐变样式 UI 在 sketch 软件中拉渐变时，渐变轴可能不会按照边界拉，往往会超出形状边界，但是蓝湖里标注图上的渐变样式会直接按照整个渐变轴来取色，可能中造成最终渐变样式差异较大，所以最好前端自己去吸边界上的色值，太复杂的渐变可以找UI提供更详细的一整个形状为边界的色值
+* 微信小程序静态资源会被缓存，明明服务器上已经更新了，但是小程序里还是老的，解决办法资源路径后面带时间戳，或者自己清理微信小陈新股缓存：我 - 设置 - 通用 - 储存空间
+* slot 插槽简要写法：<template #action="{ row }">，对应之前的 <template slot="action" slot-scope="{ row }">
+
 ## 2022年11月22日
 * 开发：历史问题不用管，脏数据不用管，测试：一天都是不用管，这也不用管那也不用管
 * 命令行输入 winver 可以弹出 windows 版本，查看系统信息 systeminfo

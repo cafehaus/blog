@@ -101,6 +101,8 @@ export default {
 </style>
 ```
 
+* 注意 macOS 里的 safari 浏览器上多行文本截取显示省略号有兼容性问题，不能和 float 浮动一起使用，所以需要自己用 max-height 来模拟多行截取。
+
 ## uni 版小程序多行显示省略
 
 uni 版的因为要兼容小程序问题比较多，下面的版本在 ios 真机上文字不显示，开发工具、h5和安卓上都是正常的，ios 上不正常的原因还没找到。
@@ -223,3 +225,10 @@ uni 版的因为要兼容小程序问题比较多，下面的版本在 ios 真�
 
 </style>
 ```
+
+### 参考
+
+* [vue-clamp](https://github.com/Justineo/vue-clamp)
+* [vue-ellipsis-component: 满足多种场景的 vue 缩略组件](https://zhuanlan.zhihu.com/p/465545601)
+* [CSS 实现多行文本“展开收起”](https://segmentfault.com/a/1190000040030723)
+* [clampjs](https://github.com/josephschmitt/Clamp.js/blob/master/clamp.js)

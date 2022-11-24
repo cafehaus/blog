@@ -123,6 +123,7 @@
 需收费，可免费试用，貌似用处不大
 
 ## 前端常见易错易混单词
+
 * form 和 from
 * handle 和 handel
 * model、modle、modal
@@ -134,6 +135,7 @@
 * useable 和 usable (两个都表示：adj. 能用的，可用的，适用的)
 
 ## node 第三方包
+
 * 删除文件和目录：rimraf
 * 图片处理：sharp、Jimp
 * 操控浏览器：puppeteer(谷歌出的)、playwright(微软出的)
@@ -148,6 +150,7 @@
 查看本地全局安装的包 npm list -g，查看本地安装的所有 node 版本 nvm list
 
 ## 前端团队协作
+
 * z-index 规范
 * 公用组件/样式/方法
 * 公用的业务组件都喜欢直接复制出来改下，后期维护成本大，也容易出问题
@@ -163,3 +166,8 @@
 * UI设计：Photoshop、Sketch、蓝湖(设计稿标注)
 * 前端：vue、react、angular、svelte、uni、flutter、electron
 * 后端：wp、nodejs、java、python
+
+## 新技术
+
+* [WebAssembly](https://webassembly.org)
+* WebGL
