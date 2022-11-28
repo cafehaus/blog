@@ -1,5 +1,10 @@
 # 日常工作每日记录
 
+## 2022年11月28日
+* 前端用 join 去拼接数组内容做页面展示时，自己判下空，否则会出现连续的分隔符情况
+* iframe 外层盒子不加 overflow: hidden，外面盒子 overflow-y 的滚动条设置会出问题
+* 段落文字记得加 word-break:break-all，否则全英文或者数字不会换行
+
 ## 2022年11月24日
 * 小程序动态 style 以对象形式绑定 uni 编译到微信小程序会变成 <view style="[object Object]"></view>，uni 文档上有说：小程序端不支持 classObject 和 styleObject 语法 https://uniapp.dcloud.net.cn/tutorial/vue-basics.html#class-%E4%B8%8E-style-%E7%BB%91%E5%AE%9A
 * uniapp 开发工具 HBuilderX 云打包安卓app时，manifest.json 配置文件里 加上 "ios" : { "dSYMs" : false } 这个后，打包一直无反应，去掉就好了
