@@ -84,6 +84,7 @@
 18. local history：代码本地修改记录，比 ctrl + z 好用
 19. vscode-icons：官方出品的图标库
 20. Regex Previewer：预览正则表达式效果
+20. EditorConfig for VS Code：格式化代码
 
 
 ## 前端工具链
