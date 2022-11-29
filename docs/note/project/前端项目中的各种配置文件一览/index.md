@@ -18,6 +18,9 @@ ESLint 规则配置，和 package.json 里的 eslintConfig 配置一样，如果
 ### .yarnrc
 yarn 的配置文件，一般可以用来设置镜像源及包的路径
 
+### .npmrc
+和 .yarnrc 类似
+
 ### .babelrc
 babel 的配置文件，一般用于配置转码规则和插件，和 babel.config.js 一样(但这个需要 babel 7.x  以上版本，推荐使用这个)
 
