@@ -74,7 +74,7 @@ nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
 
 是因为服务器上默认已经装了 fastpanel2-nginx，在浏览器中直接输入服务器的公网ip也可以看到 fastpanel 的内容：
 
-<img src="./4png">
+<img src="./4.png">
 
 
 
