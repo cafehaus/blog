@@ -100,4 +100,13 @@ git branch | findStr /V master | foreach {git branch -D $_.Trim()}
 
 # 注意要用 Trim() 方法去掉获取到的分支名前后的空格，否则会报错
 # error: branch '  xxx' not found.
+
+# 当前的分支因为前面有个 * 会报错，不会被删除
+error: branch '* master' not found
+
+# 所以其实可以直接用下面的命令
+git branch | foreach {git branch -D $_.Trim()}
+
+# 强迫症就用这条命令
+git branch | findStr /V "* master" | foreach {git branch -D $_.Trim()}
 ```
