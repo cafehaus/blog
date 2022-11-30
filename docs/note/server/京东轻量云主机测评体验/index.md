@@ -4,9 +4,7 @@
 
 ### 登录服务器
 
-服务器配置C：2核4GB，80GB系统盘
-
-系统 CentOS Linux 7 (Core)
+服务器配置：2核4GB，80GB系统盘，系统：CentOS Linux 7 (Core)
 
 #### 拿到公网 IP
 先登录到后台拿到公网IP，等下直接远程登录，最右边有一个登录按钮也可以直接点击登录服务器。
@@ -46,7 +44,12 @@ make install
 /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
 ```
 
-最后一步安装 make 可能会报错: *** No rule to make target `build', needed by `default'. Stop，安装以下缺少的依赖重新编译就可以了：
+最后一步安装 make 可能会报错: 
+
+```bash
+*** No rule to make target `build', needed by `default'. Stop
+```
+安装以下缺少的依赖重新编译就可以了：
 
 ```bash
 # 安装缺少的依赖
@@ -63,7 +66,13 @@ make install
 /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
 ```
 
-然后发现继续报错：nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)，是因为服务器上默认已经装了 fastpanel2-nginx，在浏览器中直接输入服务器的公网ip也可以看到 fastpanel 的内容
+然后发现继续报错：
+
+```bash
+nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+```
+
+是因为服务器上默认已经装了 fastpanel2-nginx，在浏览器中直接输入服务器的公网ip也可以看到 fastpanel 的内容：
 
 <img src="./4png">
 
