@@ -1,5 +1,11 @@
 # 日常工作每日记录
 
+## 2022年11月30日
+* windows下 win+R，然后输入 recent 可以看到电脑上的操作记录
+* 小程序设置剪贴板内容 uni.setClipboardData，uni 文档上说微信小程序在成功回调success里设置toast可覆盖自带的轻提示，实测无效
+* 浏览器的 console 控制台里也可以用终端命令里一样的 ↑↓ 箭头切换历史输入
+* 浏览器提供的地理位置接口：HTML5 Geolocation 和 navigator.geolocation
+
 ## 2022年11月28日
 * 前端用 join 去拼接数组内容做页面展示时，自己判下空，否则会出现连续的分隔符情况
 * iframe 外层盒子不加 overflow: hidden，外面盒子 overflow-y 的滚动条设置会出问题
