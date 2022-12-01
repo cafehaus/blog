@@ -76,5 +76,28 @@ nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
 
 <img src="./4.png">
 
+注意如果要配置其他端口需要在服务器后台防火墙那自己配置，默认只配置了22、80和443端口
 
+<img src="./5.png">
 
+#### 启动和停止
+nginx 运行目录：/usr/local/sbin
+```bash
+# 进入目录
+cd /usr/local/sbin
+
+# 启动
+nginx
+
+# 重启
+nginx -s reopen
+
+# 强制关闭
+nginx -s stop
+
+# 等待工作进程处理完成后关闭
+nginx -s quit
+
+# 修改配置后重新加载生效
+nginx -s reload
+```
