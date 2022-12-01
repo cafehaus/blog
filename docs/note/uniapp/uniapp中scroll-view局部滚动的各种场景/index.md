@@ -73,17 +73,18 @@ export default {
     }
   },
   mounted() {
-    // 实际弹窗中应该是在弹窗显示时去计算高度，此处仅作示例
+    // 实际弹窗中应该是在弹窗显示时去计算高度，此处仅作示例，获取不到节点信息可以放到 $nextTick 中去获取
     this.calcHeight()
   },
   methods: {
     calcHeight() {
-      let view = uni.createSelectorQuery().select('#scroll-content')
-      view.boundingClientRect(res => {
-        const h = res.height
+      const query = uni.createSelectorQuery().in(this)
+      query.select('#scroll-content').boundingClientRect(res => {
+        const h = res ? res.height : 0
         let height = this.height
         if (h > 0 && h <= this.height) {
-          height = h
+          // 感觉获取到的 res.height 和实际的有大约 39px 误差，所以自己减去一点
+          height = (h > 19) ? (h - 19) : h
         }
 
         this.height = height
@@ -93,3 +94,5 @@ export default {
 }
 </script>
 ```
+
+注意 createSelectorQuery 在自定义组件中要加上 in(this)
