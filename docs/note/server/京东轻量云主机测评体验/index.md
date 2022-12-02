@@ -81,7 +81,9 @@ nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
 <img src="./5.png">
 
 #### 启动和停止
+
 nginx 运行目录：/usr/local/sbin
+
 ```bash
 # 进入目录
 cd /usr/local/sbin
@@ -89,6 +91,10 @@ cd /usr/local/sbin
 # 启动
 nginx
 
+# 指定配置文件启动（平时启动推荐用这种方式）
+nginx -c xx.conf
+
+# 给主进程发送一个信号【nginx -s 参数】reopen/stop/quit/reload
 # 重启
 nginx -s reopen
 
@@ -100,4 +106,47 @@ nginx -s quit
 
 # 修改配置后重新加载生效
 nginx -s reload
+
+# 查看 nginx 安装位置
+whereis nginx
+
+# 测试 nginx 配置文件
+nginx -t [xx.conf]
+
+# 查看 nginx 版本
+nginx -v
+
+# 查看 nginx 进程号命令
+ps -ef | grep nginx
+
+# 查找并杀死所有 nginx 进程
+ps aux | grep nginx | awk '{print $2}' | xargs kill -9
 ```
+
+#### 用 nginx 部署 vue 项目
+
+* 1、本地打 build 打包后，将 dist 目录压缩
+* 2、将 dist 压缩包直接在 Tabby 的 SFTP 上传到 /data/www/blog 目录下，当然这个目录可以自定义
+* 3、修改 nginx 配置文件
+```conf
+http {
+    server {
+        listen       80;
+        server_name  localhost;
+        charset utf-8;
+
+        location / {
+            root      /data/www/blog;
+            index     index.html index.htm;
+            try_files $uri $uri/ /index.html;
+        }
+    }
+}
+```
+端口我们一般就用默认的 80，注意 index 那行最后一个是 index.htm，不是写错了少个 l。try_files 是为了配合前端的 history 路由。
+
+* 4、启动 nginx，启动的时候最好用 -c 指定配置文件，刚开始我就是怎修改怎么配置一直 404，最后把所有进程都杀了，指定配置文件重启 nginx 就好了。猜测可能是因为服务器上好几个地方都装了 nginx，不指定配置文件默认会去取了 /etc/nginx/nginx.conf，导致自己修改 /usr/local/nginx/nginx.conf 发现一直不生效。
+
+最终部署上去了自己的博客，是比部署到 github 上快好多，页面切换基本秒开，毕竟 2核4GB 的配置摆在那，我那小小博客绰绰有余。
+
+#### 用 nginx 部署 Java 项目
