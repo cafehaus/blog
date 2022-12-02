@@ -10,7 +10,7 @@ let readmeContent = `
 ## 加个好友
 * 微信：cafe-haus
 * [微博](https://weibo.com/u/3503148914)
-* [知乎](https://www.zhihu.com/people/ka-fei-jiao-shi)
+* [知乎](https://www.zhihu.com/people/cafehaus)
 * [B站](https://space.bilibili.com/25400077/)
 
 ## 文章目录
