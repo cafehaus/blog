@@ -86,7 +86,6 @@
 * [react和TypeScript开发项目问题记录](./react/react和TypeScript开发项目问题记录/index.md)
 
 ### server
-* [.DS_Store](./server/.DS_Store/index.md)
 * [京东轻量云主机测评体验](./server/京东轻量云主机测评体验/index.md)
 
 ### test

@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const IGNORE_FILE = ['guide.md', '.DS_Store'] // 不需要处理的文件
 
 // 自动生成首页 guide.md 的内容和 README.md 的内容
 let guideContent = ''
@@ -20,20 +21,22 @@ let readmeContent = `
 let sidebar = [{ text: '首页', link: '/note/guide' }]
 const menuList = fs.readdirSync(path.join(__dirname, '../note'))
 menuList.map(m => {
-  if (m !== 'guide.md') {
+  if (!IGNORE_FILE.includes(m)) {
     let posts = fs.readdirSync(path.join(__dirname, '../note/' + m))
     guideContent += `\n### ${m}\n`
     readmeContent += `\n### ${m}\n`
 
     let children = []
     posts.map(n => {
-      guideContent += `* [${n}](./${m}/${n}/index.md)\n`
-      readmeContent += `* [${n}](./docs/note/${m}/${n}/index.md)\n`
-
-      children.push({
-        text: n,
-        link: `/note/${m}/${n}/index.md`
-      })
+      if (!IGNORE_FILE.includes(n)) {
+        guideContent += `* [${n}](./${m}/${n}/index.md)\n`
+        readmeContent += `* [${n}](./docs/note/${m}/${n}/index.md)\n`
+  
+        children.push({
+          text: n,
+          link: `/note/${m}/${n}/index.md`
+        })
+      }
     })
 
     sidebar.push({
