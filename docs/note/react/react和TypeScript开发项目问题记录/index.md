@@ -85,3 +85,19 @@ const routes: Array<routeType> = [
 
 export default routes
 ```
+
+### 标签上绑定属性变量不用加引号
+
+绑定属性变量用花括号 {} 扩起来就行了，不用加引号，注意不要跟 vue 和小程序的语法搞混了
+```ts
+const Comp = function() {
+  return (
+    // 错误方式
+		// <img className="img" src="{logoImg}" />
+
+    // 正确的方式
+		<img className="img" src={logoImg} />
+	)
+}
+export default Comp
+```
