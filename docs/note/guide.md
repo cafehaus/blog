@@ -1,4 +1,9 @@
 
+### UItools
+* [iview数字输入组件InputNumber](./UItools/iview数字输入组件InputNumber/index.md)
+* [iview组件踩坑记](./UItools/iview组件踩坑记/index.md)
+* [iview组件默认样式覆盖](./UItools/iview组件默认样式覆盖/index.md)
+
 ### buildTool
 * [探寻webpack打包vue项目特别慢问题](./buildTool/探寻webpack打包vue项目特别慢问题/index.md)
 
@@ -59,21 +64,18 @@
 * [Git使用技巧](./project/Git使用技巧/index.md)
 * [PATH系统环境变量](./project/PATH系统环境变量/index.md)
 * [vscode编辑器Volar插件导致vue自定义标签不变颜色](./project/vscode编辑器Volar插件导致vue自定义标签不变颜色/index.md)
-* [windows中cmd和PowerShell批处理命令](./project/windows中cmd和PowerShell批处理命令/index.md)
-* [windows系统开发常用cmd命令学习](./project/windows系统开发常用cmd命令学习/index.md)
-* [win右键菜单vscode打开当前目录](./project/win右键菜单vscode打开当前目录/index.md)
 * [前端常用vue组件代码](./project/前端常用vue组件代码/index.md)
 * [前端常用代码片段](./project/前端常用代码片段/index.md)
 * [前端常用工具函数](./project/前端常用工具函数/index.md)
 * [前端常用正则表达式](./project/前端常用正则表达式/index.md)
 * [前端查看日志](./project/前端查看日志/index.md)
+* [前端项目中的各种配置文件一览](./project/前端项目中的各种配置文件一览/index.md)
 * [工作中常用工具和技术合集](./project/工作中常用工具和技术合集/index.md)
 * [日常工作每日记录](./project/日常工作每日记录/index.md)
 * [本地localhost不同服务token被覆盖](./project/本地localhost不同服务token被覆盖/index.md)
 * [根据环境设置请求地址和接口代理](./project/根据环境设置请求地址和接口代理/index.md)
 * [用Docker搭建运行本地WordPress](./project/用Docker搭建运行本地WordPress/index.md)
 * [电脑上打不开github解决办法](./project/电脑上打不开github解决办法/index.md)
-* [编写bat文件在windows上自动执行cmd命令](./project/编写bat文件在windows上自动执行cmd命令/index.md)
 * [通过hosts文件修改本地域名映射](./project/通过hosts文件修改本地域名映射/index.md)
 * [那些相见恨晚的工作技巧](./project/那些相见恨晚的工作技巧/index.md)
 
@@ -83,15 +85,15 @@
 ### react
 * [react和TypeScript开发项目问题记录](./react/react和TypeScript开发项目问题记录/index.md)
 
+### server
+* [京东轻量云主机测评体验](./server/京东轻量云主机测评体验/index.md)
+
 ### test
 * [用JMeter做接口压力测试](./test/用JMeter做接口压力测试/index.md)
-
-### UItools
-* [iview数字输入组件InputNumber](./UItools/iview数字输入组件InputNumber/index.md)
-* [iview组件踩坑记](./UItools/iview组件踩坑记/index.md)
-* [iview组件默认样式覆盖](./UItools/iview组件默认样式覆盖/index.md)
+* [用Jest做前端单元测试](./test/用Jest做前端单元测试/index.md)
 
 ### uniapp
+* [uniapp中scroll-view局部滚动的各种场景](./uniapp/uniapp中scroll-view局部滚动的各种场景/index.md)
 * [各端开发打包发布完整指南](./uniapp/各端开发打包发布完整指南/index.md)
 * [安卓模拟器接口抓包教程](./uniapp/安卓模拟器接口抓包教程/index.md)
 * [开发字节抖音小程序踩坑记](./uniapp/开发字节抖音小程序踩坑记/index.md)
@@ -100,10 +102,19 @@
 
 ### vue
 * [ES模块导入引发的vue未定义变量报错](./vue/ES模块导入引发的vue未定义变量报错/index.md)
+* [vue-cli-service的命令行参数](./vue/vue-cli-service的命令行参数/index.md)
+* [vue-router的hash模式和history模式](./vue/vue-router的hash模式和history模式/index.md)
 * [vue中文本字符串实现换行](./vue/vue中文本字符串实现换行/index.md)
 * [vue中的v-model刨根问底](./vue/vue中的v-model刨根问底/index.md)
 * [用vitepress搭建文档网站踩坑记录](./vue/用vitepress搭建文档网站踩坑记录/index.md)
 * [用vuepress2搭建自己的github网站](./vue/用vuepress2搭建自己的github网站/index.md)
+
+### windows
+* [windows中cmd和PowerShell批处理命令](./windows/windows中cmd和PowerShell批处理命令/index.md)
+* [windows和linux系统上查看历史终端命令](./windows/windows和linux系统上查看历史终端命令/index.md)
+* [windows系统开发常用cmd命令学习](./windows/windows系统开发常用cmd命令学习/index.md)
+* [win右键菜单vscode打开当前目录](./windows/win右键菜单vscode打开当前目录/index.md)
+* [编写bat文件在windows上自动执行cmd命令](./windows/编写bat文件在windows上自动执行cmd命令/index.md)
 
 ### wordpress
 * [wordpress插件开发](./wordpress/wordpress插件开发/index.md)
