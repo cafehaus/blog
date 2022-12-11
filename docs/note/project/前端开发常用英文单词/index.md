@@ -25,6 +25,7 @@
 * 屏幕：screen
 * 端口：port
 * 进程：process
+* 线程：thread
 * 程序：program
 * 项目：project
 * 版本：version
@@ -34,6 +35,23 @@
 * 应用程序：application
 * 框架：framework
 * 硬盘：hard disk
+* 快捷方式：short cut
+* 防火墙：firewall
+* 网关：gateway
+* 域名：domain
+* 终端：terminal
+* 远程登录：telnet
+* 主机：host
+* 网络：network
+* 路由：route
+* 路由器：router
+* 路由表：routing table
+* 芯片：chip
+* 条形码：bar code
+* 二维码：QR code，QR是Quick Response的缩写
+* Nginx：一个高性能的HTTP和反向代理web服务器
+* Docker：一个开源的应用容器引擎
+* Jenkins：基于Java开发的一种持续集成工具
 
 ## javascript 相关
 * 函数：function
@@ -99,6 +117,9 @@
 * 值：value
 * 语法：syntax
 * 表达式：expressions
+* 栈：stack
+* 堆：heap
+* 十进制：decimal
 
 ## css 相关
 * 骚操作：hack，常用于CSS中的一些招数，或者类似于偏方的技巧
@@ -160,6 +181,8 @@
 * 模板：template
 * 组件：component
 * 模块：module
+* 行：column
+* 列：row
 
 ## ui 组件
 * 输入框：input、field
@@ -207,6 +230,8 @@
 * 已访问：visited
 * 悬停：hover
 * 高亮：highlight
+* 点击：active
+* 聚焦：focus
 
 ## 图片
 * 图标：icon
@@ -291,6 +316,10 @@
 * 开：on
 * 关：off
 * 退出：exit
+* 撤销：undo
+* 重做：redo
+* 选择：select、choose、pick
+* 查找：find
 * 格式化：format
 * 提交：submit
 * 保存：save
@@ -326,7 +355,8 @@
 * 生产环境：production environment
 * 包：package
 * 打包：packaging
-* 编译：compile、build
+* 构建：build
+* 编译：compile
 * 编译时：compile time
 * 编译器：compiler
 * 运行时：run time
@@ -342,17 +372,29 @@
 * 依赖：vendor
 * 工具：util、tool
 * 别名：alias
-* 配置：config
+* 配置：config、configuration
 * 分发目录：dist（distribution），也有的用 dest（destination）、target、build
 * 入口：entry
+* 代码审查：code review
+* 安装：install、setup
+* 卸载：uninstall
+* 移除：remove
+* 许可：license
+* 文档：document
+* 代理：proxy
 
 ## 常用缩写
+* WWW：World Wide Web，万维网
 * CSS：Cascading Style Sheets，层叠样式表
 * HTML：HyperText Markup Language，超文本标记语言
+* LAN：Local area network，局域网
 * HTTPS：Hyper Text Transfer Protocol over SecureSocket Layer，超文本传输安全协议
 * HTTP：HyperText Transfer Protocol，超文本传输协议
+* FTP：File Transfer Protocol，文件传送协议
 * URI：Uniform Resource Identifier，统一资源标识符
+* SSL：Secure Sockets Layer，安全套接字协议
 * URL：Uniform Resource Locator，统一资源定位器
+* URN：Uniform Resource Name，统一资源名称，是带有名字的因特网资源
 * XSS：Cross Site Scripting，跨站脚本攻击
 * CSRF：Cross Site Request Forgery，跨站请求伪造
 * CORS：Cross-Origin Resource Sharing，跨域资源共享
@@ -387,3 +429,8 @@
 * AJAX：Asynchronous Javascript And XML，异步JavaScript和XML
 * JWT：JSON Web Token，数据传输规范，经常用于 token 身份验证
 * SVG：Scalable Vector Graphics，可伸缩矢量图形
+* CI：Continuous Integration，持续集成
+* CD：Continuous Deployment，持续部署，(或者 Continuous Delivery，持续交付)
+* IP：Internet Protocol，网际互连协议
+* SQL：Structured Query Language，结构化查询语言
+* CPU：Central Processing Unit，中央处理器
