@@ -382,6 +382,10 @@
 * 许可：license
 * 文档：document
 * 代理：proxy
+* polyfill：英文原意是一种用于衣物、床具等的聚酯填充材料，使这些物品更加温暖舒适。是一块代码(通常是 Web 上的 JavaScript)，用来为旧浏览器提供它没有原生支持的较新的功能
+* babel
+* chunk
+* bundle
 
 ## 常用缩写
 * WWW：World Wide Web，万维网
