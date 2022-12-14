@@ -1,5 +1,15 @@
 # 日常工作每日记录
 
+## 2022年12月14日
+* 父组件调用子组件方法，除了通过 ref 获取到子组件实例再调用，也可以在子组件中通过监听一个 props 变量值去触发，如在父组件中切换 Tab 选项卡获取对应 TabItem 子组件的数据，就可以在组件中 watch 当前选中的 Tab。还可以利用 $parent 和 $children
+* windows cmd 终端命令不区分大小写，Linux 上区分大小写
+* .m-class:nth-of-type 类名加上 nth-of-type 去选择同类名元素坑：和咱直觉相悖，并不是选中具有 m-class 类名的第 n 个元素，就是要先数标签（第 n 个），然后再是那个类名就选中了，所以要选中类名中的第 n 个，要标签也一样，而且和里面的其他标签区分开：
+  * ① 这个元素是它的父元素下同一个标签名的元素中的第 n 个；
+  * ② 要选中的元素的类名是class。
+* 想测试 safari 浏览器兼容性，没有 mac 笔记本时，可以在苹果手机上打开 safari 测试
+* overflow-y:auto 设置滚动条没超过最大高度也出现滚动条，有可能是父元素的 box-sizing 导致的
+* display想同时使用 flex 和 inline-block，用 display: inline-flex; 就行了
+
 ## 2022年11月30日
 * windows下 win+R，然后输入 recent 可以看到电脑上的操作记录
 * 小程序设置剪贴板内容 uni.setClipboardData，uni 文档上说微信小程序在成功回调success里设置toast可覆盖自带的轻提示，实测无效
