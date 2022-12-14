@@ -63,6 +63,282 @@ background: radial-gradient(circle at top left, red 0%, blue 30px, yellow 40%, g
   </div>
 </div>
 
+### 简洁移动端优惠券
+
+左右布局，中间虚线分割，分割处上下有个内凹半圆，也是很常见的移动端优惠券布局：
+```vue
+<template>
+  <div class="coupon-item">
+    <div class="coupon-item-l">
+      <p class="tag">满减券</p>
+      <p class="c-name">双十一跨店满减</p>
+      <p>优惠封顶50元，领完即止，先到先得，快叫上你的小伙伴来领取吧</p>
+      <p>2022-04-09至2022-08-05</p>
+    </div>
+    <div class="coupon-item-r">
+      <p class="price">100<span class="unit">元</span></p>
+      <p>优惠封顶50元</p>
+      <p class="btn">去使用</p>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'CouponItem',
+    props: {
+      item: {
+        type: Object,
+        default: () => ({})
+      },
+    },
+    data() {
+      return {}
+    },
+    methods: {}
+  }
+</script>
+
+<style lang="stylus" scoped>
+$radialGradient($positon = 'right')
+  if $positon == 'right'
+    background radial-gradient(circle at top left, #FFF, #FFF 0) top left,
+    radial-gradient(circle at top right, transparent 10rpx, #FFF 0) top right,
+    radial-gradient(circle at bottom right, transparent 10rpx, #FFF 0) bottom right,
+    radial-gradient(circle at bottom left, #FFF, #FFF 0) bottom left
+  if $positon == 'left'
+    background radial-gradient(circle at top left, transparent 10rpx, #FFF 0) top left,
+    radial-gradient(circle at top right, #FFF, #FFF 0) top right,
+    radial-gradient(circle at bottom right, #FFF, #FFF 0) bottom right,
+    radial-gradient(circle at bottom left, transparent 10rpx, #FFF 0) bottom left
+  background-size 52% 52%
+  background-repeat no-repeat
+
+.coupon-item
+  border-radius 20rpx
+  overflow hidden
+  margin-bottom 20rpx
+  display flex
+  justify-content space-between
+  &.disabled
+    .coupon-item-l,
+    .coupon-item-r
+      opacity 0.6
+    .coupon-item-l .tag
+      background #C1C1C1
+      color #FFF
+    .coupon-item-r .price
+      color #666
+  .coupon-item-l
+    $radialGradient('right')
+    padding 36rpx 32rpx
+    font-size 24rpx
+    color #999999
+    line-height 36rpx
+    position relative
+    flex 1
+    &::after
+      content ''
+      border-left 1px dashed #D8D8D8
+      position absolute
+      right 0
+      top 20rpx
+      bottom 20rpx
+    .tag
+      position absolute
+      top 0
+      left 0
+      min-width 100rpx
+      font-size 20rpx
+      padding 0 20rpx
+      line-height 30rpx
+      color #8A2626
+      text-align center
+      background #FFEAE7
+      box-sizing border-box
+      border-radius 16rpx 0 16rpx 0
+    .c-name
+      font-size 32rpx
+      color $black
+      line-height 46rpx
+    p
+      &:not(:first-child)
+        margin-top 8rpx
+  .coupon-item-r
+    width 226rpx
+    padding 36rpx 22rpx
+    box-sizing border-box
+    text-align center
+    font-size 22rpx
+    color #999999
+    line-height 33rpx
+    display flex
+    flex-direction column
+    justify-content center
+    flex-shrink 0
+    $radialGradient('left')
+    .price
+      font-size 60rpx
+      color #FC3A17
+      line-height 1
+      .unit
+        font-size 28rpx
+    .btn
+      font-size 28rpx
+      color #161718
+      line-height 52rpx
+      background linear-gradient(176deg, #FEDD75 0%, #FDC837 100%)
+      border-radius 27rpx
+      width 156rpx
+      margin 11rpx auto 0
+      border 2rpx solid transparent
+      &.active
+        background #FFFCE6
+        border 2rpx solid #FDD664
+        color #2B2C32
+        justify-content center
+        .img
+          width 38rpx
+          height 38rpx !important
+          margin-right 7rpx
+</style>
+```
+### PC端双边内凹半圆波浪纹优惠券
+左右布局，一边背景的双侧是内凹半圆波浪纹：
+```vue
+<template>
+  <div class="coupon-item">
+    <div class="coupon-item-left">
+      <div class="coupon-item-inner">
+        <p class="coupon-item-num">100<small class="coupon-item-unit">元</small></p>
+        <div class="coupon-item-condition">跨店每满300减40哟</div>
+      </div>
+    </div>
+    <div class="coupon-item-right">
+      <div class="coupon-item-info">
+        <p class="coupon-item-title">双十一满减券</p>
+        <p class="coupon-item-des">优惠封顶50元，领完即止，先到先得，快叫上你的小伙伴来领取吧</p>
+        <p class="coupon-item-date">有效期：2022-04-09至2022-08-05</p>
+      </div>
+
+      <div v-if="canAction" class="coupon-item-action">
+        <p class="coupon-item-btn">去使用</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'CouponItem',
+    data() {
+      return {}
+    },
+    methods: {}
+  }
+</script>
+<style lang='stylus' scoped>
+$gradient-start = #FE754E
+$gradient-end = #F8481F
+
+.coupon-item
+  display flex
+  border-radius 6px 12px 12px 6px
+  overflow hidden
+  min-height 120px
+  &-left
+    width 216px
+    padding 0 6px
+    border-radius 6px
+    overflow hidden
+    .coupon-item-inner
+      background linear-gradient(to right, $gradient-start, $gradient-end)
+      padding 10px
+      height 100%
+      color #FFF
+      text-align center
+      display flex
+      flex-direction column
+      justify-content center
+      align-items center
+      position relative
+      &:before
+        content ''
+        position absolute
+        left -6px
+        top 0
+        bottom 0
+        width 6px
+        background radial-gradient(6px circle at 0 50%, transparent, transparent 3px, $gradient-start 3px)
+        background-repeat repeat-y
+        background-size 12px 9px
+        background-position 0 0
+      &:after
+        content ''
+        position absolute
+        right -6px
+        top 0
+        bottom 0
+        width 6px
+        background radial-gradient(6px circle, transparent, transparent 3px, $gradient-end 3px)
+        background-repeat repeat-y
+        background-size 12px 9px
+        background-position 0 0
+      .coupon-item-num
+        font-size 36px
+        font-weight bold
+        line-height 1
+        .coupon-item-unit
+          font-size 14px
+          font-weight normal
+      .coupon-item-condition
+        font-size 14px
+        font-weight 400
+        line-height 1.5
+        &:nth-of-type(1)
+          margin-top 10px
+  &-right
+    flex 1
+    // height 100%
+    padding 15px 30px
+    display flex
+    align-items center
+    justify-content space-between
+    background #fff5f2
+    margin-left -6px
+    .coupon-item-info
+      .coupon-item-title
+        font-size 18px
+        color #161718
+        line-height 1.5
+        margin-bottom 12px
+      .coupon-item-des
+        font-size 14px
+        color #5B5C5D
+        line-height 1.5
+      .coupon-item-date
+        font-size 14px
+        font-weight 400
+        color #C1C1C1
+        line-height 1
+        margin-top 6px
+    .coupon-item-action
+      margin-left 20px
+      .coupon-item-btn
+        flex-shrink 0
+        width 120px
+        height 48px
+        background #FC331C
+        border-radius 24px
+        font-size 16px
+        font-weight bold
+        color #FFFFFF
+        line-height 48px
+        text-align center
+        cursor pointer
+</style>
+```
+
 ### 参考资料
 * [10个demo示例学会CSS3 radial-gradient径向渐变
 ](https://www.zhangxinxu.com/wordpress/2017/11/css3-radial-gradient-syntax-example/)
