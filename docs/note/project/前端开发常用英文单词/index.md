@@ -1,6 +1,7 @@
 # 前端开发常用英文单词
 
 ## 基础名词
+* 全栈：full stack
 * 前端：Front-End
 * 后端：Back-End
 * 浏览器：browser
@@ -120,6 +121,13 @@
 * 栈：stack
 * 堆：heap
 * 十进制：decimal
+* 二进制：binary
+* 事件循环：eventloop
+* 事件队列：event queue
+* 宏任务：macro-task
+* 微任务：micro-task
+* 任务队列：task queue
+* 回环地址：loopback（127.0.0.1就是一个回环地址，以127开头的ip地址）
 
 ## css 相关
 * 骚操作：hack，常用于CSS中的一些招数，或者类似于偏方的技巧
@@ -209,7 +217,7 @@
 * 轮播：swiper、swipe、carousel
 * 主题：theme
 * 时间线：timeline
-* 分页器：pagination
+* 分页器：pagination、pager
 * 栅格：grid
 * 粘贴板：clipboard
 * 空态：empty
@@ -278,6 +286,7 @@
 * 排名：rank
 * 标签：tag
 * 设置：settings
+* 工作台：workbench
 
 ## 用户互动
 * 喜欢：like
