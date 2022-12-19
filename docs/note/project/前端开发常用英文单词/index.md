@@ -1,5 +1,17 @@
 # 前端开发常用英文单词
 
+## 前端常见易错易混单词
+* form 和 from
+* handle 和 handel
+* model、modle、modal
+* params 和 pramas
+* route 和 router
+* title 和 tittle
+* label 和 lable
+* month 和 mouth
+* useable 和 usable (两个都表示：adj. 能用的，可用的，适用的)
+* opacity 和 opcity
+
 ## 基础名词
 * 全栈：full stack
 * 前端：Front-End

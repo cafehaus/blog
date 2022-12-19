@@ -113,7 +113,7 @@
 22. 抓包工具：Wireshark、Chalers、Fidder
 23. 监控：sentry
 
-浏览器兼容性测试
+## 浏览器兼容性测试
 * [turbo](https://hub.turbo.net/browsers)
 * [Browserstack](https://www.browserstack.com)
 * [LambdaTest](https://www.lambdatest.com)
@@ -122,19 +122,6 @@
 * [testgrid](https://www.testgrid.io)
 
 需收费，可免费试用，貌似用处不大
-
-## 前端常见易错易混单词
-
-* form 和 from
-* handle 和 handel
-* model、modle、modal
-* params 和 pramas
-* route 和 router
-* title 和 tittle
-* label 和 lable
-* month 和 mouth
-* useable 和 usable (两个都表示：adj. 能用的，可用的，适用的)
-* opacity 和 opcity
 
 ## node 第三方包
 
@@ -150,20 +137,6 @@
 * JsDoc 注释：jsdoc
 
 查看本地全局安装的包 npm list -g，查看本地安装的所有 node 版本 nvm list
-
-## 前端团队协作
-
-* z-index 规范
-* 公用组件/样式/方法
-* 公用的业务组件都喜欢直接复制出来改下，后期维护成本大，也容易出问题
-* git commit 规范，尽量不要一次 commit 所有文件，跟模块化开发一样的，拆分成细小的修改，然后每一个点一次 commit
-* 代码 jsDoc 注释
-* 模块化：js 代码逻辑抽离、css样式抽离（变量、函数、单独的样式文件）、组件抽离、mixins 混入、composition API
-* 公用方法封装命名规范，如pc端 this.$Message.success('成功')，移动端又是  this.$tips.toast('成功')，开发时同样的功能逻辑可能都是直接复制过来该，像这种公用方法命名不同就很容易误用
-* 提高开发效率：公用封装、代码片段、造数据开发流程小工具
-* 低级码农：不会的不知道找同事协助，有延期风险不向上反馈，有问题不解决只抱怨（尤雨溪，觉得 angular 不好用就自己开发了一个vue）
-* 不要畏手畏脚，遇到不合理的代码和逻辑要敢于去重构去删除，当然也不能随意瞎搞，修改前问自己几个问题：自己单元测试了吗？如果改动了真有问题影响范围有多大（如果确实影响范围很大那建议协调测试资源测试后再发布）？有问题了排查和应对得措施。如果这几个问题都想好了，勇敢地去改动，如果每个人都怕担责任不敢去修改历史的东西，屎山代码只会越来越高
-* 不要一位迁就别人，完全按照产品、UI和后端的设计去做，有不合理的地方要提出来，工期比较赶拿出一个比较合理的方案去努力沟通
 
 ## 全栈项目
 
