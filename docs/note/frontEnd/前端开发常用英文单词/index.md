@@ -140,6 +140,11 @@
 * 微任务：micro-task
 * 任务队列：task queue
 * 回环地址：loopback（127.0.0.1就是一个回环地址，以127开头的ip地址）
+* 拦截器：interceptor
+* 请求：request
+* 响应：response
+* 后缀：suffix
+* 前缀：prefix
 
 ## css 相关
 * 骚操作：hack，常用于CSS中的一些招数，或者类似于偏方的技巧
@@ -407,6 +412,10 @@
 * babel
 * chunk
 * bundle
+* 打补丁：patch
+* 安装：install、setup
+* 优化：optimize
+* 重构：refactor
 
 ## 常用缩写
 * WWW：World Wide Web，万维网
