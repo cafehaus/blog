@@ -38,6 +38,10 @@ form 表单校验的trigger要写成数组 trigger: ['blur', 'change']，不是�
 
 覆盖选择框 el-select 右侧的箭头图标，升级element-ui 版本，图标的content值可能发生变化，可以放到全局的 var.scss 中定义一个变量去统一维护。
 
+下拉选择框 el-select 多选默认会撑高输入框，可加上 collapse-tags 属性就会只显示一个，其他全部折叠起来，跟 iview 下拉框组件的 max-tag-coun 类似(iview这个更高级点，还可以自己设置最多显示的个数)。
+
+async-validator 自定义校验的 validator 参数位置为 (rule, value, callback)。
+
 ### Table
 el-table 表格组件的 slot-scope 插槽中序号是 $index，iview 中才是 index
 
