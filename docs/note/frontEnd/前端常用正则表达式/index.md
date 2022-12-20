@@ -5,6 +5,17 @@
 2. [菜鸟工具正则在线测试](https://c.runoob.com/front-end/854)
 3. [正则可视化](https://jex.im/regulex/)
 
+## 图片
+文件后缀名不区分大小写，拿到文件名先统一转成小写
+```js
+const fileName = 'zhouxiaohei.pNg'
+const fileSuffix = fileName.split('.').pop().toLocaleLowerCase() // 转换成小写后缀，注意不包括点 .
+const imgSuffix = `(bmp|jpg|png|tif|gif|pcx|tga|exif|fpx|svg|psd|cdr|pcd|dxf|ufo|eps|ai|raw|WMF|webp|jpeg)`
+// const imgReg = new RegExp(`.*\.${imgSuffix}$`)
+const imgReg = new RegExp(`${imgSuffix}$`)
+const isImg = imgReg.test(fileSuffix)
+```
+
 ## email 邮箱验证
 
 没找到比较权威的，网上找的部分版本像 1345102704@qq.com1234 也能匹配成功，项目中推荐使用校验库 vee-validate 的版本
