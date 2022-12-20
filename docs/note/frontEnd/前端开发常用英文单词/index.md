@@ -36,7 +36,6 @@
 * 键盘：keyboard
 * 网络：network
 * 屏幕：screen
-* 端口：port
 * 进程：process
 * 线程：thread
 * 程序：program
@@ -55,6 +54,8 @@
 * 终端：terminal
 * 远程登录：telnet
 * 主机：host
+* 协议：protocol
+* 端口：port
 * 网络：network
 * 路由：route
 * 路由器：router
