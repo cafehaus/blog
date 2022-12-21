@@ -56,3 +56,7 @@ windows下会将 0.0.0.0 这个地址作为访问的非法地址处理，但是�
 
 ### localhost
 是个域名而不是一个ip地址，一般windows系统默认将 localhost 指向了 127.0.0.1，但是 localhost 并不等于 127.0.0.1，localhost 指向的IP地址是可以自己配置
+
+## uni-serve和uni-build
+* node_modules\@dcloudio\vue-cli-plugin-uni\commands\serve.js
+* node_modules\@dcloudio\vue-cli-plugin-uni\commands\build.js
