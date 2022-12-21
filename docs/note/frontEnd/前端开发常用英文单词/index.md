@@ -426,6 +426,12 @@
 * HTTPS：Hyper Text Transfer Protocol over SecureSocket Layer，超文本传输安全协议
 * HTTP：HyperText Transfer Protocol，超文本传输协议
 * FTP：File Transfer Protocol，文件传送协议
+* TCP：Transmission Control Protocol，传输控制协议
+* IP：Internet Protocol，网际互连协议
+* IPv4：Internet Protocol Version 4
+* IPv6：Internet Protocol Version 6
+* ISP：Internet Service Provider，因特网服务提供方
+* DHCP：Dynamic Host Configuration Protocol，动态主机配置协议
 * URI：Uniform Resource Identifier，统一资源标识符
 * SSL：Secure Sockets Layer，安全套接字协议
 * URL：Uniform Resource Locator，统一资源定位器
@@ -466,6 +472,5 @@
 * SVG：Scalable Vector Graphics，可伸缩矢量图形
 * CI：Continuous Integration，持续集成
 * CD：Continuous Deployment，持续部署，(或者 Continuous Delivery，持续交付)
-* IP：Internet Protocol，网际互连协议
 * SQL：Structured Query Language，结构化查询语言
 * CPU：Central Processing Unit，中央处理器
