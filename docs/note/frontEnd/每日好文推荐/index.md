@@ -1,5 +1,9 @@
 # 每日好文推荐
 
+## 2022年12月21日
+* [从 HTTP 协议求解：为什么我们越来越不需要雪碧图了？](https://mp.weixin.qq.com/s/1A3fFopkHvayhi6mEq3_bw)
+* [前端都应该懂的 TCP/IP 知识](https://zhuanlan.zhihu.com/p/157607847)
+
 ## 2022年12月19日
 * [5年前端-历时1个月收获7个offer](https://mp.weixin.qq.com/s/ILhiktgXn1OQqZk9Hn8f3Q)
 * [2022凛冬之时三年经验前端面经](https://mp.weixin.qq.com/s/k3t90ojZF6uSFZv9zoqV5g)
