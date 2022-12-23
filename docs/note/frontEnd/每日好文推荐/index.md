@@ -1,5 +1,8 @@
 # 每日好文推荐
 
+## 2022年12月223日
+* [趣谈JS二进制:File､Blob､FileReader､ArrayBuffer､Base64](https://m.toutiao.com/is/hbwYuW5/)
+
 ## 2022年12月21日
 * [从 HTTP 协议求解：为什么我们越来越不需要雪碧图了？](https://mp.weixin.qq.com/s/1A3fFopkHvayhi6mEq3_bw)
 * [前端都应该懂的 TCP/IP 知识](https://zhuanlan.zhihu.com/p/157607847)
