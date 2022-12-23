@@ -42,6 +42,8 @@ form 表单校验的trigger要写成数组 trigger: ['blur', 'change']，不是�
 
 async-validator 自定义校验的 validator 参数位置为 (rule, value, callback)。
 
+数字输入框组件 el-input-number 有个默认值为0，设置为 null 还是会是0，只能设置成 undefined；和 iview 的 input-number 组件正好相反，iview 设置成 undefined 会显示成 1，要设置成 null 才能置空。
+
 ### Table
 el-table 表格组件的 slot-scope 插槽中序号是 $index，iview 中才是 index
 
