@@ -146,6 +146,15 @@
 * 响应：response
 * 后缀：suffix
 * 前缀：prefix
+* 代理模式：proxy pattern
+* 工厂模式：factory pattern
+* 单例模式：singleton pattern
+* 策略模式：strategy pattern
+* 迭代器模式：iterator pattern
+* 观察者模式：observer pattern
+* 中介者模式：mediator pattern
+* 访问者模式：visitor pattern
+* 外观模式：facade pattern
 
 ## css 相关
 * 骚操作：hack，常用于CSS中的一些招数，或者类似于偏方的技巧
@@ -170,6 +179,8 @@
 * 滤镜：filter
 * 像素：pixel、px
 * 占位符：placeholder
+* 帧：frame
+* 关键帧：keyframe
 
 ## vue 相关
 * 混入：mixin
