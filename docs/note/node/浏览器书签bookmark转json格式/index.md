@@ -43,4 +43,9 @@ File 接口继承了 Blob 的方法和属性，里面有一个 text 方法，[Bl
 
 ## 系统自动生成的书签json文件
 
-浏览器有生成系统的json文件
+Chrome 浏览器其实有自动生成的json文件，具体位置：
+
+* windows 系统 C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Default\Bookmarks
+* mac 系统 	/Users/${一般是你的电脑账号名}/Library/Application Support/Google/Chrome/Default/Bookmarks
+
+也可以直接在谷歌浏览器地址栏输入 chrome://version，会自动加载出有关谷歌浏览器的各种信息。
