@@ -44,6 +44,13 @@ async-validator 自定义校验的 validator 参数位置为 (rule, value, callb
 
 数字输入框组件 el-input-number 有个默认值为0，设置为 null 还是会是0，只能设置成 undefined；和 iview 的 input-number 组件正好相反，iview 设置成 undefined 会显示成 1，要设置成 null 才能置空。
 
+select 组件的搜索过滤 filterable，默认是根据 label 来匹配的，不指定 label 时会默认跟 value 一样，所以 el-option 记得要设置 label 属性
+
+el-form 表单中 el-date-picker 日期时间选择器校验规则，不要改成 type: 'date'，改成日期类型后如果不是直接选择的，比如直接赋值的日期时间字符串 2023-01-01 12:32:18，触发校验会报错 getTime is not a function
+
+### Menu
+el-menu 菜单组件刷新或者跳转到其他菜单，不能自动展开和选中当前菜单项，加一个属性 :default-active="$route.path" 就可以解决了，iview 里要自己手动去调一下更新菜单的方法 this.$refs.menu.updateOpened()
+
 ### Table
 el-table 表格组件的 slot-scope 插槽中序号是 $index，iview 中才是 index
 
