@@ -48,6 +48,35 @@ select 组件的搜索过滤 filterable，默认是根据 label 来匹配的，�
 
 el-form 表单中 el-date-picker 日期时间选择器校验规则，不要改成 type: 'date'，改成日期类型后如果不是直接选择的，比如直接赋值的日期时间字符串 2023-01-01 12:32:18，触发校验会报错 getTime is not a function
 
+Form 表单校验不通过时，有滚动条自动跳转到错误的元素位置：
+```javascript
+submit () {
+  this.$refs.form.validate(vali => {
+    if (vali) {
+      console.log('ok')
+    } else {
+      this.$nextTick(() => {
+        const isError = document.getElementsByClassName('is-error')
+        isError[0].scrollIntoView({
+          block: 'center',
+          behavior: 'smooth'
+        })
+
+        let tableErr = false
+        // ...
+
+        // 表格里也有动态表单项时自动滚动到表格最右边
+        if (tableErr) {
+          const table = this.$refs['el-table']
+          const w = table.bodyWidth
+          table.bodyWrapper.scrollLeft = Number(w.replace('px',''))
+        }
+      })
+    }
+  })
+}
+```
+
 ### Menu
 el-menu 菜单组件刷新或者跳转到其他菜单，不能自动展开和选中当前菜单项，加一个属性 :default-active="$route.path" 就可以解决了，iview 里要自己手动去调一下更新菜单的方法 this.$refs.menu.updateOpened()
 
