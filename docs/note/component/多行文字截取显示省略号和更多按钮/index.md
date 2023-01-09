@@ -226,6 +226,21 @@ uni 版的因为要兼容小程序问题比较多，下面的版本在 ios 真�
 </style>
 ```
 
+### view-design 中 Tooltip 组件
+
+view-design 中 Tooltip 组件判断是否显示文字，里面有用到 createRange、setStart、setEnd，getBoundingRect().width 会返回小数，offsetWidth 返回整数
+```javascript
+handleTooltipIn () {
+  const $content = this.$refs.content
+  let range = document.createRange()
+  range.setStart($content, 0)
+  range.setEnd($content, $content.childNodes.length)
+  const rangeWidth = range.getBoundingClientRect().width
+  this.showTooltip = rangeWidth > $content.offsetWidth
+  range = null
+},
+```
+
 ### 参考
 
 * [vue-clamp](https://github.com/Justineo/vue-clamp)
