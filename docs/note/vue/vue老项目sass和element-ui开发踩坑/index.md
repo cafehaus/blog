@@ -48,30 +48,48 @@ select 组件的搜索过滤 filterable，默认是根据 label 来匹配的，�
 
 el-form 表单中 el-date-picker 日期时间选择器校验规则，不要改成 type: 'date'，改成日期类型后如果不是直接选择的，比如直接赋值的日期时间字符串 2023-01-01 12:32:18，触发校验会报错 getTime is not a function
 
-Form 表单校验不通过时，有滚动条自动跳转到错误的元素位置：
+Form 表单校验不通过时，有滚动条自动跳转到错误的元素位置：el-form、el-collapse、el-dialog、el-table
 ```javascript
 submit () {
   this.$refs.form.validate(vali => {
     if (vali) {
       console.log('ok')
     } else {
-      this.$nextTick(() => {
-        const isError = document.getElementsByClassName('is-error')
-        isError[0].scrollIntoView({
-          block: 'center',
-          behavior: 'smooth'
-        })
+      this.scrollToError()
+    }
+  })
+}
 
-        let tableErr = false
-        // ...
-
-        // 表格里也有动态表单项时自动滚动到表格最右边
-        if (tableErr) {
-          const table = this.$refs['el-table']
-          const w = table.bodyWidth
-          table.bodyWrapper.scrollLeft = Number(w.replace('px',''))
-        }
+scrollToError() {
+  function scrollIntoView() {
+    const elements = document.getElementsByClassName('is-error')
+    if (elements && elements.length) {
+      elements[0].scrollIntoView({
+        block: 'center',
+        behavior: 'smooth'
       })
+    }
+  }
+
+  const tableErr = !(this.isCheck && !this.form.supplierId)
+  // 如果折叠面板折叠了自动展开
+  if (tableErr && this.active && !this.active.includes('2')) {
+    this.active.push('2')
+  }
+
+  this.$nextTick(() => {
+    // 表格里的表单有错误时表格自动滚动到最右边
+    if (tableErr) {
+      const table = this.$refs['el-table']
+      const w = table.bodyWidth
+      table.bodyWrapper.scrollLeft = Number(w.replace('px',''))
+
+      // 滚动到表格中时，要先更新表格的滚动条
+      this.$nextTick(() => {
+        scrollIntoView()
+      })
+    } else {
+      scrollIntoView()
     }
   })
 }

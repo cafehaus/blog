@@ -142,6 +142,45 @@ export default {
         return m
       })
     },
+
+    /**
+     * el-tree 树形组件设置权限
+     * 如果子节点不是全部都选中了就不需要父节点的 id
+     */
+    fmtSelectData() {
+      let selectIds = []
+      this.menus.map(m => {
+        selectIds = this.fmtTree(m, this.menuIds, selectIds)
+      })
+      this.$refs.tree.setCheckedKeys(selectIds)
+    },
+
+    /**
+     * 格式化选中id，子节点全部选中了才加上父节点
+     * @param {object} item 节点数据
+     * @param {array} ids 有权限的id数组
+     * @param {array} arr 过滤后实际的id数组
+     * @return {array} 过滤后实际的id数组
+     */
+    fmtTree(item, ids, arr = []) {
+      const id = item.id
+      if (ids.includes(id)) {
+        const children = item.children
+        if (children && children.length) {
+          // 子节点都有时才添加父节点
+          const isAll = children.every(e => ids.includes(e.id))
+          if (isAll) {
+            arr.push(id)
+          }
+          children.map(m => {
+            arr = this.fmtTree(m, ids, arr)
+          })
+        } else {
+          arr.push(id)
+        }
+      }
+      return arr
+    },
   }
 }
 </script>
