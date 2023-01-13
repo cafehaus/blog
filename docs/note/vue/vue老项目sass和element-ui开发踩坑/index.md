@@ -95,6 +95,8 @@ scrollToError() {
 }
 ```
 
+el-input 直接加 v-model.trim 会导致输入框无法输入空格，这样字符串中间的空格也不能输入了，人家隔壁 iview 都是可以的
+
 ### Menu
 el-menu 菜单组件刷新或者跳转到其他菜单，不能自动展开和选中当前菜单项，加一个属性 :default-active="$route.path" 就可以解决了，iview 里要自己手动去调一下更新菜单的方法 this.$refs.menu.updateOpened()
 

@@ -35,7 +35,17 @@ File 接口继承了 Blob 的方法和属性，里面有一个 text 方法，[Bl
 
 <img src="./3.png">
 
-<iframe src="./format.html" height="300" width="400" />
+<iframe src="https://cafehaus.github.io/parse-bookmark" height="300" width="400" />
+
+**注意**
+生成 markdown 文件时，超链接的文字内容里带标签的话，vuepress build 编译时会报错：Compiling with vite[vite:vue] Element is missing end tag，解决方式将标签的尖括号去掉：
+```markdown
+<!-- 错误方式 -->
+[HTML的<pre>标签中嵌套HTML标签时被解析的解决方案](http://xxx.com)
+
+<!-- 正确方式 -->
+[HTML的pre标签中嵌套HTML标签时被解析的解决方案](http://xxx.com)
+```
 
 ## nodejs 版本
 
