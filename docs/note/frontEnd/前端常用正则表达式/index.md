@@ -10,7 +10,11 @@
 ```js
 const fileName = 'zhouxiaohei.pNg'
 const fileSuffix = fileName.split('.').pop().toLocaleLowerCase() // 转换成小写后缀，注意不包括点 .
-const imgSuffix = `(bmp|jpg|png|tif|gif|pcx|tga|exif|fpx|svg|psd|cdr|pcd|dxf|ufo|eps|ai|raw|WMF|webp|jpeg)`
+// const imgSuffix = `(bmp|jpg|png|tif|gif|pcx|tga|exif|fpx|svg|psd|cdr|pcd|dxf|ufo|eps|ai|raw|WMF|webp|jpeg)`
+// 只匹配 img 标签可以直接显示的图片
+// https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img
+// https://developer.mozilla.org/zh-CN/docs/Web/Media/Formats/Image_types
+const imgSuffix = '(apng|avif|bmp|gif|ico|jpeg|jpg|png|svg|tiff|webp)'
 // const imgReg = new RegExp(`.*\.${imgSuffix}$`)
 const imgReg = new RegExp(`${imgSuffix}$`)
 const isImg = imgReg.test(fileSuffix)
