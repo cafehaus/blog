@@ -82,8 +82,8 @@
        * 拖拽
        */
       handleDrop(e) {
-        if (!this.drag) return
         e.preventDefault()
+        if (!this.drag) return
         const files = e.dataTransfer.files
         if (!files.length) return
         this.handleChange(files, true)
@@ -96,7 +96,12 @@
           const fileSize = file.size
           const fileName = file.name
           const fileSuffix = fileName.split('.').pop().toLocaleLowerCase() // 转换成小写后缀，注意不包括点 .
-          const imgSuffix = `(bmp|jpg|png|tif|gif|pcx|tga|exif|fpx|svg|psd|cdr|pcd|dxf|ufo|eps|ai|raw|WMF|webp|jpeg)`
+          // const imgSuffix = `(bmp|jpg|png|tif|gif|pcx|tga|exif|fpx|svg|psd|cdr|pcd|dxf|ufo|eps|ai|raw|WMF|webp|jpeg)`
+
+          // 只匹配 img 标签可以直接显示的图片
+          // https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img
+          // https://developer.mozilla.org/zh-CN/docs/Web/Media/Formats/Image_types
+          const imgSuffix = '(apng|avif|bmp|gif|ico|jpeg|jpg|png|svg|tiff|webp)'
           // const imgReg = new RegExp(`.*\.${imgSuffix}$`)
           const imgReg = new RegExp(`${imgSuffix}$`)
           const isImg = imgReg.test(fileSuffix)
@@ -120,11 +125,7 @@
             }
           }
 
-          if (!isImg) {
-            this.handleEmit({ file, fileName, fileSize, isImg })
-          } else {
-            this.readFile({ file, fileName, fileSize, isImg })
-          }
+          this.readFile({ file, fileName, fileSize, isImg })
         } else {
           this.$message.error('请刷新页面后重新上传！')
         }
@@ -135,73 +136,73 @@
        * 读取文件信息
        */
       readFile({ file, fileName, fileSize, isImg }) {
-        this.compressImage({ file, fileName, fileSize, isImg })
+        const reader = new FileReader()
+        reader.readAsDataURL(file)
+        reader.onload = e => {
+          // 读取文件本地地址，用在页面上回显
+          const fileUrl = e.target.result
+
+          if (!isImg || (this.compress <= 0 || fileSize <= this.compress * 1024 * 1024)) { // 不压缩
+            this.handleEmit({ file, fileName, fileSize, isImg, fileUrl })
+          } else {
+            this.compressImage({ file, fileName, fileSize, fileUrl, isImg })
+          }
+        }
+        reader.onerror = e => {
+          console.error(e)
+        }
       },
 
       /**
        * 压缩图片
        */
-      compressImage({ file, fileName, fileSize, isImg }) {
-        const reader = new FileReader()
-        reader.readAsDataURL(file)
-        reader.onload = e => {
-          // 读取 base64 图片地址，用在页面上回显
-          const imgSrc = e.target.result
+      compressImage({ file, fileName, fileSize, isImg, fileUrl }) {
+        const img = new Image()
+        img.src = fileUrl
+        img.onload = e => {
+          const w = img.width / 1.5
+          const h = img.height / 1.5
+          const quality = 0.7 // 默认图片质量为0.92
+          // 生成canvas
+          const canvas = document.createElement('canvas')
+          const ctx = canvas.getContext('2d')
+          // 创建属性节点
+          const anw = document.createAttribute('width')
+          anw.nodeValue = w
+          const anh = document.createAttribute('height')
+          anh.nodeValue = h
+          canvas.setAttributeNode(anw)
+          canvas.setAttributeNode(anh)
 
-          if (this.compress <= 0 || fileSize <= this.compress * 1024 * 1024) { // 不压缩
-            this.handleEmit({ file, fileName, fileSize, isImg, imgSrc })
-          } else {
-            const img = new Image()
-            img.src = imgSrc
-            img.onload = e => {
-              const w = img.width / 1.5
-              const h = img.height / 1.5
-              const quality = 0.7 // 默认图片质量为0.92
-              // 生成canvas
-              const canvas = document.createElement('canvas')
-              const ctx = canvas.getContext('2d')
-              // 创建属性节点
-              const anw = document.createAttribute('width')
-              anw.nodeValue = w
-              const anh = document.createAttribute('height')
-              anh.nodeValue = h
-              canvas.setAttributeNode(anw)
-              canvas.setAttributeNode(anh)
+          // 铺底色 PNG转JPEG时透明区域会变黑色
+          ctx.fillStyle = '#fff'
+          ctx.fillRect(0, 0, w, h)
 
-              // 铺底色 PNG转JPEG时透明区域会变黑色
-              ctx.fillStyle = '#fff'
-              ctx.fillRect(0, 0, w, h)
+          ctx.drawImage(img, 0, 0, w, h)
+          // quality值越小，所绘制出的图像越模糊
+          const base64 = canvas.toDataURL('image/jpeg', quality) // 图片格式jpeg或webp可以选0-1质量区间
 
-              ctx.drawImage(img, 0, 0, w, h)
-              // quality值越小，所绘制出的图像越模糊
-              const base64 = canvas.toDataURL('image/jpeg', quality) // 图片格式jpeg或webp可以选0-1质量区间
-
-              // 去掉url的头，并转换为byte
-              const bytes = window.atob(base64.split(',')[1])
-              // 处理异常,将ascii码小于0的转换为大于0
-              const ab = new ArrayBuffer(bytes.length)
-              const ia = new Uint8Array(ab)
-              for (let i = 0; i < bytes.length; i++) {
-                ia[i] = bytes.charCodeAt(i)
-              }
-              let newFile = new File([ab], fileName, { type: 'image/jpeg' })
-              this.handleEmit({ file: newFile, fileName, fileSize, isImg, imgSrc })
-            }
-            img.onerror = e => {
-              consloe.error(e)
-            }
+          // 去掉url的头，并转换为byte
+          const bytes = window.atob(base64.split(',')[1])
+          // 处理异常,将ascii码小于0的转换为大于0
+          const ab = new ArrayBuffer(bytes.length)
+          const ia = new Uint8Array(ab)
+          for (let i = 0; i < bytes.length; i++) {
+            ia[i] = bytes.charCodeAt(i)
           }
+          let newFile = new File([ab], fileName, { type: 'image/jpeg' })
+          this.handleEmit({ file: newFile, fileName, fileSize, fileUrl, isImg })
         }
-        reader.onerror = e => {
-          consloe.error(e)
+        img.onerror = e => {
+          console.error(e)
         }
       },
 
       /**
        * 将文件信息传递给父组件
        */
-      handleEmit({ file, fileName, fileSize, isImg, imgSrc }) {
-        this.$emit('file', { file, fileName, fileSize, isImg, imgSrc })
+      handleEmit({ file, fileName, fileSize, fileUrl, isImg }) {
+        this.$emit('file', { file, fileName, fileSize, fileUrl, isImg })
       }
     },
   }
