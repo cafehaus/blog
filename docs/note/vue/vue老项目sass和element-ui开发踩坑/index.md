@@ -103,6 +103,9 @@ el-menu 菜单组件刷新或者跳转到其他菜单，不能自动展开和选
 ### Table
 el-table 表格组件的 slot-scope 插槽中序号是 $index，iview 中才是 index
 
+### Dialog
+弹窗组件 el-dialog 如果存在嵌套，子弹窗一定要加上 append-to-body，否则会造成层级不对被遮挡
+
 ### 日期时间选择组件 el-date-picker 禁选当前时间之前的时间
 设置 picker-options 属性，disabledDate 禁选日期，selectableRange 设置可选时分秒
 ```vue
