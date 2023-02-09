@@ -1,5 +1,24 @@
 # 日常工作每日记录
 
+## 2023年2月9日
+* map 无法遍历直接 Array(10) 创建的数组，在 JavaScript 内部，数组就是用数字作为键名的对象，当使用 Array 构造函数创建了一个新的数组时，实际上是创建了一个 length 属性等于传给 Array 的参数的空对象，对象中并没有数组对应的索引键（index key）
+* 浏览器页面进入全屏模式 document.documentElement.requestFullscreen()，退出全屏 document.exitFullscreen()
+* console.log 添加样式，%c 处的字符一次匹配后面的样式，网址还可以直接点击
+```js
+console.log(
+  '%c 样式文本一 %c 样式文本二 \n https://www.baidu.com',
+   'color: #ffffff; background: #3c9cff; padding:5px 0;',
+  'color: #3c9cff;background: #ffffff; padding:5px 0;',
+)
+```
+* 阻止浏览器默认的账号密码自动填充，用 hidden 或 display:none 隐藏输入框无效
+```html
+<!-- #ifdef H5 -->
+<!-- <input type="text" style="width: 0; height: 0; position: absolute; z-index: -1;"> -->
+<input type="password" style="width: 0; height: 0; position: absolute; z-index: -1;">
+<!-- #endif -->
+```
+
 ## 2023年1月13日
 * 注意其他第三方包对项目数据的修改影响，项目中用了一个自己封装的 npm 组件包，里面用到了自己封装的一个菜单组件，每次点击菜单会去把菜单下的操作权限 id 缓存到 sessionStorage 里，项目里再去通过 sessionStorage 里缓存的权限值判断权限，开始在项目中搜索，一直没找到到底是在哪去缓存的权限值，这坑太深了
 
