@@ -148,7 +148,7 @@ module.exports = new Promise((resolve, reject) => {
         compilationSuccessInfo: {
           messages: [
             `  App running at:`,
-            `  - Local:   ` + chalk.cyan(`http://${LOCAL_HOST}:${port}`),
+            `  - Local:   ` + chalk.cyan(`http://${LOCAL_HOST}:${port}`)
             `  - Network: ` + chalk.cyan(`http://${LOCAL_IP}:${port}`)
           ],
         },
