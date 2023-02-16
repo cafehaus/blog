@@ -7,6 +7,19 @@
 * 3. H3 和 A 结束标签末尾加上 DT 结束标签
 * 4. 如果报错：Unexpected EOF in tag...删掉报错标签上除了常规属性，如 href 属性之外的其他属性
 * 5. DL、DT、H3、A 标签全部替换成小写，否则 build 时会报错：TypeError: Invalid value used as weak map key
+
+### 常用博客同步平台
+* [知乎](https://zhuanlan.zhihu.com/)
+* [简书](https://www.jianshu.com/)
+* [B站](https://www.bilibili.com/)
+* [51CTO](https://blog.51cto.com/)
+* [segmentfault](https://segmentfault.com/)
+* [稀土掘金](https://juejin.cn/)
+* [慕课网](https://www.imooc.com/)
+* [博客园](https://www.cnblogs.com/)
+* [CSDN](https://mp.csdn.net/)
+* [InfoQ-极客时间](https://www.infoq.cn/)
+
 ### 工具
 * [秀米 XIUMI | 秀米 XIUMI](http://xiumi.us/)
 * [i排版-微信图文编辑器](http://www.ipaiban.com/)
