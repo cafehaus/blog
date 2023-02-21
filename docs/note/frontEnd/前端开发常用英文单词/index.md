@@ -11,6 +11,7 @@
 * month 和 mouth
 * useable 和 usable (两个都表示：adj. 能用的，可用的，适用的)
 * opacity 和 opcity
+* create和creat（医：等于creatine，肌酸）
 
 ## 基础名词
 * 全栈：full stack
