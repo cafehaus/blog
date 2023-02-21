@@ -1,5 +1,14 @@
 # 日常工作每日记录
 
+## 2023年2月21日
+* 但 IPv4 网络标准为 localhost 保留了 127.0.0.1 – 127.255.255.255 范围，使用范围内的任意一个 IP 地址会导致相同或相似的方式，所以我们平时启动的前端项目服务，用 http://127.200.1.3:8080 也是可以访问的
+* class类的public公开方法里不能去调用类的静态方法，即静态成员方法不能直接使用非静态成员
+* es6函数结构参数，记得给个默认的空对象结构，否则不传参时会报错：
+```js
+function createBoy({ name='zhou', age=18 } = {}) {
+  console.log(name, age)
+}
+```
 ## 2023年2月9日
 * map 无法遍历直接 Array(10) 创建的数组，在 JavaScript 内部，数组就是用数字作为键名的对象，当使用 Array 构造函数创建了一个新的数组时，实际上是创建了一个 length 属性等于传给 Array 的参数的空对象，对象中并没有数组对应的索引键（index key）
 * 浏览器页面进入全屏模式 document.documentElement.requestFullscreen()，退出全屏 document.exitFullscreen()
