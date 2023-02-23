@@ -1,10 +1,10 @@
 # 每日好文推荐
 
 # 2023年1月23日
-*[2022年前端大事记](https://mp.weixin.qq.com/s/HfgifbdzBSOZkDb0ru0XsA)
-*[代码人生之前端复盘](https://m.toutiao.com/is/ku5dtu5)
-*[20多款绘制拓扑等图的JavaScript库](https://m.toutiao.com/is/kv9WXKs)
-*[推荐8个鲜为人知实用的Web API](https://m.toutiao.com/is/hu8HbSG)
+* [2022年前端大事记](https://mp.weixin.qq.com/s/HfgifbdzBSOZkDb0ru0XsA)
+* [代码人生之前端复盘](https://m.toutiao.com/is/ku5dtu5)
+* [20多款绘制拓扑等图的JavaScript库](https://m.toutiao.com/is/kv9WXKs)
+* [推荐8个鲜为人知实用的Web API](https://m.toutiao.com/is/hu8HbSG)
 
 ## 2022年12月23日
 * [趣谈JS二进制:File､Blob､FileReader､ArrayBuffer､Base64](https://m.toutiao.com/is/hbwYuW5/)
