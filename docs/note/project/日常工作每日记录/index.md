@@ -1,6 +1,23 @@
 # 日常工作每日记录
 
 ## 2023年2月21日
+* vue项目中把api这种会不断增大的数据挂在this下并不好，会造成那vue下挂载的数据越来越大，可以按 api/user.js、api/order.js 这样按业务或模块分，页面中按需引入，不要啥都挂载到 vue.prototype 全局上，学习 vue3、react... 这种按需引入，全局一时爽，后期火葬场！
+* react函数组件，函数入口是 props，出口是 html。理解 JSX 语法：遇到 {} 符号内部解析为 JS 代码，遇到成对的 <> 符号内部解析为 HTML 代码
+* axios响应拦截器axios.interceptors.response.use的第一个回调 2xx 范围内的状态码都会触发该函数，第二个超出 2xx 范围的状态码都会触发该函数
+```js
+axios.interceptors.response.use(function (response) {
+    // 2xx 范围内的状态码都会触发该函数。
+    // 对响应数据做点什么
+    return response;
+  }, function (error) {
+    // 超出 2xx 范围的状态码都会触发该函数。
+    // 对响应错误做点什么
+    return Promise.reject(error);
+  })
+```
+* fetch下一代ajax，全局window的 fetch() 方法用于发起获取资源的请求。它返回一个 promise，这个 promise 会在请求响应后被 resolve，并传回 Response 对象。需要两个Promise才能获取到接口返回的数据，第一个Promise成功以后，得到的是一个Response对象，它对应服务器的 HTTP 回应；第二个Promise需要根据服务器返回的类型的数据，使用不同的读取方法异步读取数据：response.text()：得到文本字符串、response.json()：得到 JSON 对象、response.blob()：得到二进制 Blob 对象、response.formData()：得到 FormData 表单对象、response.arrayBuffer()：得到二进制 ArrayBuffer 对象。
+* 函数可以直接 return 一个 await，跟 return new Promise()一样
+## 2023年2月21日
 * 但 IPv4 网络标准为 localhost 保留了 127.0.0.1 – 127.255.255.255 范围，使用范围内的任意一个 IP 地址会导致相同或相似的方式，所以我们平时启动的前端项目服务，用 http://127.200.1.3:8080 也是可以访问的
 * class类的public公开方法里不能去调用类的静态方法，即静态成员方法不能直接使用非静态成员
 * es6函数结构参数，记得给个默认的空对象结构，否则不传参时会报错：
