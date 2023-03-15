@@ -1,5 +1,10 @@
 # 每日好文推荐
 
+# 2023年3月15日
+* [前端组件级别的抽象方向](https://juejin.cn/post/7156575298501214221)
+* [Node.js 是如何跑起来的](https://mp.weixin.qq.com/s/8QFKeFW6qcZXi3r9Qfm0GA)
+* [2022大前端总结和2023就业分析](https://zhuanlan.zhihu.com/p/603410758)
+
 # 2023年2月27日
 * [为什么我们放弃了 Vue？Vue 和 React 深度对比](https://markdowner.net/article/79319258450055168)
 * [Vue 转 React 指南，看这篇文章就够了](https://markdowner.net/article/166272088981004288)

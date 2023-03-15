@@ -67,6 +67,14 @@
 * Nginx：一个高性能的HTTP和反向代理web服务器
 * Docker：一个开源的应用容器引擎
 * Jenkins：基于Java开发的一种持续集成工具
+* scope：作用域
+* global scope：全局作用域
+* function scope：函数作用域
+* module scope：模块作用域
+* block scope：块级作用域
+* code point：码点
+* decorators：装饰器
+* timestamp：时间戳
 
 ## javascript 相关
 * 函数：function

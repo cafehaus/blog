@@ -1,5 +1,15 @@
 # 日常工作每日记录
 
+## 2023年3月15日
+* promise 的reject只能在 catch 里去捕获，否则会报错：Uncaught (in promise)
+* 不要嵌套三元表达式，逻辑复杂了很难看懂
+* 初始化表单复杂数据的默认值，之前都是每个地方自己写一遍，或者用JSON.stringify这些去深度克隆，其实可以直接学vue组件的data函数，每次直接返回一个对象，需要使用的地方直接调用模板的方法就可以了
+```
+// 数据模板
+  const formTemp = () => ({ name: '', age: null, friends: [] })
+```
+* sql查询数据库：模糊查询手机号 SELECT * FROM `address` WHERE phone like '152%876'
+* https下不管访问http里的静态资源，还是调http域名下的接口，都是不行的哟
 ## 2023年2月21日
 * vue项目中把api这种会不断增大的数据挂在this下并不好，会造成那vue下挂载的数据越来越大，可以按 api/user.js、api/order.js 这样按业务或模块分，页面中按需引入，不要啥都挂载到 vue.prototype 全局上，学习 vue3、react... 这种按需引入，全局一时爽，后期火葬场！
 * react函数组件，函数入口是 props，出口是 html。理解 JSX 语法：遇到 {} 符号内部解析为 JS 代码，遇到成对的 <> 符号内部解析为 HTML 代码
