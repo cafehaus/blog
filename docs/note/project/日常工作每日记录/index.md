@@ -1,5 +1,12 @@
 # 日常工作每日记录
 
+## 2023年3月27日
+* svg图标上添加 click 点击事件无效，自己在外面再套一层 span 标签
+* 对象属性key可以重复的教训：methods 里写了两个同名的函数，调试发现逻辑死活不生效，最后才发现一直再第一个里面写逻辑，后面的直接给你覆盖了的，所以配置 eslint 禁止重名定义是个好习惯：https://eslint.org/docs/latest/rules/no-dupe-keys
+* 不能直接将带 · 的多级字符串 key 用 [] 去取对象的属性值，会被整个当成一个 key，例：res['data.records']，正确的：'data.records'.split('.').reduce((value, entry) => value && value[entry], res)
+* 路由前置守卫 router.beforeEach 里增加判断逻辑，本地可以部署到线上就一直白屏，最后才发现是里面用到了数组的 includes 方法去判断权限，但是这个方法前面未做空判断，导致路由白屏但是也没有具体的报错信息，排查老半天
+* 遇到客户 bmp 格式图片无法上传，原来是项目里用 canvas 和 img 压缩图片，客户的源图片有问题，导致 img.onerror 报错，用 windows 自带的画图工具另存为一下 bmp 图片就好了
+
 ## 2023年3月15日
 * promise 的reject只能在 catch 里去捕获，否则会报错：Uncaught (in promise)
 * 不要嵌套三元表达式，逻辑复杂了很难看懂
