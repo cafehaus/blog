@@ -4,14 +4,16 @@
 
 
 ### 运行步骤
+```
 * 1、拉各个服务代码
-* 2、pom.xml配置文件，右键添加为 maven 项目，根据 dependencies 里的 artifactId 拉取其他项目：kjhaoyun-parent、last-mile-core、last-mile-domain、last-mile-web
+* 2、pom.xml配置文件，右键添加为 maven 项目，根据 dependencies 里的 artifactId 拉取其他项目：xx
 * 3、settings - Build,Execution,Deployment - Build Tools - Maven - User settings file 里配置自己的私有仓库文件
 * 4、settings - Build,Execution,Deployment - Build Tools - compiler - java compiler，选择 1.8 版本
 * 5、选中每个项目点击小锤子图标 build project
 * 6、再点击小三角启动入口服务类
 
 修改配置：Services - Run Configuration Type - Application，Edit Configuration，专业版的settings里才有 spring boot 的配置，自定义参数在 VM options 里，-Dspring.profiles.active=test -Dserver.port=9906，Services 菜单如果没有，在顶部 View - Tool Windows - Services
+```
 
 java程序重启端口被占用
 ```bash
