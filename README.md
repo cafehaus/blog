@@ -10,25 +10,29 @@
 
 ## 文章目录
 
-### UItools
-* [iview数字输入组件InputNumber](./docs/note/UItools/iview数字输入组件InputNumber/index.md)
-* [iview组件踩坑记](./docs/note/UItools/iview组件踩坑记/index.md)
-* [iview组件默认样式覆盖](./docs/note/UItools/iview组件默认样式覆盖/index.md)
-
 ### buildTool
+* [vue项目中webpack-dev-server的open和host0.0.0.0配置冲突](./docs/note/buildTool/vue项目中webpack-dev-server的open和host0.0.0.0配置冲突/index.md)
+* [webpack代理proxy配置](./docs/note/buildTool/webpack代理proxy配置/index.md)
+* [webpack本地axios接口代理一直不生效](./docs/note/buildTool/webpack本地axios接口代理一直不生效/index.md)
 * [探寻webpack打包vue项目特别慢问题](./docs/note/buildTool/探寻webpack打包vue项目特别慢问题/index.md)
 
 ### component
 * [iview动态表单Form组件校验](./docs/note/component/iview动态表单Form组件校验/index.md)
 * [iview动态表单删除时防止校验出错和下拉选项禁选已选项](./docs/note/component/iview动态表单删除时防止校验出错和下拉选项禁选已选项/index.md)
+* [iview和element-ui复选框模拟单选效果](./docs/note/component/iview和element-ui复选框模拟单选效果/index.md)
 * [iview多重循环表单form校验](./docs/note/component/iview多重循环表单form校验/index.md)
 * [iview的Poptip组件动态获取数据封装](./docs/note/component/iview的Poptip组件动态获取数据封装/index.md)
 * [iview的Table组件套FormItem表单动态校验](./docs/note/component/iview的Table组件套FormItem表单动态校验/index.md)
 * [iview表格Table组件跨页勾选数据](./docs/note/component/iview表格Table组件跨页勾选数据/index.md)
+* [menu多级菜单递归渲染和权限控制](./docs/note/component/menu多级菜单递归渲染和权限控制/index.md)
+* [tdesign动态表单校验和自动滚动到错误处](./docs/note/component/tdesign动态表单校验和自动滚动到错误处/index.md)
 * [全屏PC端侧边栏浮窗工具条](./docs/note/component/全屏PC端侧边栏浮窗工具条/index.md)
+* [多个select下拉框已选选项禁选](./docs/note/component/多个select下拉框已选选项禁选/index.md)
 * [多行文字截取显示省略号和更多按钮](./docs/note/component/多行文字截取显示省略号和更多按钮/index.md)
+* [封装业务中常用的公共上传组件](./docs/note/component/封装业务中常用的公共上传组件/index.md)
 * [步骤条和展开收起折叠面板](./docs/note/component/步骤条和展开收起折叠面板/index.md)
 * [用driverjs制作用户页面操作步骤引导](./docs/note/component/用driverjs制作用户页面操作步骤引导/index.md)
+* [用单例模式封装canvas环形进度条](./docs/note/component/用单例模式封装canvas环形进度条/index.md)
 * [通过component标签动态加载组件](./docs/note/component/通过component标签动态加载组件/index.md)
 
 ### css
@@ -47,40 +51,64 @@
 ### flutter
 * [flutter初体验demo踩坑指南](./docs/note/flutter/flutter初体验demo踩坑指南/index.md)
 
+### frontEnd
+* [前端团队协作](./docs/note/frontEnd/前端团队协作/index.md)
+* [前端常用vue组件代码](./docs/note/frontEnd/前端常用vue组件代码/index.md)
+* [前端常用代码片段](./docs/note/frontEnd/前端常用代码片段/index.md)
+* [前端常用工具函数](./docs/note/frontEnd/前端常用工具函数/index.md)
+* [前端常用技能](./docs/note/frontEnd/前端常用技能/index.md)
+* [前端常用正则表达式](./docs/note/frontEnd/前端常用正则表达式/index.md)
+* [前端常见避坑](./docs/note/frontEnd/前端常见避坑/index.md)
+* [前端开发常用英文单词](./docs/note/frontEnd/前端开发常用英文单词/index.md)
+* [前端开发效率](./docs/note/frontEnd/前端开发效率/index.md)
+* [前端开发规范](./docs/note/frontEnd/前端开发规范/index.md)
+* [前端查看日志](./docs/note/frontEnd/前端查看日志/index.md)
+* [前端装逼词汇](./docs/note/frontEnd/前端装逼词汇/index.md)
+* [前端项目中的各种配置文件一览](./docs/note/frontEnd/前端项目中的各种配置文件一览/index.md)
+* [前端项目目录结构](./docs/note/frontEnd/前端项目目录结构/index.md)
+* [我的书签bookmark](./docs/note/frontEnd/我的书签bookmark/index.md)
+* [每日好文推荐](./docs/note/frontEnd/每日好文推荐/index.md)
+
 ### html
 * [前端框架中index.html中的变量语法](./docs/note/html/前端框架中index.html中的变量语法/index.md)
 
 ### ios
 * [用swift开发ios移动端app应用初体验](./docs/note/ios/用swift开发ios移动端app应用初体验/index.md)
 
+### java
+* [公司SpringBoot微服务java项目本地运行笔记](./docs/note/java/公司SpringBoot微服务java项目本地运行笔记/index.md)
+* [用SpringBoot开发java程序和部署笔记](./docs/note/java/用SpringBoot开发java程序和部署笔记/index.md)
+
 ### javascript
+* [a标签下载图片谷歌chrome浏览器无反应](./docs/note/javascript/a标签下载图片谷歌chrome浏览器无反应/index.md)
+* [input输入unicode零宽字符前端踩坑](./docs/note/javascript/input输入unicode零宽字符前端踩坑/index.md)
 * [node匿名函数自调用立即执行的坑](./docs/note/javascript/node匿名函数自调用立即执行的坑/index.md)
+* [toFixed和Math.round既不是四舍五入也不是银行家舍入法](./docs/note/javascript/toFixed和Math.round既不是四舍五入也不是银行家舍入法/index.md)
 * [代码注释利器jsDoc](./docs/note/javascript/代码注释利器jsDoc/index.md)
 * [前端pdf预览下载和图片下载压缩](./docs/note/javascript/前端pdf预览下载和图片下载压缩/index.md)
 * [前端导出下载excel表格](./docs/note/javascript/前端导出下载excel表格/index.md)
 * [日期字符串直接比较的坑](./docs/note/javascript/日期字符串直接比较的坑/index.md)
 * [根据字符串中的范围判断当前值](./docs/note/javascript/根据字符串中的范围判断当前值/index.md)
+* [用reduce高阶函数组装查询表单分隔字符数据](./docs/note/javascript/用reduce高阶函数组装查询表单分隔字符数据/index.md)
 * [解析excel表格数据并自定义校验](./docs/note/javascript/解析excel表格数据并自定义校验/index.md)
+* [防抖节流和休眠函数](./docs/note/javascript/防抖节流和休眠函数/index.md)
 
 ### miniapp
 * [video视频高度设置百分比在微信小程序中直接不显示](./docs/note/miniapp/video视频高度设置百分比在微信小程序中直接不显示/index.md)
 * [在微信小程序里使用自定义字体](./docs/note/miniapp/在微信小程序里使用自定义字体/index.md)
+* [小程序开发和设计注意事项](./docs/note/miniapp/小程序开发和设计注意事项/index.md)
 * [短信链接直接打开微信小程序踩坑](./docs/note/miniapp/短信链接直接打开微信小程序踩坑/index.md)
 
 ### node
+* [node_modules目录中的bin文件夹](./docs/note/node/node_modules目录中的bin文件夹/index.md)
 * [node学习笔记记录](./docs/note/node/node学习笔记记录/index.md)
+* [浏览器书签bookmark转json格式](./docs/note/node/浏览器书签bookmark转json格式/index.md)
 
 ### project
 * [Docker踩坑记录](./docs/note/project/Docker踩坑记录/index.md)
 * [Git使用技巧](./docs/note/project/Git使用技巧/index.md)
 * [PATH系统环境变量](./docs/note/project/PATH系统环境变量/index.md)
 * [vscode编辑器Volar插件导致vue自定义标签不变颜色](./docs/note/project/vscode编辑器Volar插件导致vue自定义标签不变颜色/index.md)
-* [前端常用vue组件代码](./docs/note/project/前端常用vue组件代码/index.md)
-* [前端常用代码片段](./docs/note/project/前端常用代码片段/index.md)
-* [前端常用工具函数](./docs/note/project/前端常用工具函数/index.md)
-* [前端常用正则表达式](./docs/note/project/前端常用正则表达式/index.md)
-* [前端查看日志](./docs/note/project/前端查看日志/index.md)
-* [前端项目中的各种配置文件一览](./docs/note/project/前端项目中的各种配置文件一览/index.md)
 * [工作中常用工具和技术合集](./docs/note/project/工作中常用工具和技术合集/index.md)
 * [日常工作每日记录](./docs/note/project/日常工作每日记录/index.md)
 * [本地localhost不同服务token被覆盖](./docs/note/project/本地localhost不同服务token被覆盖/index.md)
@@ -92,6 +120,7 @@
 
 ### python
 * [python学习笔记记录](./docs/note/python/python学习笔记记录/index.md)
+* [python的flask项目环境安装和本地运行](./docs/note/python/python的flask项目环境安装和本地运行/index.md)
 
 ### react
 * [react和TypeScript开发项目问题记录](./docs/note/react/react和TypeScript开发项目问题记录/index.md)
@@ -100,11 +129,20 @@
 * [京东轻量云主机测评体验](./docs/note/server/京东轻量云主机测评体验/index.md)
 
 ### test
-* [用JMeter做接口压力测试](./docs/note/test/用JMeter做接口压力测试/index.md)
 * [用Jest做前端单元测试](./docs/note/test/用Jest做前端单元测试/index.md)
+* [用JMeter做接口压力测试](./docs/note/test/用JMeter做接口压力测试/index.md)
+* [胖仙测试课程目录](./docs/note/test/胖仙测试课程目录/index.md)
+
+### UItools
+* [element-ui下拉框el-select多选出现滚动条闪现](./docs/note/UItools/element-ui下拉框el-select多选出现滚动条闪现/index.md)
+* [iview数字输入组件InputNumber](./docs/note/UItools/iview数字输入组件InputNumber/index.md)
+* [iview组件踩坑记](./docs/note/UItools/iview组件踩坑记/index.md)
+* [iview组件默认样式覆盖](./docs/note/UItools/iview组件默认样式覆盖/index.md)
+* [t-design组件踩坑记](./docs/note/UItools/t-design组件踩坑记/index.md)
 
 ### uniapp
 * [uniapp中scroll-view局部滚动的各种场景](./docs/note/uniapp/uniapp中scroll-view局部滚动的各种场景/index.md)
+* [uniapp常见踩坑记录](./docs/note/uniapp/uniapp常见踩坑记录/index.md)
 * [各端开发打包发布完整指南](./docs/note/uniapp/各端开发打包发布完整指南/index.md)
 * [安卓模拟器接口抓包教程](./docs/note/uniapp/安卓模拟器接口抓包教程/index.md)
 * [开发字节抖音小程序踩坑记](./docs/note/uniapp/开发字节抖音小程序踩坑记/index.md)
@@ -117,6 +155,8 @@
 * [vue-router的hash模式和history模式](./docs/note/vue/vue-router的hash模式和history模式/index.md)
 * [vue中文本字符串实现换行](./docs/note/vue/vue中文本字符串实现换行/index.md)
 * [vue中的v-model刨根问底](./docs/note/vue/vue中的v-model刨根问底/index.md)
+* [vue的data函数中访问this的坑](./docs/note/vue/vue的data函数中访问this的坑/index.md)
+* [vue老项目sass和element-ui开发踩坑](./docs/note/vue/vue老项目sass和element-ui开发踩坑/index.md)
 * [用vitepress搭建文档网站踩坑记录](./docs/note/vue/用vitepress搭建文档网站踩坑记录/index.md)
 * [用vuepress2搭建自己的github网站](./docs/note/vue/用vuepress2搭建自己的github网站/index.md)
 
