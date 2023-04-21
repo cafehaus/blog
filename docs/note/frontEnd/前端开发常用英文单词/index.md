@@ -307,6 +307,9 @@
 * 多个的：multiple
 * 原生的：original
 * 原始的：raw
+* 轻量级：Light-Weight
+* 基于文本的：Text-Based
+* 可读的：Human-Readable
 
 ## 常用页面
 * 登录：login
@@ -494,3 +497,4 @@
 * CD：Continuous Deployment，持续部署，(或者 Continuous Delivery，持续交付)
 * SQL：Structured Query Language，结构化查询语言
 * CPU：Central Processing Unit，中央处理器
+* JSON：JavaScript Object Notation，即 JavaScript 对象标记法

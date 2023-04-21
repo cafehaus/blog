@@ -1,5 +1,10 @@
 # 日常工作每日记录
 
+## 2023年4月21日
+* 注意 vuex 的 mutations 和 actions 是不支持传递多个参数的，多个参数可以直接放到对象或者数组中作为一个传递进去
+* 复制文本一般用css的 user-select 就能解决，如果在手机上能选择文本但是不弹出系统的右键菜单，也就是无法复制、全选这些，看下是不是阻止了 [contextmenu 事件](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/contextmenu_event)
+* 前端直接下载文件时，注意下载名后面要加上文件后缀，否则浏览器不能自动识别出来的文件是不会自动加上后缀的，需要用户自己下载下来手动加上文件后缀才能正常打开
+
 ## 2023年3月27日
 * svg图标上添加 click 点击事件无效，自己在外面再套一层 span 标签
 * 对象属性key可以重复的教训：methods 里写了两个同名的函数，调试发现逻辑死活不生效，最后才发现一直再第一个里面写逻辑，后面的直接给你覆盖了的，所以配置 eslint 禁止重名定义是个好习惯：https://eslint.org/docs/latest/rules/no-dupe-keys

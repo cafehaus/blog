@@ -1,5 +1,12 @@
 # 每日好文推荐
 
+# 2023年4月21日
+* [2022大前端总结和2023就业分析](https://zhuanlan.zhihu.com/p/603410758)
+* [Flutter技术在哈啰两轮的应用推广](https://m.toutiao.com/is/SWNWtKk)
+* [Vue源码-事件解析](https://zhuanlan.zhihu.com/p/295392327)
+* [常用正则表达式汇总整理—HTML篇](https://m.toutiao.com/is/AcBxcX6)
+* [支持Vue、React混用的veaury库大火？前端摆脱二选一？](https://www.toutiao.com/article/7208478708917879330)
+
 # 2023年3月15日
 * [前端组件级别的抽象方向](https://juejin.cn/post/7156575298501214221)
 * [Node.js 是如何跑起来的](https://mp.weixin.qq.com/s/8QFKeFW6qcZXi3r9Qfm0GA)
