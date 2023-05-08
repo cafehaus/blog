@@ -1,5 +1,11 @@
 # 日常工作每日记录
 
+## 2023年5月8日
+* element-ui 的消息提示框 $alert、$confirm，如果不用 promise 的 then 和 catch 使用方式，不加 callback 这个参数，点右上角关闭按钮时会报错：uncaught (in promise) cancel
+* element-ui的上传组件el-upload，接口还在上传时直接点击删除会报错：TypeError: reqs[uid].abort is not a function，解决办法：上传中时将 el-uplaod 的 disabled 属性设为 true，就不会出现那个删除图标
+* node版本管理工具 nvm，要安装最新的 20.0.0，要升级到 1.1.11版本，1.1.09版本会报错
+* 用构造函数 new RegExp 构造正则表达式时，一般表达式中需要插入变量时只能用构造函数方式，注意里面的特殊字符需要转义，否则容易报错，如 new RegExp('(+861347)', 'ig') 会报 SyntaxError: Invalid regular expression: /(+861347)/: Nothing to repeat
+
 ## 2023年4月21日
 * 注意 vuex 的 mutations 和 actions 是不支持传递多个参数的，多个参数可以直接放到对象或者数组中作为一个传递进去
 * 复制文本一般用css的 user-select 就能解决，如果在手机上能选择文本但是不弹出系统的右键菜单，也就是无法复制、全选这些，看下是不是阻止了 [contextmenu 事件](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/contextmenu_event)
