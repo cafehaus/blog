@@ -1,5 +1,10 @@
 # 每日好文推荐
 
+# 2023年5月19日
+* [探究前端项目打包构建的用户故事](https://mp.weixin.qq.com/s/CA9tjpztJt3Iy0C9vyjWaQ)
+* [又新学到了一个JavaScript知识点Import Maps](https://mp.weixin.qq.com/s/6KV1Q-7Wvwb-8E81fTooWA)
+* [如何解析出令人惊艳的Psd设计稿？](https://mp.weixin.qq.com/s/HUI8ejgyOybmRJyhVNbsDw)
+
 # 2023年5月8日
 * [｢前端｣一文读懂前端技术演进:盘点Web前端20年的技术变迁史](https://m.toutiao.com/is/DDpM1QG)
 * [｢前端｣万字详文:深入理解浏览器原理](https://m.toutiao.com/is/Dx9SPVk)

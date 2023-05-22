@@ -1,5 +1,10 @@
 # 日常工作每日记录
 
+## 2023年5月19日
+* 项目依赖安装超时，导致报错可以通过 npmrc/yarnrc 文件配置镜像源和第三方包的地址
+* 项目中尽量不要用 replaceAll 方法，有兼容性问题，在部分浏览器或版本里会报错(即使常用的Chrome也要大于85版本)：replaceAll is not a function，替换成 replace 和正则加 g
+* 前端项目本地运行，只要打开控制台一点刷新按钮就一直加载中，开始还以为是电脑、浏览器内存占满了或项目打包配置出问题了啥的，更新浏览器到最新版本、重启电脑都不行，最后才发现是 Network 网络哪里可能是啥时候定位问题选成了 Fast 3G，现在都5G了，3G肯定慢嘛，那个地方要选 No throttling
+
 ## 2023年5月8日
 * element-ui 的消息提示框 $alert、$confirm，如果不用 promise 的 then 和 catch 使用方式，不加 callback 这个参数，点右上角关闭按钮时会报错：uncaught (in promise) cancel
 * element-ui的上传组件el-upload，接口还在上传时直接点击删除会报错：TypeError: reqs[uid].abort is not a function，解决办法：上传中时将 el-uplaod 的 disabled 属性设为 true，就不会出现那个删除图标

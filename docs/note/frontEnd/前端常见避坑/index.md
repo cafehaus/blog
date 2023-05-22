@@ -7,6 +7,7 @@
 * 浮点数运算失精
 * macOS 系统下日期时间格式要用斜杠 / 代替横杠 -
 * https 下访问 http 资源
+* 项目中尽量不要用 replaceAll 方法，有兼容性问题，在部分浏览器或版本里会报错(即使常用的Chrome也要大于85版本)：replaceAll is not a function，替换成 replace 和正则加 g
 
 ## css
 * transform 对于行内 inline 元素无效
