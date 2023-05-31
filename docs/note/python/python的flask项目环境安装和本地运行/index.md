@@ -11,6 +11,8 @@
 ### 二、配置解释器
 先新建项目虚拟环境，windows 下 python3 在终端输入命令：py -3 -m venv myvenv，后面的 myvenv 就是新建的虚拟环境目录名，会自动在项目生成myvenv这个目录，然后项目的依赖就会安装在这个目录下，这样就可以实现和其他项目隔离环境。
 
+注意新建了虚拟环境要激活才能用，直接终端进入到虚拟环境目录 myvenv/Scripts，输入：activate 激活虚拟环境 (deactivate 退出虚拟环境)。
+
 配置 python 解释器，用 python 3.6.5 版本，其他版本可能会有一些奇奇怪怪的问题，点击 pyCharm 右上角的设置图标 - 设置 - 项目:xxx - Python解释器，选上面新建的那个虚拟环境的解释器。
 <img src="./2.png" />
 
