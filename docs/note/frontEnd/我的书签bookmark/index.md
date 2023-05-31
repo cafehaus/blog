@@ -42,7 +42,7 @@
 * [在线GIF动图压缩](https://docsmall.com/gif-compress)
 * [增强版注册和登录api](https://docs.qq.com/doc/DVmxPWnFwaWpyYnJL?&u=a7efc766f1274ab381934a350a07b313)
 * [在线css转less/sass/stylus工具](http://tools.jb51.net/code/css2less)
-
+* [效率工具列表](http://blog.luckly-mjw.cn/tool-show/index.html)
 ### 设计
 ### 设计工具
 * [在线小工具 – 设计分类 – 学ui网](http://www.xueui.cn/design/online-tools)
@@ -51,6 +51,7 @@
 * [稿定设计](https://www.gaoding.com/)
 * [Figma](https://www.figma.com/)
 * [蓝湖](https://lanhuapp.com/)
+* [AIDesign](https://ailogo.qq.com/guide/brandname)
 ### 图标设计
 * [Iconfont-阿里巴巴矢量图标库](http://www.iconfont.cn/)
 * [Iconfinder - 1,950,000+ free and premium icons](https://www.iconfinder.com/)
@@ -204,7 +205,6 @@
 * [工具-UI中国-专业界面交互设计平台](http://tool.ui.cn/)
 * [网页设计师联盟--国内网页设计综合门户](http://www.68design.net/)
 * [UI中国-专业界面交互设计平台](http://www.ui.cn/)
-
 ### 笔记
 ### javaScript
 * [BingKui/javascript-zh: Airbnb 出品，目前非常流行的 JavaScript 代码规范（中文版）。其内对各种 js 范式的写法进行了详细的规定与说明，按照此规范写出的代码将会更加合理。](https://github.com/BingKui/javascript-zh)
@@ -220,6 +220,8 @@
 * [JavaScript正则表达式需要转义的字符_Ｓòrry╮的博客-CSDN博客_js正则需要转义的字符](https://blog.csdn.net/weixin_44100002/article/details/114373990?spm=1001.2101.3001.6650.6&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-6-114373990-blog-108361305.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-6-114373990-blog-108361305.pc_relevant_default&utm_relevant_index=10)
 * [你不知道的 Blob-前端开发博客](http://caibaojian.com/blob.html)
 * [分类：JavaScript - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/javascript/)
+* [How to write async await without try-catch blocks in Javascript](https://blog.grossman.io/how-to-write-async-await-without-try-catch-blocks-in-javascript/)
+* [learn-regex/README-cn.md at master · ziishaned/learn-regex](https://github.com/ziishaned/learn-regex)
 ### typeScript
 * [文档简介 · TypeScript中文网 · TypeScript——JavaScript的超集](https://www.tslang.cn/docs/home.html)
 * [TypeScript 入门教程](http://ts.xcatliu.com/)
@@ -269,6 +271,8 @@
 * [超实用的高清图标SVG解决方案全总结(下) - 熊宗的博客 - CSDN博客](https://blog.csdn.net/qq_36648555/article/details/78440805)
 * [移动端适配问题解决方案 - 掘金](https://juejin.im/post/5add7a44f265da0b886d05f8)
 * [Box Shadow(阴影)-Css3演示](https://www.html.cn/tool/css3Preview/Box-Shadow.html)
+* [常见的CSS图形绘制合集 « 张鑫旭-鑫空间-鑫生活](https://www.zhangxinxu.com/wordpress/2019/01/pure-css-shapes/)
+* [某天，我的 sass-loader 突然不认 /deep/ 语法了 - 掘金](https://juejin.cn/post/7085915259541667847)
 ### vue
 * [.vue文件结构 - 简书](https://www.jianshu.com/p/da79b4b7cdec)
 * [(转)Vue中mixin的理解 - 简书](https://www.jianshu.com/p/f34863f2eb6d)
@@ -308,6 +312,7 @@
 * [vuejs/awesome-vue: 🎉 A curated list of awesome things related to Vue.js](https://github.com/vuejs/awesome-vue)
 * [Vue动态面包屑导航怎么实现 - SlaneYang的回答 - SegmentFault 思否](https://segmentfault.com/q/1010000011795481/a-1020000011795530)
 * [WordPress 和 Vue.js 的学习资源推荐 - 简书](https://www.jianshu.com/p/a4b4d03073fb)
+* [Vue源码-事件解析 - 知乎](https://zhuanlan.zhihu.com/p/295392327)
 ### vue插件
 * [v-click-outside-x - npm](https://www.npmjs.com/package/v-click-outside-x)
 * [vue2-calendar](http://blog.w3cub.com/vue2-calendar/)
@@ -344,6 +349,7 @@
 * [(12 条消息) react中有没有办法像vue一样注册全局组件呢？在入口只需注册一次然后在其他组件无需注册即可使用呢？ - 知乎](https://www.zhihu.com/question/374919200)
 * [React 配置 Less - 知乎](https://zhuanlan.zhihu.com/p/294022202)
 * [关于飞冰 | 飞冰](https://ice.work/docs/guide/about)
+* [一个简洁、强大、可扩展的前端项目架构是什么样的？ - 知乎](https://zhuanlan.zhihu.com/p/544288732)
 ### flutter
 * [Flutter 中文开发者网站 | Flutter —— 为所有屏幕构建精美应用](https://flutter.cn/)
 * [Windows install | Flutter](https://docs.flutter.dev/get-started/install/windows)
@@ -422,6 +428,7 @@
 * [前端监控和前端埋点 - 简书](https://www.jianshu.com/p/0a3650d06ccb)
 * [图片利用 new Image()预加载原理 和懒加载的实现原理 - 田庚的博客园 - 博客园](https://www.cnblogs.com/tiangeng/p/10084279.html)
 * [为什么前端监控要用GIF打点](https://mp.weixin.qq.com/s/v6R2w26qZkEilXY0mPUBCw?utm_source=tuicool&utm_medium=referral)
+* [浅谈Sentry前端监控原理 - 知乎](https://zhuanlan.zhihu.com/p/75577689)
 ### uni
 * [路由构建 | uni-simple-router](https://hhyang.cn/v2/start/cross/match.html#%E9%BB%98%E8%AE%A4%E7%9A%84%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE)
 ### node
@@ -477,6 +484,7 @@
 * [(4条消息) iview page分页添加跳转按钮-输入页码后点击跳转_a934384199的博客-CSDN博客](https://blog.csdn.net/a934384199/article/details/80680507/?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.highlightwordscore&spm=1001.2101.3001.4242.1)
 * [iview关于menu结合router问题 - Wil_Ho - 博客园](https://www.cnblogs.com/wilfredo/p/9048744.html)
 * [关于element的dialog垂直居中的完美解决方案 - 木灵鱼儿 - 有梦就能远航](https://www.mulingyuer.com/archives/610/#comment-2892)
+* [el-select下拉框不跟随页面滚动/不随滚动条滚动问题/页面滚动时位置错乱, element 下拉选项层级过高问题 - 掘金](https://juejin.cn/post/7155694329841844255)
 ### 动效
 * [Animate.css](https://animate.style/)
 * [vue2-animate - npm](https://www.npmjs.com/package/vue2-animate)
@@ -506,6 +514,7 @@
 * [Ionicons: The premium icon pack for Ionic Framework](https://ionicons.com/)
 * [Feather – Simply beautiful open source icons](https://feathericons.com/)
 * [CSS ICON -- project by Wenting Zhang](https://cssicon.space/#/icon/pensive-solid)
+* [iconfont 在线预览工具及其解析 - 原创小文章 - SegmentFault 思否](https://segmentfault.com/a/1190000020121850)
 ### 项目配置
 * [vue用命令直接修复ESLint - SHiny_Jun的博客 - CSDN博客](https://blog.csdn.net/cuiji4724/article/details/80365834)
 * [vscode 代码折叠快捷键，折叠所有/展开所有 - 修石 - 博客园](https://www.cnblogs.com/xiushi/p/11819404.html)
@@ -531,6 +540,8 @@
 * [babel-handbook/plugin-handbook.md at master · jamiebuilds/babel-handbook](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/plugin-handbook.md)
 * [PowerShell入门指南(三)·一门新的编程语言 - 知乎](https://zhuanlan.zhihu.com/p/76708298?from_voters_page=true)
 * [Win10 系统安装 Linux 子系统教程(WSL2 + Ubuntu 20.04 + Gnome 桌面 ）](https://www.ngui.cc/51cto/show-724900.html?action=onClick)
+* [UNPKG](https://unpkg.com/)
+* [前端内网穿透localtunnel和natapp - 掘金](https://juejin.cn/post/6844903623659356168)
 ### 框架
 * [jquery 在线手册 | jQuery API 中文手册 | jQuery 速查表 | jQuery 参考手册 | jQuery CHM | jQuery 在线文档 | jQuery 1.12.1](http://hemin.cn/jq/index.html)
 * [Amaze UI | 中国首个开源 HTML5 跨屏前端框架](http://amazeui.org/)
@@ -618,6 +629,7 @@
 * [Tabby - a terminal for a more modern age](https://tabby.sh/)
 * [https://www.programming-idioms.org/all-idioms](https://www.programming-idioms.org/all-idioms)
 * [NodeJS Cheat Sheet | OverAPI.com](https://overapi.com/nodejs)
+* [Releases · coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows/releases)
 ### 测试
 * [开始上手 · Jest](https://jestjs.io/zh-Hans/docs/getting-started)
 * [Testin云测试](https://www.testin.cn/realmachine/index.htm)
@@ -731,6 +743,7 @@
 * [WordPress 不使用插件开发 RESTful API JWT 授权和验证 - JavaScript.net.cn 「线球实验室」](https://javascript.net.cn/articles/819)
 * [UCloud云社区 - UCloud中立云计算服务商](https://www.ucloud.cn/yun/)
 * [Topbook | 高效生活视频书](https://topbook.cc/overview)
+* [Docker 微服务教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2018/02/docker-wordpress-tutorial.html)
 ### coffee
 * [cu-yang/flutter_luckin_coffee: flutter luckin coffee application（仿瑞幸咖啡）](https://github.com/cu-yang/flutter_luckin_coffee)
 * [coreskill/brew-calculator: Coffee brewing calculator for Generic Hipster Coffee](https://github.com/coreskill/brew-calculator)
@@ -771,7 +784,7 @@
 * [接口错误状态码对照表 - 简书](https://www.jianshu.com/p/0e7bc07b9323)
 * [JELLY DESIGN | 京东零售官方设计共享平台](https://jelly.jd.com/articlelist/exp)
 * [JSLinux-浏览器中的windows 2000系统](https://bellard.org/jslinux/vm.html?url=https://bellard.org/jslinux/win2k.cfg&mem=192&graphic=1&w=1024&h=768)
-
+* [前端工程师的自检 - 简书](https://www.jianshu.com/p/7bc4035af1b7)
 ### 文档
 * [微信公众平台](https://mp.weixin.qq.com/)
 * [微信小程序开发文档](https://developers.weixin.qq.com/miniprogram/dev/reference/)
@@ -815,10 +828,12 @@
 * [Android 开发者  |  Android Developers](https://developer.android.google.cn/)
 * [webpack中文文档](https://webpack.docschina.org/)
 * [webpack](https://webpack.js.org/)
+* [Rspack](https://www.rspack.dev/zh/)
 * [gulp.js - 基于流的自动化构建工具。 | gulp.js 中文网](https://www.gulpjs.com.cn/)
 * [低代码引擎 | LowCodeEngine](https://lowcode-engine.cn/)
 * [开始 | Vite 官方中文文档](https://cn.vitejs.dev/guide/)
 * [Node.js 教程 | 菜鸟教程](https://www.runoob.com/nodejs/nodejs-tutorial.html)
+* [node和npm对应版本](https://nodejs.org/zh-cn/download/releases/)
 * [GoGoCode | 代码魔法师](https://gogocode.io/zh)
 * [sharp图像处理](https://sharp.pixelplumbing.com/)
 * [Babel · The compiler for next generation JavaScript](https://babeljs.io/setup)
@@ -830,3 +845,10 @@
 * [Rust 程序设计语言](https://www.rust-lang.org/zh-CN)
 * [WebAssembly](https://webassembly.org/)
 * [Jest · 🃏 Delightful JavaScript Testing](https://jestjs.io/zh-Hans/)
+* [常用设计模式有哪些？](https://refactoringguru.cn/design-patterns)
+* [Emoji大全 | Emoji表情符号词典 📓 | EmojiAll中文官方网站](https://www.emojiall.com/zh-hans)
+* [Unicode – The World Standard for Text and Emoji](https://home.unicode.org/)
+* [Local - Local WordPress development made simple](https://localwp.com/)
+* [Localtunnel ~ Expose yourself to the world](https://theboroer.github.io/localtunnel-www/)
+* [The Go Programming Language](https://go.dev/)
+* [Sentry Documentation | Sentry Documentation](https://docs.sentry.io/)
