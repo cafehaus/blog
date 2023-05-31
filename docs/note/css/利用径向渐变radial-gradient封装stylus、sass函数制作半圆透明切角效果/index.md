@@ -127,6 +127,41 @@ $radial-gradient-half-circle(
 
 <img src="./2.png">
 
+### 对应的 sass 版本
+
+sass 封装函数需要用到 @mixin，使用时需要用 @include，注意 sass 中不能像 stylus 一样直接用三元表达式，需要用 if 函数：if(expression, 第一个参数为 true 时的 value, 第一个参数为 false 时的 value)。
+
+还有就是中间的参数不能像 stylus 一样可以直接省略，sass 中参数连续写多个逗号会报错，所以只能省略后面的参数。
+
+```sass
+// 用径向渐变制作半圆透明切角效果，可以自定义每个角的大小、颜色
+@mixin radial-gradient-half-circle(
+  $top-left: false, // 左上角是否为透明半圆
+  $top-right: false, // 右上角是否为透明半圆
+  $bottom-right: false, // 右下角是否为透明半圆
+  $bottom-left: false, // 左下角是否为透明半圆
+  $size-top-left: 16px, // 左上角半圆半径
+  $size-top-right: 16px, // 右上角半圆半径
+  $size-bottom-right: 16px, // 右下角半圆半径
+  $size-bottom-left: 16px, // 左下角半圆半径
+  $bg-top-left: #FFF, // 左上角背景色
+  $bg-top-right: #FFF, // 右上角背景色
+  $bg-bottom-right: #FFF, // 右下角背景色
+  $bg-bottom-left: #FFF, // 左下角背景色
+) {
+  background: if($top-left, radial-gradient(circle at top left, transparent $size-top-left, $bg-top-left 0) top left, radial-gradient(circle at top left, $bg-top-left, $bg-top-left 0) top left),
+  if($top-right, radial-gradient(circle at top right, transparent $size-top-right, $bg-top-right 0) top right, radial-gradient(circle at top right, $bg-top-right, $bg-top-right 0) top right),
+  if($bottom-right, radial-gradient(circle at bottom right, transparent $size-bottom-right, $bg-bottom-right 0) bottom right, radial-gradient(circle at bottom right, $bg-bottom-right, $bg-bottom-right 0) bottom right),
+  if($bottom-left, radial-gradient(circle at bottom left, transparent $size-bottom-left, $bg-bottom-left 0) bottom left, radial-gradient(circle at bottom left, $bg-bottom-left, $bg-bottom-left 0) bottom left);
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+// 使用示例
+.test {
+  @include radial-gradient-half-circle(true, true, true, true, 30px, 40px, 50px, 60px, pink, yellow, green);
+}
+```
+
 ### 注意
 * 手机屏幕显示问题：注意背景色大小 background-size 可以比 50% 多设置点，比如设置成 52%，防止在部分手机屏幕上看着中间会有一条缝隙
-* sass 版本和 stylus 类似
