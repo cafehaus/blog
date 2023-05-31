@@ -1,5 +1,10 @@
 # 日常工作每日记录
 
+## 2023年5月31日
+* 浏览器原生复制文本 navigator.clipboard.writeText 注意要自己 catch 一下，有时会报：DOMException: Document is not focused.
+* python、java 项目注意环境和端口，如果一直启动不起来或者启动了一直访问不了，把端口杀死再重新启动
+* stylus 和 sass 可义通过 @extend 关键字后面直接跟选择器名，继承复用样式，直接 @加上属性名引用自身的样式值（常用的 @width、@height...其实其他的也可以这样用，如：@color）
+
 ## 2023年5月19日
 * 项目依赖安装超时，导致报错可以通过 npmrc/yarnrc 文件配置镜像源和第三方包的地址
 * 项目中尽量不要用 replaceAll 方法，有兼容性问题，在部分浏览器或版本里会报错(即使常用的Chrome也要大于85版本)：replaceAll is not a function，替换成 replace 和正则加 g

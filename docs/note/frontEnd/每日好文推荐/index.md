@@ -1,5 +1,8 @@
 # 每日好文推荐
 
+# 2023年5月31日
+* [面试官：你们是如何解决多端海报图片生成问题的？](https://mp.weixin.qq.com/s/v6zUSe7Tmmr7nc-losUB9w)
+
 # 2023年5月19日
 * [探究前端项目打包构建的用户故事](https://mp.weixin.qq.com/s/CA9tjpztJt3Iy0C9vyjWaQ)
 * [又新学到了一个JavaScript知识点Import Maps](https://mp.weixin.qq.com/s/6KV1Q-7Wvwb-8E81fTooWA)
