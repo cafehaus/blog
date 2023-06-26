@@ -1,5 +1,12 @@
 # 日常工作每日记录
 
+## 2023年6月26日
+* axios 不同版本 Content-Type 的坑：0.x 版本会根据数据类型自己设置 Content-Type，你封装的时候设置的或者传参设置的无效；1.x 版本会先判断有没有自己设置，有设置就取设置的
+* webpack 的 productionSourceMap 设置为 true，可以在浏览器的 控制台 source 里看到项目源代码，会造成项目源代码泄露
+* vue 组件懒加载不止router路由里可以用，在普通页面里也可以用，像页面里的各种弹窗组件就应该用impot()函数动态导入来优化性能
+* uniapp 中用 uni-simple-router 来实现路由功能，在 created 生命周期里用 this.$Route.query 在小程序中拿不到参数（h5中没问题），在 mounted 生命周期里可以拿到，uni-simple-router 官方文档里也有提到这个问题，跨端获取路由信息要在 this.$AppReady.then 里去获取
+* el-form 表单组件里，获取数据直接填充默认值后，输入框填充数据导致假死无法输入，开始还以为是不是 el-select 下拉框组件数据太多导致卡顿，结果最后才发现是绑定的 form 数据变量里没有设置默认的属性，导致双向绑定失效
+
 ## 2023年5月31日
 * 浏览器原生复制文本 navigator.clipboard.writeText 注意要自己 catch 一下，有时会报：DOMException: Document is not focused.
 * python、java 项目注意环境和端口，如果一直启动不起来或者启动了一直访问不了，把端口杀死再重新启动
