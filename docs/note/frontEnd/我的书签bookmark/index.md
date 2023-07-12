@@ -20,6 +20,7 @@
 * [CSDN](https://mp.csdn.net/)
 * [InfoQ-极客时间](https://www.infoq.cn/)
 
+### 书签栏
 ### 工具
 * [秀米 XIUMI | 秀米 XIUMI](http://xiumi.us/)
 * [i排版-微信图文编辑器](http://www.ipaiban.com/)
@@ -313,6 +314,7 @@
 * [Vue动态面包屑导航怎么实现 - SlaneYang的回答 - SegmentFault 思否](https://segmentfault.com/q/1010000011795481/a-1020000011795530)
 * [WordPress 和 Vue.js 的学习资源推荐 - 简书](https://www.jianshu.com/p/a4b4d03073fb)
 * [Vue源码-事件解析 - 知乎](https://zhuanlan.zhihu.com/p/295392327)
+* [javascript - 分享8个非常实用的Vue自定义指令 - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000038475001)
 ### vue插件
 * [v-click-outside-x - npm](https://www.npmjs.com/package/v-click-outside-x)
 * [vue2-calendar](http://blog.w3cub.com/vue2-calendar/)
@@ -630,6 +632,7 @@
 * [https://www.programming-idioms.org/all-idioms](https://www.programming-idioms.org/all-idioms)
 * [NodeJS Cheat Sheet | OverAPI.com](https://overapi.com/nodejs)
 * [Releases · coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows/releases)
+* [IntelliJ IDEA破解激活详细教程(windows和mac)「亲测有效,永久激活」 - 哔哩哔哩](https://www.bilibili.com/read/cv24295467/)
 ### 测试
 * [开始上手 · Jest](https://jestjs.io/zh-Hans/docs/getting-started)
 * [Testin云测试](https://www.testin.cn/realmachine/index.htm)
@@ -774,6 +777,9 @@
 * [(1条消息) FastAPI 快速入门_Violet·Evergarden-的博客-CSDN博客_fastapi](https://blog.csdn.net/weixin_53906838/article/details/123185879)
 ### electron
 * [Electron + Puppeteer + Robotjs 实现工作自动化 - 知乎](https://zhuanlan.zhihu.com/p/197737856)
+* [electron-builder打包过程中报错——网络下载篇（转） - 知乎](https://zhuanlan.zhihu.com/p/483976136?utm_id=0)
+* [(5条消息) 【Electron开发】electron-builder打包遇到的问题_zadarmo_的博客-CSDN博客](https://blog.csdn.net/destiny_balabala/article/details/121085495)
+* [Electron自定义通知Notification - 简书](https://www.jianshu.com/p/5cc6e133d76e)
 ### c语言
 * [C 语言简介 - C 语言教程 - 网道](https://wangdoc.com/clang/intro)
 ### vscode
@@ -823,6 +829,7 @@
 * [AngularJS — Superheroic JavaScript MVW Framework](https://angularjs.org/)
 * [node123: node.js中文资料导航](https://github.com/youyudehexie/node123)
 * [Electron | 使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序。](https://www.electronjs.org/)
+* [electron-egg](https://www.kaka996.com/)
 * [electron-egg文档](https://www.yuque.com/u34495/mivcfg/xnhmms)
 * [Windows 命令 | Microsoft Docs](https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands)
 * [Android 开发者  |  Android Developers](https://developer.android.google.cn/)
@@ -852,3 +859,4 @@
 * [Localtunnel ~ Expose yourself to the world](https://theboroer.github.io/localtunnel-www/)
 * [The Go Programming Language](https://go.dev/)
 * [Sentry Documentation | Sentry Documentation](https://docs.sentry.io/)
+* [Build smaller, faster, and more secure desktop applications with a web frontend | Tauri Apps](https://tauri.app/zh-cn/)
