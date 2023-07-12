@@ -1,5 +1,11 @@
 # 日常工作每日记录
 
+## 2023年7月12日
+* vue-check-view，监听元素是否进入视口
+* vuex 可以 modules 和全局共存，还可以用 modules 嵌入子模块
+* bind()方法调用的函数，函数名name属性值前会加上“bound ”前缀：foo.bind({}).name  // "bound foo"
+* Chrome 浏览器设置-无障碍-使用文本光标浏览网页，打开这一项网页上点击文本内容时都会出现一个像输入框一样的聚焦光标
+
 ## 2023年6月26日
 * axios 不同版本 Content-Type 的坑：0.x 版本会根据数据类型自己设置 Content-Type，你封装的时候设置的或者传参设置的无效；1.x 版本会先判断有没有自己设置，有设置就取设置的
 * webpack 的 productionSourceMap 设置为 true，可以在浏览器的 控制台 source 里看到项目源代码，会造成项目源代码泄露
