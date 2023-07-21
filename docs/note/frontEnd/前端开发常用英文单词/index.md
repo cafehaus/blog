@@ -76,6 +76,42 @@
 * decorators：装饰器
 * timestamp：时间戳
 
+## 后端相关
+* 断言：predicate
+* 耦合：coupling
+* 负载均衡：load balance
+* 过滤器：filter
+* 拦截器：interceptor
+* 多线程：multithread
+* 执行：execute
+* 调用：invoke
+* 父类：parent class
+* 基类：base class
+* 超类：super class
+* 子类：child class
+* 派生类：derived class
+* 重载：overload
+* 重写：override
+* 生产者：producer
+* 消费者：consumer
+* 集合：collection
+* 数组下标越界异常：ArrayIndexOutOfBoundsException
+* 算术异常：ArithmeticException
+* 空引用(指针)异常：NullPointerException
+* 类没有发现异常 ：ClassNotFoundException
+* 数字格式异常(字符串不能转化为数字) ：NumberFormatException
+* AOP：Aspect oriented programming 面向切面编程
+* IOC：Inversion of control
+* OO: object-oriented ,面向对象
+* OOP: object-oriented programming,面向对象编程
+* JFC：Java Foundation Class，Java基础类
+* JRE：Java Runtime Environment，Java运行时环境
+* JVM：Java Virtual Machine，Java虚拟机
+* JDK：Java Development Kit，Java开发工具包
+* SQL：Structured Query Language，结构化查询语言
+* JDBC：Java Database Connectivity，Java数据库连接
+* ODBC：Open DataBase Connectivity，开放式数据库连接
+
 ## javascript 相关
 * 函数：function
 * 返回：return
