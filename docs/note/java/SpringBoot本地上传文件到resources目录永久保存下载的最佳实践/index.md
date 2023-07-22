@@ -118,7 +118,8 @@ public class UploadFileUtil {
 }
 ```
 
-pom.xml
+~pom.xml~
+注意：这个不需要配置，加了这个会导致 target 目录里不能同步 application.yml 配置文件，会导致获取不到各类配置报错，如 mysql 的地址、账号、密码未配置查询数据库报错：Failed to configure a DataSource: ‘url‘ attribute is not specified and no embedded datasource
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
