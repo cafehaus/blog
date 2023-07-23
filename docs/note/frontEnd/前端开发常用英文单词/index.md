@@ -101,9 +101,10 @@
 * 类没有发现异常 ：ClassNotFoundException
 * 数字格式异常(字符串不能转化为数字) ：NumberFormatException
 * AOP：Aspect oriented programming 面向切面编程
-* IOC：Inversion of control
-* OO: object-oriented ,面向对象
-* OOP: object-oriented programming,面向对象编程
+* IOC：Inversion of control 控制反转
+* DI：Dependecy Injection 依赖注入
+* OO：object-oriented 面向对象
+* OOP：object-oriented programming 面向对象编程
 * JFC：Java Foundation Class，Java基础类
 * JRE：Java Runtime Environment，Java运行时环境
 * JVM：Java Virtual Machine，Java虚拟机
