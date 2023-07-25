@@ -1,5 +1,17 @@
 # Docker踩坑记录
 
+## Docker 修改国内镜像源
+安装了桌面端的直接点击右上角的齿轮设置图标，在 Docker Engine 配置文件最后面添加镜像源配置，可配置多个，配置了之后点击下面的 Apply & restart：
+```json
+{
+  "registry-mirrors": [
+    "https://docker.mirrors.ustc.edu.cn",
+    "https://hub-mirror.c.163.com",
+    "https://registry.docker-cn.com"
+  ]
+}
+```
+
 ## Docker Desktop stopped...
 
 明明用得好好的，突然某一天再打开，就看到了下面这样的：
