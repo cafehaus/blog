@@ -17,3 +17,13 @@ rm -rf ~/Library/Caches/JetBrains/IntelliJIdea*
 # 第4条
 rm -rf ~/Library/Preferences/jetbrains.idea*
 ```
+
+### mac 上杀死端口
+
+```bash
+# 查出占用要杀死端口的 PID
+lsof -i:8080
+
+# 通过 PID 杀死进程
+kill -9 ${查出来的PID}
+```
