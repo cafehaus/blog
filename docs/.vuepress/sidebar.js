@@ -6,7 +6,7 @@ const IGNORE_FILE = ['guide.md', '.DS_Store'] // 不需要处理的文件
 let guideContent = ''
 let readmeContent = `
 # BLOG
-周小黑的[前端博客](https://cafehaus.github.io/blog/)，记录工作和生活日常
+ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 
 ## 加个好友
 * 微信：cafe-haus
@@ -31,7 +31,7 @@ menuList.map(m => {
       if (!IGNORE_FILE.includes(n)) {
         guideContent += `* [${n}](./${m}/${n}/index.md)\n`
         readmeContent += `* [${n}](./docs/note/${m}/${n}/index.md)\n`
-  
+
         children.push({
           text: n,
           link: `/note/${m}/${n}/index.md`

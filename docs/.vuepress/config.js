@@ -6,7 +6,7 @@ module.exports = {
   // base: '/blog/', // 部署站点的基础路径
   lang: 'zh-CN',
   title: 'BLOG',
-  description: '我的前端笔记',
+  description: 'ZHOU的技术博客',
   head: [['link', { rel: 'icon', href: '/images/logo.png' }]],
   theme: '@vuepress/theme-default',
   themeConfig: {
