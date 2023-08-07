@@ -11,8 +11,31 @@
 ```json
 # Added by zhou Github
 20.205.243.166 github.com
-140.82.113.4 github.com
+140.82.114.4 github.com
 20.205.243.165 codeload.github.com
+151.101.1.6 github.global.ssl.fastly.net
+185.199.108.153 assets-cdn.github.com
+185.199.109.153 assets-cdn.github.com
+185.199.110.153 assets-cdn.github.com
+185.199.111.153 assets-cdn.github.com
+192.30.253.119 gist.github.com 
+151.101.100.133 assets-cdn.github.com
+151.101.100.133 raw.githubusercontent.com 
+151.101.100.133 gist.githubusercontent.com 
+151.101.100.133 cloud.githubusercontent.com 
+151.101.100.133 camo.githubusercontent.com 
+151.101.100.133 avatars0.githubusercontent.com 
+151.101.100.133 avatars1.githubusercontent.com 
+151.101.100.133 avatars2.githubusercontent.com 
+151.101.100.133 avatars3.githubusercontent.com 
+151.101.100.133 avatars4.githubusercontent.com 
+151.101.100.133 avatars5.githubusercontent.com 
+151.101.100.133 avatars6.githubusercontent.com 
+151.101.100.133 avatars7.githubusercontent.com 
+151.101.100.133 avatars8.githubusercontent.com
+185.199.108.154 github.githubassets.com
+185.199.109.133 camo.githubusercontent.com
+# GitHub End
 ```
 
 4. 在终端里输入命令刷新下本地 dns 缓存：ipconfig/flushdns
