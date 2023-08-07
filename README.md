@@ -1,6 +1,6 @@
 
 # BLOG
-周小黑的[前端博客](https://cafehaus.github.io/blog/)，记录工作和生活日常
+ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 
 ## 加个好友
 * 微信：cafe-haus
@@ -37,6 +37,7 @@
 
 ### css
 * [vue中computed动态设置background背景图无效](./docs/note/css/vue中computed动态设置background背景图无效/index.md)
+* [利用径向渐变radial-gradient封装stylus、sass函数制作半圆透明切角效果](./docs/note/css/利用径向渐变radial-gradient封装stylus、sass函数制作半圆透明切角效果/index.md)
 * [前端常用css样式代码](./docs/note/css/前端常用css样式代码/index.md)
 * [用css制作头像渐变圆角边框](./docs/note/css/用css制作头像渐变圆角边框/index.md)
 * [用css制作渐变内外阴影漂亮按钮](./docs/note/css/用css制作渐变内外阴影漂亮按钮/index.md)
@@ -76,17 +77,24 @@
 * [用swift开发ios移动端app应用初体验](./docs/note/ios/用swift开发ios移动端app应用初体验/index.md)
 
 ### java
+* [java学习笔记](./docs/note/java/java学习笔记/index.md)
+* [SpringBoot本地上传文件到resources目录永久保存下载的最佳实践](./docs/note/java/SpringBoot本地上传文件到resources目录永久保存下载的最佳实践/index.md)
 * [公司SpringBoot微服务java项目本地运行笔记](./docs/note/java/公司SpringBoot微服务java项目本地运行笔记/index.md)
+* [用docker和nginx部署前端项目访问本地java网关gateway服务](./docs/note/java/用docker和nginx部署前端项目访问本地java网关gateway服务/index.md)
 * [用SpringBoot开发java程序和部署笔记](./docs/note/java/用SpringBoot开发java程序和部署笔记/index.md)
 
 ### javascript
+* [axios拦截器封装：await遇上reject时catch的优雅处理方式](./docs/note/javascript/axios拦截器封装：await遇上reject时catch的优雅处理方式/index.md)
 * [a标签下载图片谷歌chrome浏览器无反应](./docs/note/javascript/a标签下载图片谷歌chrome浏览器无反应/index.md)
 * [input输入unicode零宽字符前端踩坑](./docs/note/javascript/input输入unicode零宽字符前端踩坑/index.md)
+* [javascript函数的call、apply和bind的原理及作用详解](./docs/note/javascript/javascript函数的call、apply和bind的原理及作用详解/index.md)
+* [js树形数据查找父节点，在侧边栏菜单中的实际应用](./docs/note/javascript/js树形数据查找父节点，在侧边栏菜单中的实际应用/index.md)
 * [node匿名函数自调用立即执行的坑](./docs/note/javascript/node匿名函数自调用立即执行的坑/index.md)
 * [toFixed和Math.round既不是四舍五入也不是银行家舍入法](./docs/note/javascript/toFixed和Math.round既不是四舍五入也不是银行家舍入法/index.md)
 * [代码注释利器jsDoc](./docs/note/javascript/代码注释利器jsDoc/index.md)
 * [前端pdf预览下载和图片下载压缩](./docs/note/javascript/前端pdf预览下载和图片下载压缩/index.md)
 * [前端导出下载excel表格](./docs/note/javascript/前端导出下载excel表格/index.md)
+* [前端跨浏览器标签页数据共享解决方案](./docs/note/javascript/前端跨浏览器标签页数据共享解决方案/index.md)
 * [日期字符串直接比较的坑](./docs/note/javascript/日期字符串直接比较的坑/index.md)
 * [根据字符串中的范围判断当前值](./docs/note/javascript/根据字符串中的范围判断当前值/index.md)
 * [用reduce高阶函数组装查询表单分隔字符数据](./docs/note/javascript/用reduce高阶函数组装查询表单分隔字符数据/index.md)
@@ -135,6 +143,8 @@
 
 ### UItools
 * [element-ui下拉框el-select多选出现滚动条闪现](./docs/note/UItools/element-ui下拉框el-select多选出现滚动条闪现/index.md)
+* [element-ui图标偶现乱码问题的原因和修复方法](./docs/note/UItools/element-ui图标偶现乱码问题的原因和修复方法/index.md)
+* [element-ui表格组件el-table多选时报错](./docs/note/UItools/element-ui表格组件el-table多选时报错/index.md)
 * [iview数字输入组件InputNumber](./docs/note/UItools/iview数字输入组件InputNumber/index.md)
 * [iview组件踩坑记](./docs/note/UItools/iview组件踩坑记/index.md)
 * [iview组件默认样式覆盖](./docs/note/UItools/iview组件默认样式覆盖/index.md)
@@ -155,8 +165,10 @@
 * [vue-router的hash模式和history模式](./docs/note/vue/vue-router的hash模式和history模式/index.md)
 * [vue中文本字符串实现换行](./docs/note/vue/vue中文本字符串实现换行/index.md)
 * [vue中的v-model刨根问底](./docs/note/vue/vue中的v-model刨根问底/index.md)
+* [vue用v-on动态绑定事件名需要2.6以上版本才有效](./docs/note/vue/vue用v-on动态绑定事件名需要2.6以上版本才有效/index.md)
 * [vue的data函数中访问this的坑](./docs/note/vue/vue的data函数中访问this的坑/index.md)
 * [vue老项目sass和element-ui开发踩坑](./docs/note/vue/vue老项目sass和element-ui开发踩坑/index.md)
+* [vue自定义指令监听元素是否进入父元素视窗内](./docs/note/vue/vue自定义指令监听元素是否进入父元素视窗内/index.md)
 * [用vitepress搭建文档网站踩坑记录](./docs/note/vue/用vitepress搭建文档网站踩坑记录/index.md)
 * [用vuepress2搭建自己的github网站](./docs/note/vue/用vuepress2搭建自己的github网站/index.md)
 
