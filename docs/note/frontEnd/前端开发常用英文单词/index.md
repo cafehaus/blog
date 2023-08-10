@@ -535,3 +535,5 @@
 * SQL：Structured Query Language，结构化查询语言
 * CPU：Central Processing Unit，中央处理器
 * JSON：JavaScript Object Notation，即 JavaScript 对象标记法
+* JIT：Just-In-Time，即时编译
+* AOT：Ahead-Of-Time，预编译
