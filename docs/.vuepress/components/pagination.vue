@@ -135,6 +135,7 @@
       display: inline-block;
       box-sizing: border-box;
       vertical-align: top;
+      color: var(--c-text);
       cursor: pointer;
       &[disabled] {
         color: #c0c4cc;
@@ -161,6 +162,7 @@
       padding: 0 8px;
       margin-left: 5px;
       margin-top: 10px;
+      color: var(--c-text);
       line-height: 26px;
       &::-ms-expand,
       &::-webkit-scrollbar,
