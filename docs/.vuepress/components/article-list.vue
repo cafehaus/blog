@@ -1,23 +1,45 @@
 <template>
-  <div class="article-list">
-    <a
-      v-for="(item, index) in articleList"
-      :key="index"
-      class="article-item"
-      :href="item.link"
-    >
-      <p class="title">{{ item.title }}</p>
-      <p class="time">{{ item.createTime }}</p>
-    </a>
+  <div>
+    <div class="article-list">
+      <a
+        v-for="(item, index) in pageList"
+        :key="index"
+        class="article-item"
+        :href="item.link"
+      >
+        <p class="title">{{ item.title }}</p>
+        <p class="time">{{ item.createTime }}</p>
+      </a>
+    </div>
+
+    <!-- 分页 -->
+    <pagination
+      :page-no="page.index"
+      :page-size="page.size"
+      :total="page.total"
+      :continues="3"
+      @get-page-no="getPageNo"
+      @get-page-size="getPageSize"
+    />
   </div>
 </template>
 
 <script>
+import pagination from './pagination.vue'
 export default {
+  components: {
+    pagination,
+  },
   name: 'article-list',
   data() {
     return {
       articleList: [],
+      pageList: [],
+      page: {
+        index: 1,
+        size: 10,
+        total: 0,
+      },
     }
   },
   created() {
@@ -795,7 +817,26 @@ export default {
     "link": "/note/vue/用vuepress2搭建自己的github网站/index.html"
   }
 ]
+      
+      this.page.total = this.articleList.length
+      this.getList()
     },
+
+    getPageNo(i) {
+      this.page.index = i
+      this.getList()
+    },
+
+    getPageSize(size) {
+      this.page.size = size
+      this.page.index = 1
+      this.getList()
+    },
+
+    getList() {
+      const { index, size } = this.page
+      this.pageList = this.articleList.slice((index - 1) * size, index * size)
+    }
   }
 }
 </script>
@@ -806,7 +847,6 @@ export default {
     justify-content: space-between;
     align-items: center;
     &:not(:last-child) {
-      // border-bottom: 1px solid #F0F2F2;
       border-bottom: 1px dashed var(--c-border);
     }
     .title {
