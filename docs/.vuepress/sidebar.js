@@ -50,8 +50,10 @@ menuList.map(m => {
         const createTimestamp = await getCreatedTime(path.join(__dirname, `../note/${m}/${n}/index.md`))
         const date = new Date(createTimestamp)
         const year = date.getFullYear()
-        const month = date.getMonth() + 1
-        const day = date.getDate()
+        let month = date.getMonth() + 1
+        if (month < 10) month = '0' + month
+        let day = date.getDate()
+        if (day < 10) day = '0' + day
 
         articleList.push({
           title: n,
