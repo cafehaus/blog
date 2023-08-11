@@ -18,8 +18,8 @@
       :page-size="page.size"
       :total="page.total"
       :continues="3"
-      @get-page-no="getPageNo"
-      @get-page-size="getPageSize"
+      @change-page-no="getPageNo"
+      @change-page-size="getPageSize"
     />
   </div>
 </template>

@@ -1,43 +1,43 @@
 <template>
     <div class="pagination">
       <button
-        :disabled="pageNo == 1"
+        :disabled="pageNo === 1"
         @click="$emit('getPageNo', pageNo - 1)"
       >
         上一页
       </button>
       <button
-        v-if="startNumAndEndNum.start > 1"
-        @click="$emit('getPageNo', 1)"
-        :class="{ active: pageNo == 1 }"
+        v-if="startAndEndIndex.start > 1"
+        @click="$emit('change-page-no', 1)"
+        :class="{ active: pageNo === 1 }"
       >
         1
       </button>
-      <button v-if="startNumAndEndNum.start > 2">···</button>
+      <button v-if="startAndEndIndex.start > 2">···</button>
    
       <!-- 连续的页码 -->
-      <template v-for="(page, index) in startNumAndEndNum.end">
+      <template v-for="(page, index) in startAndEndIndex.end">
         <button
-          v-if="page >= startNumAndEndNum.start"
+          v-if="page >= startAndEndIndex.start"
           :key="index"
-          :class="{ active: pageNo == page }"
-          @click="$emit('getPageNo', page)"
+          :class="{ active: pageNo === page }"
+          @click="$emit('change-page-no', page)"
         >
           {{ page }}
         </button>
       </template>
    
-      <button v-if="startNumAndEndNum.end < totalPage - 1">···</button>
+      <button v-if="startAndEndIndex.end < totalPage - 1">···</button>
       <button
-        v-if="startNumAndEndNum.end < totalPage"
-        :class="{ active: pageNo == totalPage }"
-        @click="$emit('getPageNo', totalPage)"
+        v-if="startAndEndIndex.end < totalPage"
+        :class="{ active: pageNo === totalPage }"
+        @click="$emit('change-page-no', totalPage)"
       >
         {{ totalPage }}
       </button>
       <button
-        @click="$emit('getPageNo', pageNo + 1)"
-        :disabled="pageNo == totalPage"
+        :disabled="pageNo === totalPage"
+        @click="$emit('change-page-no', pageNo + 1)"
       >
         下一页
       </button>
@@ -45,7 +45,7 @@
       <select
         v-model="size"
         class="select"
-        @change="$emit('getPageSize', size)"
+        @change="$emit('change-page-size', size)"
       >
         <option v-for="s in pageSizes" :key="s" :value="s">{{ s }} 条/页</option>
       </select>
@@ -88,13 +88,12 @@
     computed: {
       // 总页数
       totalPage() {
-        return Math.ceil(this.total / this.pageSize);
+        return Math.ceil(this.total / this.pageSize)
       },
    
       // 计算出连续页码的起始数字与结束的数字
-      startNumAndEndNum() {
+      startAndEndIndex() {
         const { continues, pageNo, totalPage } = this
-
         let start = 0, end = 0
         // 即总页数 < 连续页码
         if (continues > totalPage) {
@@ -120,48 +119,48 @@
    
   <style lang="scss" scoped>
   .pagination {
+    font-size: 13px;
+    color: var(--c-text);
     text-align: center;
-    margin: 20px 0 40px;
+    margin: 10px 0 40px;
     button {
-      margin: 0 5px;
-      background: var(--c-bg-light);
-      color: var(--c-text);
-      outline: none;
-      border-radius: 2px;
-      padding: 0 8px;
-      vertical-align: top;
-      display: inline-block;
-      font-size: 13px;
       min-width: 32px;
       height: 28px;
-      line-height: 28px;
-      cursor: pointer;
-      box-sizing: border-box;
-      text-align: center;
+      padding: 0 8px;
+      margin: 10px 5px 0;
       border: 0;
+      border-radius: 2px;
+      background: var(--c-bg-light);
+      outline: none;
+      display: inline-block;
+      box-sizing: border-box;
+      vertical-align: top;
+      cursor: pointer;
       &[disabled] {
         color: #c0c4cc;
         cursor: not-allowed;
       }
       &.active {
         cursor: not-allowed;
-        background-color: var(--c-brand);
+        background: var(--c-brand);
         color: #fff;
       }
     }
     .total {
-      font-size: 13px;
-      line-height: 28px;
+      display: inline-block;
+      margin-top: 10px;
       margin-left: 10px;
     }
     .select {
       appearance: none;
       -webkit-appearance: none;
       outline: none;
+      cursor: pointer;
       border: 1px solid var(--c-border);
       border-radius: 2px;
       padding: 0 8px;
-      font-size: 13px;
+      margin-left: 5px;
+      margin-top: 10px;
       line-height: 26px;
       &::-ms-expand,
       &::-webkit-scrollbar,

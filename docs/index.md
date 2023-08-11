@@ -2,7 +2,7 @@
 home: true
 heroImage: /images/logo.png
 heroText: 
-tagline: 🍳 web • uniapp • flutter • electron • wordpress • node • Java 🍉
+tagline: 🍳 web • uniapp • flutter • electron • wordpress • node • java 🍉
 #   - text: 技术博客
 #     link: /note/guide.md
 #     type: primary
