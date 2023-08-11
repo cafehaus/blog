@@ -1,3 +1,9 @@
+// 首页描述文字
+.home .hero .description {
+    max-width: 45rem;
+}
+
+// 侧边栏二级菜单
 .sidebar-item:not(.sidebar-heading) {
     white-space: nowrap;
     overflow: hidden;
