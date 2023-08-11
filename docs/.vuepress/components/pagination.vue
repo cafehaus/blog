@@ -157,6 +157,7 @@
       -webkit-appearance: none;
       outline: none;
       cursor: pointer;
+      background: var(--c-bg);
       border: 1px solid var(--c-border);
       border-radius: 2px;
       padding: 0 8px;
