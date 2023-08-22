@@ -403,6 +403,10 @@ fs.readFile(path.join(__dirname, './components/article-list.vue'), 'utf-8', asyn
 module.exports =  sidebar
 ```
 
+开始直接在生成列表数据时直接生成的 template 模板标签里的内容，这样就有点类似后端里的模板技术、jsp之类的，不过现在都是前后端分离，为了好维护最终还是改成只去替换组件里的 articleList 列表数据，这样 article-list 组件里可以随意修改布局样式交互这些， sidebar 只是提供对应的数据。
+
+### 3、引入文章列表组件
+
 最后直接在博客首页的 markdown 文件里引入 article-list 组件就行了：
 ```markdown
 ---
