@@ -1,13 +1,4 @@
 
-### UItools
-* [element-ui下拉框el-select多选出现滚动条闪现](./UItools/element-ui下拉框el-select多选出现滚动条闪现/index.md)
-* [element-ui图标偶现乱码问题的原因和修复方法](./UItools/element-ui图标偶现乱码问题的原因和修复方法/index.md)
-* [element-ui表格组件el-table多选时报错](./UItools/element-ui表格组件el-table多选时报错/index.md)
-* [iview数字输入组件InputNumber](./UItools/iview数字输入组件InputNumber/index.md)
-* [iview组件踩坑记](./UItools/iview组件踩坑记/index.md)
-* [iview组件默认样式覆盖](./UItools/iview组件默认样式覆盖/index.md)
-* [t-design组件踩坑记](./UItools/t-design组件踩坑记/index.md)
-
 ### buildTool
 * [vue项目中webpack-dev-server的open和host0.0.0.0配置冲突](./buildTool/vue项目中webpack-dev-server的open和host0.0.0.0配置冲突/index.md)
 * [webpack代理proxy配置](./buildTool/webpack代理proxy配置/index.md)
@@ -75,12 +66,12 @@
 * [用swift开发ios移动端app应用初体验](./ios/用swift开发ios移动端app应用初体验/index.md)
 
 ### java
-* [SpringBoot本地上传文件到resources目录永久保存下载的最佳实践](./java/SpringBoot本地上传文件到resources目录永久保存下载的最佳实践/index.md)
 * [java学习笔记](./java/java学习笔记/index.md)
 * [java练习项目记录笔记](./java/java练习项目记录笔记/index.md)
+* [SpringBoot本地上传文件到resources目录永久保存下载的最佳实践](./java/SpringBoot本地上传文件到resources目录永久保存下载的最佳实践/index.md)
 * [公司SpringBoot微服务java项目本地运行笔记](./java/公司SpringBoot微服务java项目本地运行笔记/index.md)
-* [用SpringBoot开发java程序和部署笔记](./java/用SpringBoot开发java程序和部署笔记/index.md)
 * [用docker和nginx部署前端项目访问本地java网关gateway服务](./java/用docker和nginx部署前端项目访问本地java网关gateway服务/index.md)
+* [用SpringBoot开发java程序和部署笔记](./java/用SpringBoot开发java程序和部署笔记/index.md)
 
 ### javascript
 * [axios拦截器封装：await遇上reject时catch的优雅处理方式](./javascript/axios拦截器封装：await遇上reject时catch的优雅处理方式/index.md)
@@ -136,9 +127,18 @@
 * [京东轻量云主机测评体验](./server/京东轻量云主机测评体验/index.md)
 
 ### test
-* [用JMeter做接口压力测试](./test/用JMeter做接口压力测试/index.md)
 * [用Jest做前端单元测试](./test/用Jest做前端单元测试/index.md)
+* [用JMeter做接口压力测试](./test/用JMeter做接口压力测试/index.md)
 * [胖仙测试课程目录](./test/胖仙测试课程目录/index.md)
+
+### UItools
+* [element-ui下拉框el-select多选出现滚动条闪现](./UItools/element-ui下拉框el-select多选出现滚动条闪现/index.md)
+* [element-ui图标偶现乱码问题的原因和修复方法](./UItools/element-ui图标偶现乱码问题的原因和修复方法/index.md)
+* [element-ui表格组件el-table多选时报错](./UItools/element-ui表格组件el-table多选时报错/index.md)
+* [iview数字输入组件InputNumber](./UItools/iview数字输入组件InputNumber/index.md)
+* [iview组件踩坑记](./UItools/iview组件踩坑记/index.md)
+* [iview组件默认样式覆盖](./UItools/iview组件默认样式覆盖/index.md)
+* [t-design组件踩坑记](./UItools/t-design组件踩坑记/index.md)
 
 ### uniapp
 * [uniapp中scroll-view局部滚动的各种场景](./uniapp/uniapp中scroll-view局部滚动的各种场景/index.md)
@@ -153,6 +153,7 @@
 * [ES模块导入引发的vue未定义变量报错](./vue/ES模块导入引发的vue未定义变量报错/index.md)
 * [vue-cli-service的命令行参数](./vue/vue-cli-service的命令行参数/index.md)
 * [vue-router的hash模式和history模式](./vue/vue-router的hash模式和history模式/index.md)
+* [vuepress博客自动生成分页文章列表](./vue/vuepress博客自动生成分页文章列表/index.md)
 * [vue中文本字符串实现换行](./vue/vue中文本字符串实现换行/index.md)
 * [vue中的v-model刨根问底](./vue/vue中的v-model刨根问底/index.md)
 * [vue用v-on动态绑定事件名需要2.6以上版本才有效](./vue/vue用v-on动态绑定事件名需要2.6以上版本才有效/index.md)

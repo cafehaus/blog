@@ -49,6 +49,12 @@ export default {
     init() {
       this.articleList=[
   {
+    "title": "vuepress博客自动生成分页文章列表",
+    "createTimestamp": 1692707532566,
+    "createTime": "2023-08-22",
+    "link": "/note/vue/vuepress博客自动生成分页文章列表/index.html"
+  },
+  {
     "title": "java练习项目记录笔记",
     "createTimestamp": 1691475835000,
     "createTime": "2023-08-08",
