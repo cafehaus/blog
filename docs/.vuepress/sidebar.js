@@ -47,7 +47,8 @@ menuList.map(m => {
           link: `/note/${m}/${n}/index.md`
         })
 
-        const createTimestamp = await getCreatedTime(path.join(__dirname, `../note/${m}/${n}/index.md`))
+        let createTimestamp = await getCreatedTime(path.join(__dirname, `../note/${m}/${n}/index.md`))
+        if (isNaN(createTimestamp)) createTimestamp = new Date().getTime()
         const date = new Date(createTimestamp)
         const year = date.getFullYear()
         let month = date.getMonth() + 1
