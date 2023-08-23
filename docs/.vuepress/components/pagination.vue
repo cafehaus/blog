@@ -2,7 +2,7 @@
   <div class="pagination">
     <button
       :disabled="pageNo === 1"
-      @click="$emit('getPageNo', pageNo - 1)"
+      @click="$emit('change-page-no', pageNo - 1)"
     >
       上一页
     </button>
