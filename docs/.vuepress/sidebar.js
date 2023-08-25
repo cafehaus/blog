@@ -12,7 +12,7 @@ const getCreatedTime = async (filePath, cwd) => {
 }
 
 // 自动生成首页 guide.md 的内容和 README.md 的内容
-let guideContent = ''
+// let guideContent = ''
 let readmeContent = `
 # BLOG
 ZHOU的[技术博客](https://cafehaus.github.io/blog/)
@@ -33,13 +33,13 @@ const menuList = fs.readdirSync(path.join(__dirname, '../note'))
 menuList.map(m => {
   if (!IGNORE_FILE.includes(m)) {
     let posts = fs.readdirSync(path.join(__dirname, '../note/' + m))
-    guideContent += `\n### ${m}\n`
+    // guideContent += `\n### ${m}\n`
     readmeContent += `\n### ${m}\n`
 
     let children = []
     posts.map(async (n) => {
       if (!IGNORE_FILE.includes(n)) {
-        guideContent += `* [${n}](./${m}/${n}/index.md)\n`
+        // guideContent += `* [${n}](./${m}/${n}/index.md)\n`
         readmeContent += `* [${n}](./docs/note/${m}/${n}/index.md)\n`
 
         children.push({
@@ -48,6 +48,7 @@ menuList.map(m => {
         })
 
         let createTimestamp = await getCreatedTime(path.join(__dirname, `../note/${m}/${n}/index.md`))
+        // 文章还未提交无 createTime 时，直接默认到当前时间
         if (isNaN(createTimestamp)) createTimestamp = new Date().getTime()
         const date = new Date(createTimestamp)
         const year = date.getFullYear()
@@ -74,7 +75,7 @@ menuList.map(m => {
 })
 
 fs.writeFileSync(path.join(__dirname, '../../README.md'), readmeContent)
-fs.writeFileSync(path.join(__dirname, '../note/guide.md'), guideContent)
+// fs.writeFileSync(path.join(__dirname, '../note/guide.md'), guideContent)
 
 // 写入首页 article-list.vue 文章列表组件数据
 fs.readFile(path.join(__dirname, './components/article-list.vue'), 'utf-8', async (err, data) => {
