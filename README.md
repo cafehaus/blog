@@ -111,6 +111,7 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 ### node
 * [node_modules目录中的bin文件夹](./docs/note/node/node_modules目录中的bin文件夹/index.md)
 * [node学习笔记记录](./docs/note/node/node学习笔记记录/index.md)
+* [根据markdown文件反向转换成chrome浏览器书签html](./docs/note/node/根据markdown文件反向转换成chrome浏览器书签html/index.md)
 * [浏览器书签bookmark转json格式](./docs/note/node/浏览器书签bookmark转json格式/index.md)
 
 ### project
