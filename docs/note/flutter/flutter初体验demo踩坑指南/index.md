@@ -43,3 +43,20 @@ Please install the "Desktop development with C++" workload, including all of its
 2. 将里面的 https://maven.google.com/ 修改为 https://maven.aliyun.com/repository/google，也可以修改为其他的国内镜像源，只要能访问就行
 3. 找到 flutter\bin 目录，删除里面的 cache 文件夹
 4. 重新打开 cmd 小黑窗，运行 flutter doctor 检验一下
+
+### 修改国内仓库源
+
+需要修改两个地方：
+* Flutter SDK，2023年8月最新版的在 flutter\packages\flutter_tools\gradle\src\main\groovy\flutter.groovy 文件里
+* 项目里的 android\gradle.properties 文件，里面 buildscript 和 allprojects 这两个地方的都改了
+
+直接将 google() 和 mavenCentral() 注释掉，改成：
+```gradle
+repositories {
+    // google()
+    // mavenCentral()
+    maven { url 'https://maven.aliyun.com/repository/google' }
+    maven { url 'https://maven.aliyun.com/repository/jcenter' }
+    maven { url 'https://maven.aliyun.com/repository/public' }
+}
+```
