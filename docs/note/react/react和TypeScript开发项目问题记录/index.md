@@ -1,5 +1,8 @@
 # 用react和TypeScript开发项目问题记录
 
+* 类组件继承自 React.component，所以有状态有生命周期，又称动态组件、有状态组件。函数组件只能接收一个 props，是静态组件、无状态组件。
+* 组件渲染流程：父组件 componentWillMount -> 父组件 render 【子组件 componentWillMount -> 子组件 render 【】-> 子组件 componentDidMount】-> 父组件 componentDidMount
+
 ## 动态设置网站浏览器导航标题
 
 模版文件 index.html 里可以用 <%= 变量名%> 去插入变量，网站的标题 title 可以在路由中动态去设置 document.title 的值，其实直接通过 document.title 设置就生效了，似乎 index.html 中的 <%= title %> 并没有卵用，不知道是不是为了在服务端直接修改 title 的值？
