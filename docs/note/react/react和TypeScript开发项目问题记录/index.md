@@ -2,6 +2,7 @@
 
 * 类组件继承自 React.component，所以有状态有生命周期，又称动态组件、有状态组件。函数组件只能接收一个 props，是静态组件、无状态组件。
 * 组件渲染流程：父组件 componentWillMount -> 父组件 render 【子组件 componentWillMount -> 子组件 render 【】-> 子组件 componentDidMount】-> 父组件 componentDidMount
+* 用类组件的 setState 或者 函数组件钩子函数 useState 里的 setXxx 去修改状态时，引用数据类型要自己结构重新定义一个 array、object：[...arr]、{...obj}。因为React中默认为浅监听，当变量为引用类型时，栈中存的是引用（地址），而 setState 改变的是堆中的数据，所以此时set后，栈中的地址还是原来的地址，React会认为 state 并未改变，所以不重新渲染页面。
 
 ## 动态设置网站浏览器导航标题
 
