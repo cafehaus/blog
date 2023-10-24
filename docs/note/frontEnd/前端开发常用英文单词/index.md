@@ -201,6 +201,7 @@
 * 中介者模式：mediator pattern
 * 访问者模式：visitor pattern
 * 外观模式：facade pattern
+* 垃圾回收机制：garbage collection
 
 ## css 相关
 * 骚操作：hack，常用于CSS中的一些招数，或者类似于偏方的技巧
