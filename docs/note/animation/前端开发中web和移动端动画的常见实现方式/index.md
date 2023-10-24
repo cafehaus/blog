@@ -52,7 +52,7 @@ setInterval(function() {
 
 和 setTimeout 定时器类似，requestAnimationFrame 也可以通过 cancelAnimationFrame 取消回调函数请求。相比 setTimeout 有两点优势：
 * 跟屏幕刷新频率保持一致，不会出现像 setTimeout 丢帧的情况
-* 性能更好，运行在后台标签页或者隐藏的 <iframe> 里时，requestAnimationFrame() 会被暂停调用以提升性能和电池寿命
+* 性能更好，运行在后台标签页或者隐藏的 iframe 里时，requestAnimationFrame() 会被暂停调用以提升性能和电池寿命
 
 ```js
 function animate() {
