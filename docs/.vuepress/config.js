@@ -23,6 +23,31 @@ module.exports = {
     sidebarDepth: 0,
     navbar: [
       {
+        text: '开源工具',
+        children: [
+          {
+            text: '批量 git 操作',
+            link: 'https://github.com/cafehaus/git-batch',
+          },
+          {
+            text: '爬取全国省市区',
+            link: 'https://github.com/cafehaus/china-city',
+          },
+          {
+            text: '自动签到脚本',
+            link: 'https://github.com/cafehaus/check-in',
+          },
+          {
+            text: '解析浏览器书签',
+            link: 'https://github.com/cafehaus/parse-bookmark',
+          },
+          {
+            text: 'wordpress API 插件',
+            link: 'https://github.com/cafehaus/wordpress-cafehaus-api',
+          }
+        ]
+      },
+      {
         text: '咖啡教室',
         link: 'https://cafe123.cn',
       },
