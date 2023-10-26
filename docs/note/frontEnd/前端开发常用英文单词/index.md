@@ -11,7 +11,7 @@
 * month 和 mouth
 * useable 和 usable (两个都表示：adj. 能用的，可用的，适用的)
 * opacity 和 opcity
-* create和creat（医：等于creatine，肌酸）
+* create 和 creat（医：等于creatine，肌酸）
 
 ## 基础名词
 * 全栈：full stack
@@ -202,6 +202,7 @@
 * 访问者模式：visitor pattern
 * 外观模式：facade pattern
 * 垃圾回收机制：garbage collection
+* 有限状态机：finite state machine
 
 ## css 相关
 * 骚操作：hack，常用于CSS中的一些招数，或者类似于偏方的技巧

@@ -2,7 +2,24 @@
 
 收集一些项目中常用的前端工具函数
 
-**获取表单所有下拉选项公用方法**
+### 判断是否是 promise
+```js
+/**
+ * 判断传入参数是否为 Promise
+ * @param { any } value
+ * @return { boolean } 是否为 Promise
+ */
+
+function isPromise(value) {
+	return !!value
+		&& typeof value === 'object'
+		&& typeof value.then === 'function'
+		&& typeof value.catch === 'function'
+		&& typeof value.finally === 'function'
+}
+```
+
+### 获取表单所有下拉选项公用方法
 
 一个表单里如果需要获取多个下拉选项数据，可以直接配置接口信息全部获取
 
@@ -33,7 +50,7 @@ getOption() {
 }
 ```
 
-**将内容中的网址替换成可直接点击的 a 标签**
+### 将内容中的网址替换成可直接点击的 a 标签
 
 ```js
 function fmtLink(content) {
@@ -58,13 +75,15 @@ function fmtLink(content) {
 }
 ```
 
-**浏览器中复制文本内容**
+### 浏览器中复制文本内容
 
 ```js
 function copyText(text) { // from zhangxinxu
   if (!text) return
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(text)
+    navigator.clipboard.writeText(text).catch(err => {
+      console.log('复制失败：' + err)
+    })
   } else {
     let textarea = document.createElement('textarea')
     document.body.appendChild(textarea)
@@ -81,7 +100,7 @@ function copyText(text) { // from zhangxinxu
 
 也可以用知名的复制粘贴库 clipboard.js，但是需要自己提前初始化，只用简单的复制用上面那个就好了
 
-**根据环境获取对应的网址**
+### 根据环境获取对应的网址
 
 ```js
 getWebsite(subdomain, domain = 'cafe123.cn') {
@@ -106,7 +125,7 @@ getWebsite(subdomain, domain = 'cafe123.cn') {
 },
 ```
 
-**去掉时间字符串里的秒**
+### 去掉时间字符串里的秒
 
 ```js
 fmtDate(v) {
@@ -123,7 +142,7 @@ fmtDate(v) {
 },
 ```
 
-**高亮关键字**
+### 高亮关键字
 
 使用场景：模糊搜索，下拉提示选项里关键字高亮
 ```js
@@ -135,7 +154,7 @@ function highlight(text, keyword = '') {
 }
 ```
 
-**阿拉伯数字转中文数字**
+### 阿拉伯数字转中文数字
 
 ```js
 // 数字转中文数字：一二三四
@@ -166,7 +185,7 @@ function numToChinese(num) {
 }
 ```
 
-**数字序号和英文字母序号互转**
+### 数字序号和英文字母序号互转
 
 使用场景：excel 文件表头的 X 轴序号
 ```js
