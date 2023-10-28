@@ -48,3 +48,6 @@ json 文件中需要自己通过 mini-wechat、mini-ios、mini-android 去分别
 
 #### 4、打包的 Package Name 包名
 这个不是在生成开发者证书的时候设置的，是需要自己去微信开放平台设置，没设置官方会默认会分配一个测试包名。
+
+#### 5、wx.login 会隐式触发 wx.getMiniProgramCode
+小程序升级成多端项目后身份配置时 app.miniapp.json 里的 adaptWxLogin 为 true，默认 app 中调 wx.login 会隐式触发 wx.getMiniProgramCode，然后会打开小程序授权登录的页面，即使项目中没有使用微信登录。
