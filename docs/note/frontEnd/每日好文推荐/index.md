@@ -1,5 +1,8 @@
 # 每日好文推荐
 
+## 2023年10月27日
+* [写给前端的编译原理科普](https://zhuanlan.zhihu.com/p/356806174)
+
 ## 2023年10月25日
 * [一文详解Proxy与Reflect](https://juejin.cn/post/7119271655649574919)
 * [ES6中新增的Reflect怎么用？](https://www.jianshu.com/p/2f597dae07b3)
