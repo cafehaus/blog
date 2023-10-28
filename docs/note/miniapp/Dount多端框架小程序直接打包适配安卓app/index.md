@@ -31,7 +31,7 @@
 /* #elif ANDROID */
 /* #endif */
 ```
-json 文件中需要自己通过 mini-wechat、mini-ios、mini-android 去分配配置，功能上没有 uniapp 提供的条件编译强大。
+json 文件中需要自己通过 mini-wechat、mini-ios、mini-android 去分别配置，功能上没有 uniapp 提供的条件编译强大。
 
 ### 发现的问题
 
