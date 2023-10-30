@@ -203,6 +203,15 @@
 * 外观模式：facade pattern
 * 垃圾回收机制：garbage collection
 * 有限状态机：finite state machine
+* 词法分析：lexical analysis
+* 语法分析：parsing
+* 语义分析：semantic analysis
+* 词法分析器：lexer、tokenizer
+* 语法分析器：parser
+* 编译器：compiler
+* 抽象语法树：AST abstract syntax tree
+* 基础类型/原始类型：primitive type
+* 引用类型：reference type
 
 ## css 相关
 * 骚操作：hack，常用于CSS中的一些招数，或者类似于偏方的技巧
@@ -447,7 +456,6 @@
 * 构建：build
 * 编译：compile
 * 编译时：compile time
-* 编译器：compiler
 * 运行时：run time
 * 编码：encode
 * 解码：decode
