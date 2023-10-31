@@ -54,3 +54,6 @@ json 文件中需要自己通过 mini-wechat、mini-ios、mini-android 去分别
 
 #### 6、跳转到小程序
 小程序很多相关的功能、插件在 app 上都是不能用的，不过官方提供了 app 直接唤起微信打开小程序的方法 wx.miniapp.launchMiniProgram，不过里面需要用到小程序的原始 id，可以直接跳转到小程序里面的各个页面。
+
+#### 7、上架安卓应用商店提示 targetSdkVersion 版本不符合要求
+上架小米应用商店提示 targetSdkVersion 版本不符合要求，要求要大于等于30。dount 默认给设置的 29，然后在文档上找到了可以在 project.miniapp.json 里配置 targetSdkVersion，要求下载版本号 ≥ 1.06.2308242 的开发者工具。开发工具下载的稳定版最新版里面压根没这项配置，重新下载了最新的开发版开发工具才找到可以配置。
