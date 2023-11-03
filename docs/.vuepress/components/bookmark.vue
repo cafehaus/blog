@@ -113,4 +113,17 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .bookmark {
+    .bookmark-item {
+      .bookmark {
+        display: block;
+      }
+      .bookmark-item-card {
+        width: auto;
+      }
+    }
+  }
+}
 </style>
