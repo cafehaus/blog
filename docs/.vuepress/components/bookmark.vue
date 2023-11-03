@@ -122,6 +122,9 @@ export default {
       }
       .bookmark-item-card {
         width: auto;
+        .bookmark-des {
+          height: auto;
+        }
       }
     }
   }
