@@ -1,6 +1,6 @@
-# Dount多端框架小程序打包适配ios和安卓app
+# Donut多端框架小程序打包适配ios和安卓app
 
-腾讯新出了一个 Dount 多端框架，可以直接将微信小程序转成 ios 和 安卓 app，小程序开发者工具里也集成了 app 相关升级、调试和打包的功能，具体的可以参考[官方文档](https://dev.weixin.qq.com/docs/)。
+腾讯新出了一个 Donut 多端框架，可以直接将微信小程序转成 ios 和 安卓 app，小程序开发者工具里也集成了 app 相关升级、调试和打包的功能，具体的可以参考[官方文档](https://dev.weixin.qq.com/docs/)。
 
 ### 适配过程
 展示组件、样式上微信大部分都适配了，没啥大的问题，目前就发现 css 里的网格 grid 布局在一些低版本手机上会显示异常。主要是一些官方功能组件和api很多不支持，如果使用小程序特定的一些api比较多的话，可能适配也比较麻烦，很多东西在app上都还不支持或者目前还没适配。
@@ -12,20 +12,20 @@
 生成安卓开发者证书，网上有在线生成的网站，也可以本地安装 java 环境然后用命令行直接生成。
 
 #### 打包的 Package Name 包名
-这个不是在生成安卓开发者证书的时候设置的，是需要自己去微信开放平台设置，没设置官方会默认会分配一个测试包名，设置了可以在 Dount 后台同步看到。
+这个不是在生成安卓开发者证书的时候设置的，是需要自己去微信开放平台设置，没设置官方会默认会分配一个测试包名，设置了可以在 Donut 后台同步看到。
 
 #### apk 安装包发送到手机上不能安装
 直接将打包好的安卓 apk 文件通过微信发到手机上，接收保存时微信会默认在后面给你加上 .1，直接在文件管理里文件重命名删掉 .1 的后缀，就可以点击安装包安装到手机上了。
 
 #### 上架安卓应用商店提示 targetSdkVersion 版本不符合要求
-上架小米应用商店提示 targetSdkVersion 版本不符合要求，要求要大于等于30。dount 默认给设置的 29，然后在文档上找到了可以在 project.miniapp.json 里配置 targetSdkVersion，要求下载版本号 ≥ 1.06.2308242 的开发者工具。开发工具下载的稳定版最新版里面压根没这项配置，重新下载了最新的开发版开发工具才找到可以配置。
+上架小米应用商店提示 targetSdkVersion 版本不符合要求，要求要大于等于30。Donut 默认给设置的 29，然后在文档上找到了可以在 project.miniapp.json 里配置 targetSdkVersion，要求下载版本号 ≥ 1.06.2308242 的开发者工具。开发工具下载的稳定版最新版里面压根没这项配置，重新下载了最新的开发版开发工具才找到可以配置。
 
 ### ios相关问题
 #### ios签名和开发证书
 下载证书到mac上显示证书不受信任，需要现在在 https://www.apple.com/certificateauthority/ 上下载 Developer Authentication、Worldwide Developer Relations - G2、Worldwide Developer Relations - G3... 这几个中间证书，安装好后就会显示信任了。
 
 #### wx.weixinAppLogin 报错 errCode:-700000
-这个 api 需要唤起微信 app 授权，需要使用自己申请的开发证书，还要在 Dount 后台绑定了 Bundle ID 和 Universal Links，开启了相关的权限。直接使用官方提供的临时证书，是不能使用这些功能的。
+这个 api 需要唤起微信 app 授权，需要使用自己申请的开发证书，还要在 Donut 后台绑定了 Bundle ID 和 Universal Links，开启了相关的权限。直接使用官方提供的临时证书，是不能使用这些功能的。
 
 #### .mobileprovision 文件所属的 bundleId 与应用无对应关系
 跟上一个问题类似，这个一般是用自己的证书如果没设置 Bundle ID 和 Universal Links，打包时就会提示这个报错。
@@ -58,7 +58,7 @@ Invalid Provisioning Profile. The provisioning profile included in the bundle xx
 每次构建上传的版本号需要累加，不能比之前的低
 
 #### 选择图片、保存图片时app崩溃
-需要在 project.miniapp.json 中设置 iOS - 隐私信息访问许可描述，然后操作的时候用户才可以正常操作。dount 的适配也确实太粗暴了，竟然不是给个提示报错未设置隐私描述之类的，直接让app崩了！
+需要在 project.miniapp.json 中设置 iOS - 隐私信息访问许可描述，然后操作的时候用户才可以正常操作。Donut 的适配也确实太粗暴了，竟然不是给个提示报错未设置隐私描述之类的，直接让app崩了！
 
 #### 第三方登录
 如果有接入第三方平台登录，比如微信登录、微博登录...苹果要求必须同时接入它的 apple 登录，否则审核不会通过的，亲儿子就是好。有的应用商店审核只要有注册功能还需要同时提供账号注销功能。
@@ -68,7 +68,7 @@ Invalid Provisioning Profile. The provisioning profile included in the bundle xx
 比如视频不能播放、canvas绘图报错...官方为了减小打包大小 SDK 里很多功能默认是没有开启的，如果项目里有用到音视频、canvas 这些功能，需要先在 project.miniapp.json 配置文件里，自己开启相关的 SDK：Media SDK、XWeb SDK，否则是不能用的。
 
 #### 2、适配登录需要新建登录页
-使用小程序授权登录，需要新建一个 dountLogin 的授权登录页，自己不新建也会有一个官方默认的。首次打开 app 会先打开这个页面让跳转小程序授权，开发者工具里有直接集成，右键-新建多端登录 Page，会生成一个官方提供的默认授权页，也可以直接在上面修改自定义。刚开始以为这是官方强制要弹这个的，即使没用到小程序登录，首次安装也会打开这个授权页，最后才发现是直接在开发者工具里升级成多端项目时，默认给你配置了小程序授权登录，具体参考下面的一点。
+使用小程序授权登录，需要新建一个 DonutLogin 的授权登录页，自己不新建也会有一个官方默认的。首次打开 app 会先打开这个页面让跳转小程序授权，开发者工具里有直接集成，右键-新建多端登录 Page，会生成一个官方提供的默认授权页，也可以直接在上面修改自定义。刚开始以为这是官方强制要弹这个的，即使没用到小程序登录，首次安装也会打开这个授权页，最后才发现是直接在开发者工具里升级成多端项目时，默认给你配置了小程序授权登录，具体参考下面的一点。
 
 #### 3、wx.login 会隐式触发 wx.getMiniProgramCode
 小程序升级成多端项目后身份配置时 app.miniapp.json 里的 adaptWxLogin 为 true，默认 app 中调 wx.login 会隐式触发 wx.getMiniProgramCode，然后会打开小程序授权登录的页面，即使项目中没有使用微信登录。
