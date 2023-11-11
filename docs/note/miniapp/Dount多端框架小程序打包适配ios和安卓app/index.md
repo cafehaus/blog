@@ -38,6 +38,25 @@
 #### Build ipa failed：Sign the app fail:undefined
 跟上一个问题类似，用临时证书打包时可能会出现这个报错，先清除证书签名缓存，再输入正确的账号和密码。
 
+#### .ipa文件 上传交付时报错：Asset validation failed (90161) Invalid Provisioning Profile
+Invalid Provisioning Profile. The provisioning profile included in the bundle xxx [Payload/demo.app] is invalid. [Missing code-signing certificate]. A Distribution Provisioning profile should be used when submitting apps to the App Store. For more information, visit the iOS Developer Portal. (ID: xxx)
+
+用分发证书打包成功后，在 Transporter 里上传交付时报错，上面的报错提示证书文件无效，解决办法：
+
+* 核对证书和描述文件，确保受信任而且未过期
+* 打包时用的证书和描述文件，是否误用了开发证书和描述文件
+* 把本地已经在钥匙串里安装了的证书全部删掉，然后重新安装再打包
+* 上面的方法都不能解决的，重新在苹果开发者后台重新生成新的分发证书和描述文件
+
+#### invalid provisioning profile.the provisioning profile included in the bundle is invalid
+打包的证书要安装在mac电脑本地钥匙串里，直接双击证书文件，安装好了可以在钥匙串-我的证书里看到。
+
+#### Transporter 里交付成功，苹果开发者后台看不到提价信息
+这个一般是交付的版本有问题，像一些隐私权限描述未添加...注意下自己开发者账号对应的邮箱，苹果官方会给你发送具体的错误信息邮件。有收到提示邮件就是有问题的，这个时候苹果开发者后台 app 管理里是看不到你交付的版本的，需要修改后重新交互，成功了后台构建那就可以看到交互的版本了。
+
+#### The provided entity includes an attribute with a value that has already been used (-19232)
+每次构建上传的版本号需要累加，不能比之前的低
+
 ### 其他问题
 #### 1、相关功能不能用
 比如视频不能播放、canvas绘图报错...官方为了减小打包大小 SDK 里很多功能默认是没有开启的，如果项目里有用到音视频、canvas 这些功能，需要先在 project.miniapp.json 配置文件里，自己开启相关的 SDK：Media SDK、XWeb SDK，否则是不能用的。
@@ -50,6 +69,9 @@
 
 #### 4、跳转到小程序
 小程序很多相关的功能、插件在 app 上都是不能用的，不过官方提供了 app 直接唤起微信打开小程序的方法 wx.miniapp.launchMiniProgram，不过里面需要用到小程序的原始 id，可以直接跳转到小程序里面的各个页面。
+
+#### 5、安卓app安装后一直在启动页
+打包 android 的 sdk 版本 sdkVersion 是 1.1.1，更新到最新的 1.1.2 重新打包后就没问题了。所以遇到这种奇奇怪怪的问题，记得更新开发工具、sdk版本到最新版，如果已经是最新版那就回退个版本，说不定运气好就解决了，哈哈哈哈。
 
 ### 条件编译
 官方也提供了类似 uniapp 条件编译的语法，为了同时兼容小程序和app可以使用条件编译语法，注意小程序开发者工具本地配置里也要勾选上-启用条件编译：
