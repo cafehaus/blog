@@ -57,6 +57,12 @@ Invalid Provisioning Profile. The provisioning profile included in the bundle xx
 #### The provided entity includes an attribute with a value that has already been used (-19232)
 每次构建上传的版本号需要累加，不能比之前的低
 
+#### 选择图片、保存图片时app崩溃
+需要在 project.miniapp.json 中设置 iOS - 隐私信息访问许可描述，然后操作的时候用户才可以正常操作。dount 的适配也确实太粗暴了，竟然不是给个提示报错未设置隐私描述之类的，直接让app崩了！
+
+#### 第三方登录
+如果有接入第三方平台登录，比如微信登录、微博登录...苹果要求必须同时接入它的 apple 登录，否则审核不会通过的，亲儿子就是好。有的应用商店审核只要有注册功能还需要同时提供账号注销功能。
+
 ### 其他问题
 #### 1、相关功能不能用
 比如视频不能播放、canvas绘图报错...官方为了减小打包大小 SDK 里很多功能默认是没有开启的，如果项目里有用到音视频、canvas 这些功能，需要先在 project.miniapp.json 配置文件里，自己开启相关的 SDK：Media SDK、XWeb SDK，否则是不能用的。
