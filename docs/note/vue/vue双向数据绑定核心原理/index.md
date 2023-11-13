@@ -107,7 +107,7 @@ Object.defineProperty(person, 'age', {
 let action = null
 const onChange = (callback) => {
     action = callback
-    callback() // 这里可以默认先执行一次初始化
+    callback() // 这里先执行一次触发 get 依赖收集
 }
 onChange(() => {
     console.log('我是数据变动要执行的操作')
@@ -154,7 +154,7 @@ Object.defineProperty(person, 'age', {
 let action = null
 const onChange = (callback) => {
     action = callback
-    callback() // 这里可以默认先执行一次初始化
+    callback() // 这里先执行一次触发 get 依赖收集
 }
 
 // 收集所有依赖的盒子
@@ -208,9 +208,11 @@ person.age = 20
 
 定义了一个 eventBox 的对象来存所有属性的依赖回调，当触发 get 时调用 onCollect 收集依赖到盒子里，当修改数据触发 set 时，再从 eventBox 盒子里拿出对应属性的依赖回调来执行。
 
-上面的代码其实并不难，可能最难理解的是在 get 里到底是怎么完成自动依赖收集的，当我们调用 onChange 的时候，此时外部的 action 里存的就是当前要收集的依赖回调（记住这里很关键），如果回调内部有触发 get（比如上面代码里通过 person.age 获取年龄），那就会走到内部的 get 函数里，我们只用在 get 里调用一下 onCollect 把 action 收集到 eventBox 盒子对应的 key 值里就行了，如果还是不能理解可以打断点运行一下代码就明白了。
+上面的代码其实并不难，可能最难理解的是在 get 里到底是怎么完成自动依赖收集的，当我们调用 onChange 的时候，此时外部的 action 里存的就是当前要收集的依赖回调（记住这里很关键），接着直接执行一下回调函数触发 get 依赖收集，如果回调内部有触发 get（比如上面代码里通过 person.age 获取年龄），那就会走到内部的 get 函数里，我们只用在 get 里调用一下 onCollect 把 action 收集到 eventBox 盒子对应的 key 值里就行了，如果还是不能理解可以打断点运行一下代码就明白了。
 
 其实到这里你也就基本能明白 vue 的双向数据绑定实现原理和步骤了：getter 里自动收集依赖到一个盒子里，setter 里再拿出收集的对应依赖遍历执行，核心不就是发布/订阅模式。
+
+上面的代码其实还是有问题：在 set 里执行回调又会触发 get，然后又会往盒子里添加重复的回调，这一点可以通过将之前的 array 数组改成 Set 数据结构来存储 key 对应的回调来解决；除此之外上面的代码最有一个没有依赖的回调也被添加到了 age 对应的回调里，这里需要每次执行了 action 后要将 action 重置为 null，然后 get 里也需要判断一下 action 不为 null 时才去收集依赖。为了理解简单数据储存前面的版本直接用的最简单的 Object 和 Array，实际中是需要结合使用 WeakMap、Map、WeakSet、Set 这些来储存的，修改后的完整代码请参考下方的 proxy 版本。
 
 ### vue3 里的 proxy
 vue2 中是用的 Object.defineProperty 来劫持对象的 getter、setter，vue3 中换成了 proxy，其实核心原理还是上面那些，只不过收集和执行依赖换到 proxy 里去劫持 getter、setter 了而已。
@@ -222,11 +224,34 @@ let person = {
     age: 18
 }
 
+let action = null
+const onChange = (callback) => {
+    action = callback
+    callback() // 这里先执行一次触发 get 依赖收集
+    action = null
+}
+
+// 收集所有依赖的盒子
+const eventBox = {}
+// 收集依赖
+function onCollect(key) {
+    let arr = eventBox[key] || new Set()
+    arr.add(action)
+    eventBox[key] = arr
+}
+// 执行
+function onExecute(key) {
+    let arr = eventBox[key]
+    if (arr && (arr.size > 0)) {
+        arr.forEach(fn => fn())
+    }
+}
+
 let value = person.age
 
 const proxyPerson = new Proxy(person, {
     get(target, key) {
-        onCollect(key)
+        action && onCollect(key)
         console.log('获取' + key)
         return target[key]
     },
@@ -236,26 +261,6 @@ const proxyPerson = new Proxy(person, {
         onExecute(key)
     }
 })
-
-let action = null
-const onChange = (callback) => {
-    action = callback
-    callback() // 这里可以默认先执行一次初始化
-}
-
-// 收集所有依赖的盒子
-const eventBox = {}
-// 收集依赖
-function onCollect(key) {
-    let arr = eventBox[key] || []
-    arr.push(action)
-    eventBox[key] = arr
-}
-// 执行
-function onExecute(key) {
-    let arr = eventBox[key] || []
-    arr.map(fn => fn())
-}
 
 onChange(() => {
     console.log('我是数据变动要执行的操作')
