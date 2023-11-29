@@ -10,6 +10,10 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 
 ## 文章目录
 
+### animation
+* [前端开发中web和移动端动画的常见实现方式](./docs/note/animation/前端开发中web和移动端动画的常见实现方式/index.md)
+* [旋转边框头像放大出现和不断向上漂浮出现表情动画](./docs/note/animation/旋转边框头像放大出现和不断向上漂浮出现表情动画/index.md)
+
 ### buildTool
 * [vue项目中webpack-dev-server的open和host0.0.0.0配置冲突](./docs/note/buildTool/vue项目中webpack-dev-server的open和host0.0.0.0配置冲突/index.md)
 * [webpack代理proxy配置](./docs/note/buildTool/webpack代理proxy配置/index.md)
@@ -65,10 +69,14 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [前端开发规范](./docs/note/frontEnd/前端开发规范/index.md)
 * [前端查看日志](./docs/note/frontEnd/前端查看日志/index.md)
 * [前端装逼词汇](./docs/note/frontEnd/前端装逼词汇/index.md)
+* [前端面试查漏补缺](./docs/note/frontEnd/前端面试查漏补缺/index.md)
 * [前端项目中的各种配置文件一览](./docs/note/frontEnd/前端项目中的各种配置文件一览/index.md)
 * [前端项目目录结构](./docs/note/frontEnd/前端项目目录结构/index.md)
 * [我的书签bookmark](./docs/note/frontEnd/我的书签bookmark/index.md)
 * [每日好文推荐](./docs/note/frontEnd/每日好文推荐/index.md)
+
+### HarmonyOS
+* [HarmonyOS鸿蒙应用开发初体验](./docs/note/HarmonyOS/HarmonyOS鸿蒙应用开发初体验/index.md)
 
 ### html
 * [前端框架中index.html中的变量语法](./docs/note/html/前端框架中index.html中的变量语法/index.md)
@@ -77,7 +85,7 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [用swift开发ios移动端app应用初体验](./docs/note/ios/用swift开发ios移动端app应用初体验/index.md)
 
 ### java
-* [java学习笔记](./docs/note/java/java学习笔记/index.md)
+* [java开发问题记录](./docs/note/java/java开发问题记录/index.md)
 * [java练习项目记录笔记](./docs/note/java/java练习项目记录笔记/index.md)
 * [SpringBoot本地上传文件到resources目录永久保存下载的最佳实践](./docs/note/java/SpringBoot本地上传文件到resources目录永久保存下载的最佳实践/index.md)
 * [公司SpringBoot微服务java项目本地运行笔记](./docs/note/java/公司SpringBoot微服务java项目本地运行笔记/index.md)
@@ -91,28 +99,37 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [javascript函数的call、apply和bind的原理及作用详解](./docs/note/javascript/javascript函数的call、apply和bind的原理及作用详解/index.md)
 * [js树形数据查找父节点，在侧边栏菜单中的实际应用](./docs/note/javascript/js树形数据查找父节点，在侧边栏菜单中的实际应用/index.md)
 * [node匿名函数自调用立即执行的坑](./docs/note/javascript/node匿名函数自调用立即执行的坑/index.md)
+* [rest剩余参数在函数内部的使用问题](./docs/note/javascript/rest剩余参数在函数内部的使用问题/index.md)
 * [toFixed和Math.round既不是四舍五入也不是银行家舍入法](./docs/note/javascript/toFixed和Math.round既不是四舍五入也不是银行家舍入法/index.md)
 * [代码注释利器jsDoc](./docs/note/javascript/代码注释利器jsDoc/index.md)
 * [前端pdf预览下载和图片下载压缩](./docs/note/javascript/前端pdf预览下载和图片下载压缩/index.md)
 * [前端导出下载excel表格](./docs/note/javascript/前端导出下载excel表格/index.md)
 * [前端跨浏览器标签页数据共享解决方案](./docs/note/javascript/前端跨浏览器标签页数据共享解决方案/index.md)
+* [原型、原型链、继承、new、prototype、constructor](./docs/note/javascript/原型、原型链、继承、new、prototype、constructor/index.md)
+* [在javascript中如何将字符串转成变量或可执行的代码？](./docs/note/javascript/在javascript中如何将字符串转成变量或可执行的代码？/index.md)
+* [手写JSON.parse和JSON.stringify](./docs/note/javascript/手写JSON.parse和JSON.stringify/index.md)
+* [手写promise](./docs/note/javascript/手写promise/index.md)
 * [日期字符串直接比较的坑](./docs/note/javascript/日期字符串直接比较的坑/index.md)
 * [根据字符串中的范围判断当前值](./docs/note/javascript/根据字符串中的范围判断当前值/index.md)
 * [用reduce高阶函数组装查询表单分隔字符数据](./docs/note/javascript/用reduce高阶函数组装查询表单分隔字符数据/index.md)
+* [用有限状态机实现一个简版 html 解析器](./docs/note/javascript/用有限状态机实现一个简版 html 解析器/index.md)
 * [解析excel表格数据并自定义校验](./docs/note/javascript/解析excel表格数据并自定义校验/index.md)
 * [防抖节流和休眠函数](./docs/note/javascript/防抖节流和休眠函数/index.md)
 
 ### miniapp
+* [Donut多端框架小程序打包适配ios和安卓app](./docs/note/miniapp/Donut多端框架小程序打包适配ios和安卓app/index.md)
 * [video视频高度设置百分比在微信小程序中直接不显示](./docs/note/miniapp/video视频高度设置百分比在微信小程序中直接不显示/index.md)
 * [在微信小程序里使用自定义字体](./docs/note/miniapp/在微信小程序里使用自定义字体/index.md)
 * [小程序开发和设计注意事项](./docs/note/miniapp/小程序开发和设计注意事项/index.md)
 * [短信链接直接打开微信小程序踩坑](./docs/note/miniapp/短信链接直接打开微信小程序踩坑/index.md)
+* [适配最新微信小程序隐私协议开发指南，兼容uniapp版本](./docs/note/miniapp/适配最新微信小程序隐私协议开发指南，兼容uniapp版本/index.md)
 
 ### node
 * [node_modules目录中的bin文件夹](./docs/note/node/node_modules目录中的bin文件夹/index.md)
 * [node学习笔记记录](./docs/note/node/node学习笔记记录/index.md)
 * [根据markdown文件反向转换成chrome浏览器书签html](./docs/note/node/根据markdown文件反向转换成chrome浏览器书签html/index.md)
 * [浏览器书签bookmark转json格式](./docs/note/node/浏览器书签bookmark转json格式/index.md)
+* [用node脚本实现网站自动签到功能](./docs/note/node/用node脚本实现网站自动签到功能/index.md)
 
 ### project
 * [Docker踩坑记录](./docs/note/project/Docker踩坑记录/index.md)
@@ -168,6 +185,7 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [vuepress博客自动生成分页文章列表](./docs/note/vue/vuepress博客自动生成分页文章列表/index.md)
 * [vue中文本字符串实现换行](./docs/note/vue/vue中文本字符串实现换行/index.md)
 * [vue中的v-model刨根问底](./docs/note/vue/vue中的v-model刨根问底/index.md)
+* [vue双向数据绑定核心原理](./docs/note/vue/vue双向数据绑定核心原理/index.md)
 * [vue用v-on动态绑定事件名需要2.6以上版本才有效](./docs/note/vue/vue用v-on动态绑定事件名需要2.6以上版本才有效/index.md)
 * [vue的data函数中访问this的坑](./docs/note/vue/vue的data函数中访问this的坑/index.md)
 * [vue老项目sass和element-ui开发踩坑](./docs/note/vue/vue老项目sass和element-ui开发踩坑/index.md)
