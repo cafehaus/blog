@@ -47,14 +47,14 @@ module.exports = {
           }
         ]
       },
-      // {
-      //   text: '咖啡教室',
-      //   link: 'https://cafe123.cn',
-      // },
-      // {
-      //   text: '微慕小程序',
-      //   link: 'https://minapper.com',
-      // },
+      {
+        text: '咖啡教室',
+        link: 'https://cafe123.cn',
+      },
+      {
+        text: '微慕小程序',
+        link: 'https://minapper.com',
+      },
       {
         text: '联系我',
         children: [
