@@ -87,8 +87,12 @@ let boy: Person & Man = {
 
 console.log(boy)
 ```
-
-### ? 问号
+### 符号
+* &：且
+* |：或
+* !：非
+* ??：
+* ?
 在类型:的前面加上?表示可选参数或者可选属性，一般用在对象属性或者函数参数上
 ```ts
 interface Person {
@@ -120,6 +124,8 @@ a = [1, 2, 4]
 a = false // Type 'false' is not assignable to type '"zhou" | 10 | [1, 2, 4]'.ts(2322)
 ```
 
+### class 类
+
 ### 泛型
 泛型相当于一个占位符，可以理解成函数参数，使用的时候传进来的是什么，在内部就可以用用占位符去使用，一般多用于函数中，使用时用一对尖括号加上占位符，多用字母 T 占位。就是把定义的类型变量想象成一个函数，只不过参数部分用尖括号传递，使用的时候再用尖括号把具体的类型传进去
 ```ts
@@ -143,7 +149,52 @@ let man: Person<boolean> = {
 // 元组
 type Ftype<T, U> = [number, T, boolean, U]
 let fruits: Ftype<Function, string> = [1, () => {}, false, '水果']
+``` 
+
+### 内置泛型工具
+* Partial
+* Required
+* Readonly
+* Pick
+* Exclude
+* Extract
+* Omit
+* Record
+* ReturnType
+* ...
+
+### 关键字
+#### extends
+* js 中 class 类实现继承
+* ts 的 interface 接口实现继承
+* 判断类型包含
+
+#### as
+类型断言
+
+#### in
+
+#### keyof
+ts 2.1 版本中引入，用于获取某种类型中的所有键，返回的是联合类型（跟我们用 Object.keys 获取对象的所有属性键类似，只不过 Object.keys 返回的是所有键名数组）。
+
+获取到类型的键后，我们就可以访问到键对应的类型：
+```ts
+interface Person {
+    name: string,
+    age: number
+}
+
+type Name = Person['name']
+type P1 = Person['name' | 'age'] // string | number
+// 上面的 P1 也就相当于：
+type P2 = Person[keyof Person] // string | number
 ```
+
+#### typeof
+* js 中判断类型
+* ts 中获取一个变量的申明类型
+
+#### infer
 
 ### interface、type、对象属性多个中的符号
 * interface 和 type 中多个可以用分号、逗号，也可以不加，也可以混用，不过团队开发中尽量统一成一种写法
