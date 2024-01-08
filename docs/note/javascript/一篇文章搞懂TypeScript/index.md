@@ -72,7 +72,7 @@ console.log(boy)
 ```ts
 type Person = {
     name: string
-    age: number|string
+    age: number | string
 }
 
 interface Man {
@@ -88,12 +88,12 @@ let boy: Person & Man = {
 console.log(boy)
 ```
 ### 符号
-* &：且
-* |：或
-* !：非
-* ??：
-* ?
-在类型:的前面加上?表示可选参数或者可选属性，一般用在对象属性或者函数参数上
+* & 且
+* | 或
+* ! 非
+* ?? 空值合并运算符
+* ?. 可选链操作符，用在获取对象的深层属性或方法前
+* ? 加在类型上表示可选参数或者可选属性，一般用在对象属性或者函数参数上
 ```ts
 interface Person {
     name: string,
@@ -125,6 +125,9 @@ a = false // Type 'false' is not assignable to type '"zhou" | 10 | [1, 2, 4]'.ts
 ```
 
 ### class 类
+* ts 支持面向对象的所有特性，比如：类、接口等
+* 类可以通过 implements 去实现接口 interface
+* 修饰符：public / private / protected / abstract / static(js中也有)
 
 ### 泛型
 泛型相当于一个占位符，可以理解成函数参数，使用的时候传进来的是什么，在内部就可以用用占位符去使用，一般多用于函数中，使用时用一对尖括号加上占位符，多用字母 T 占位。就是把定义的类型变量想象成一个函数，只不过参数部分用尖括号传递，使用的时候再用尖括号把具体的类型传进去
@@ -149,7 +152,7 @@ let man: Person<boolean> = {
 // 元组
 type Ftype<T, U> = [number, T, boolean, U]
 let fruits: Ftype<Function, string> = [1, () => {}, false, '水果']
-``` 
+```
 
 ### 内置泛型工具
 * Partial
@@ -170,9 +173,10 @@ let fruits: Ftype<Function, string> = [1, () => {}, false, '水果']
 * 判断类型包含
 
 #### as
-类型断言
+类型断言，将一个大范围的类型收窄
 
 #### in
+遍历，从多个类型中去遍历出每个类型
 
 #### keyof
 ts 2.1 版本中引入，用于获取某种类型中的所有键，返回的是联合类型（跟我们用 Object.keys 获取对象的所有属性键类似，只不过 Object.keys 返回的是所有键名数组）。
@@ -195,6 +199,7 @@ type P2 = Person[keyof Person] // string | number
 * ts 中获取一个变量的申明类型
 
 #### infer
+推断的占位，当某个类型不确定时，就可以暂时表示为 xx
 
 ### interface、type、对象属性多个中的符号
 * interface 和 type 中多个可以用分号、逗号，也可以不加，也可以混用，不过团队开发中尽量统一成一种写法
