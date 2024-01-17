@@ -226,3 +226,35 @@ function covertToNumber(str) {
 }
 ```
 
+### 去掉多维数组中的特殊元素
+有如下 arr 类似的多维数组结构数据，需要过滤掉里面的特殊元素，可以利用递归去实现过滤
+```javascript
+function filterArray(arr) {
+  const list = arr.filter(m => Array.isArray(m) || !['&&', '||'].includes(m)) || []
+  return list.map(m => {
+    if (Array.isArray(m)) {
+      return filterArray(m)
+    } else {
+      return m
+    }
+  })
+}
+
+const arr = [
+  [{ value: 1 }, '&&', { value: 2}],
+  '||',
+  [
+    { value: 3 },
+    '||',
+    { value: 4},
+    '&&',
+    { value: 5}, 
+    [{ value: 6 }, '&&', { value: 7 }]
+  ],
+  '&&',
+  [{ value: 8 }]
+]
+
+console.log(filterArray(arr))
+```
+
