@@ -20,6 +20,12 @@
 #### 上架安卓应用商店提示 targetSdkVersion 版本不符合要求
 上架小米应用商店提示 targetSdkVersion 版本不符合要求，要求要大于等于30。Donut 默认给设置的 29，然后在文档上找到了可以在 project.miniapp.json 里配置 targetSdkVersion，要求下载版本号 ≥ 1.06.2308242 的开发者工具。开发工具下载的稳定版最新版里面压根没这项配置，重新下载了最新的开发版开发工具才找到可以配置。
 
+#### 基座 APK 构建失败，错误信息：Execution failed for task
+Android sdk 版本1.2.7，lbs sdk 版本 1.0，构建安卓安装包的时候会报错，需要把 lbs sdk 的版本切换到 1.2.0
+```
+基座 APK 构建失败，错误信息：Execution failed for task ':app:checkArmReleaseDuplicateClasses'. > A failure occurred while executing com.android.build.gradle.internal.tasks.CheckDuplicatesRunnable > Duplicate class com.tencent.tencentmap.lbssdk.service.GTime found in modules TencentLocationSdk-openplatform-7.5.2-runtime (com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.5.2) and wxa-standalone-open-runtime-SaaA-sdk-1.2.7-runtime (com.tencent.luggage:wxa-standalone-open-runtime-SaaA-sdk:1.2.7) Duplicate class com.tencent.tencentmap.lbssdk.service.GnssRaw found in modules TencentLocationSdk-openplatform-7.5.2-runtime (com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.5.2) and wxa-standalone-open-runtime-SaaA-sdk-1.2.7-runtime (com.tencent.luggage:wxa-standalone-open-runtime-SaaA-sdk:1.2.7) Duplicate class com.tencent.tencentmap.lbssdk.service.RegTxGposListener found in modules TencentLocationSdk-openplatform-7.5.2-runtime (com.tencent.map.geolocation:TencentLocationSdk-openplat...
+```
+
 ### ios相关问题
 #### ios签名和开发证书
 下载证书到mac上显示证书不受信任，需要现在在 https://www.apple.com/certificateauthority/ 上下载 Developer Authentication、Worldwide Developer Relations - G2、Worldwide Developer Relations - G3... 这几个中间证书，安装好后就会显示信任了。
