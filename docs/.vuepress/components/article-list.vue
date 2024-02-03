@@ -1,26 +1,53 @@
 <template>
-  <div>
-    <div class="article-list">
-      <a
-        v-for="(item, index) in pageList"
-        :key="index"
-        class="article-item"
-        :href="item.link"
-      >
-        <p class="title">{{ item.title }}</p>
-        <p class="time">{{ item.createTime }}</p>
-      </a>
+  <div class="article">
+    <div class="couplet-top">
+      <span class="fu">福</span>
+      Hello World
+      <span class="fu">福</span>
     </div>
+    <div class="article-content">
+      <div class="couplet-left">
+        <p>JavaScript</p>
+        <p>Java</p>
+        <p>Python</p>
+        <p>Line</p>
+        <p>Line</p>
+        <p>So</p>
+        <p>Easy</p>
+      </div>
+      <div class="article-box">
+        <div class="article-list">
+          <a
+            v-for="(item, index) in pageList"
+            :key="index"
+            class="article-item"
+            :href="item.link"
+          >
+            <p class="title">{{ item.title }}</p>
+            <p class="time">{{ item.createTime }}</p>
+          </a>
+        </div>
 
-    <!-- 分页 -->
-    <pagination
-      :page-no="page.index"
-      :page-size="page.size"
-      :total="page.total"
-      :continues="3"
-      @change-page-no="getPageNo"
-      @change-page-size="getPageSize"
-    />
+        <!-- 分页 -->
+        <pagination
+          :page-no="page.index"
+          :page-size="page.size"
+          :total="page.total"
+          :continues="3"
+          @change-page-no="getPageNo"
+          @change-page-size="getPageSize"
+        />
+      </div>
+      <div class="couplet-right">
+        <p>Years</p>
+        <p>Months</p>
+        <p>Weeks</p>
+        <p>Day</p>
+        <p>Day</p>
+        <p>No</p>
+        <p>Bug</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -49,16 +76,40 @@ export default {
     init() {
       this.articleList=[
   {
-    "title": "原型、原型链、继承、new、prototype、constructor",
-    "createTimestamp": 1701273707777,
-    "createTime": "2023-11-30",
-    "link": "/note/javascript/原型、原型链、继承、new、prototype、constructor/index.html"
+    "title": "java项目中使用protobuf扫盲笔记",
+    "createTimestamp": 1706458126000,
+    "createTime": "2024-01-29",
+    "link": "/note/java/java项目中使用protobuf扫盲笔记/index.html"
   },
   {
-    "title": "前端面试查漏补缺",
-    "createTimestamp": 1701273707772,
-    "createTime": "2023-11-30",
-    "link": "/note/frontEnd/前端面试查漏补缺/index.html"
+    "title": "java本地开发环境搭建",
+    "createTimestamp": 1706454306000,
+    "createTime": "2024-01-28",
+    "link": "/note/java/java本地开发环境搭建/index.html"
+  },
+  {
+    "title": "vue插槽slot、slot-scope、v-slot的区别以及嵌套插槽的使用",
+    "createTimestamp": 1705851634000,
+    "createTime": "2024-01-21",
+    "link": "/note/vue/vue插槽slot、slot-scope、v-slot的区别以及嵌套插槽的使用/index.html"
+  },
+  {
+    "title": "一篇文章搞懂TypeScript",
+    "createTimestamp": 1704529082000,
+    "createTime": "2024-01-06",
+    "link": "/note/javascript/一篇文章搞懂TypeScript/index.html"
+  },
+  {
+    "title": "前端知识查漏补缺",
+    "createTimestamp": 1702690353000,
+    "createTime": "2023-12-16",
+    "link": "/note/frontEnd/前端知识查漏补缺/index.html"
+  },
+  {
+    "title": "原型、原型链、继承、new、prototype、constructor",
+    "createTimestamp": 1702689665000,
+    "createTime": "2023-12-16",
+    "link": "/note/javascript/原型、原型链、继承、new、prototype、constructor/index.html"
   },
   {
     "title": "手写JSON.parse和JSON.stringify",
@@ -937,6 +988,67 @@ export default {
 }
 </script>
 <style lang='scss' scoped>
+.article {
+  .couplet-top {
+    background: red;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    line-height: 80px;
+    text-align: center;
+    height: 80px;
+    width: 220px;
+    margin: 0 auto 20px;
+    position: relative;
+    .fu {
+      position: absolute;
+      left: -80px;
+      z-index: 2;
+      font-size: 22px;
+      &:last-child {
+        left: auto;
+        right: -80px;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: -1;
+        height: 48px;
+        width: 48px;
+        background: red;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+  }
+  .article-content {
+    display: flex;
+    .couplet-left,
+    .couplet-right {
+      width: 120px;
+      background: red;
+      font-size: 20px;
+      color: black;
+      font-weight: bold;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 20px 0 60px;
+      padding: 20px 0;
+    }
+    .couplet-left {
+      margin-right: 20px;
+    }
+    .couplet-right {
+      margin-left: 20px;
+    }
+    .article-box {
+      flex: 1;
+    }
+  }
+}
 .article-list {
   .article-item {
     display: flex;
@@ -970,6 +1082,21 @@ export default {
       font-size: 14px;
       font-weight: normal;
       color: var(--c-text-lightest);
+    }
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  .article {
+    .couplet-top {
+      display: none;
+    }
+    .article-content {
+      display: block;
+      .couplet-left,
+      .couplet-right {
+        display: none;
+      }
     }
   }
 }
