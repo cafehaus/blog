@@ -122,7 +122,7 @@ export default {
   font-size: 13px;
   color: var(--c-text);
   text-align: center;
-  margin: 10px 0 0;
+  margin: 10px 0 40px;
   button {
     min-width: 32px;
     height: 28px;
