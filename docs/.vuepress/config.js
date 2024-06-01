@@ -44,6 +44,10 @@ module.exports = {
           {
             text: 'wordpress API 插件',
             link: 'https://github.com/cafehaus/wordpress-cafehaus-api',
+          },
+          {
+            text: 'vant-tree-shaking',
+            link: 'https://www.npmjs.com/package/vant-tree-shaking',
           }
         ]
       },
