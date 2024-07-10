@@ -487,6 +487,10 @@
 * 安装：install、setup
 * 优化：optimize
 * 重构：refactor
+* 树摇：tree shaking
+* 懒加载、按需加载：load on demand
+* 按需引入：on-demand import
+* 动态导入：dynamic import
 
 ## 常用缩写
 * WWW：World Wide Web，万维网

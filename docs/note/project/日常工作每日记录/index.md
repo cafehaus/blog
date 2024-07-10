@@ -1,5 +1,10 @@
 # 日常工作每日记录
 
+## 2024年7月10日
+* protobuf int64 json 时为什么会被转成 string，int64、int32、js中最大数字、精度丢失
+* 在 vscode 中 ctrl + p 输入文件完整路径可以直接打开文件
+* postman 中可以直接通过 import 导入从浏览器 network 接口里复制出来的请求信息 Copy as cURL(bash)
+
 ## 2023年7月12日
 * vue-check-view，监听元素是否进入视口
 * vuex 可以 modules 和全局共存，还可以用 modules 嵌入子模块

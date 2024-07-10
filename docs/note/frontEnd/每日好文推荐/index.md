@@ -1,5 +1,10 @@
 # 每日好文推荐
 
+## 2024年07月10日
+* [写给前端同学的终端修炼手册](https://mp.weixin.qq.com/s/0fjjmJnvsAOiK-cdKaxpwQ)
+* [从零编写一个神经网络，你才能真正理解它](https://mp.weixin.qq.com/s/1UTzYP-q_KmGU9Kc-JCxkA)
+* [跟着狂神学MyBatis](https://blog.csdn.net/YIEBO/article/details/110495360)
+
 ## 2024年06月30日
 * [微服务架构之RPC-client序列化细节](https://cloud.tencent.com/developer/article/1048121)
 * [优雅使用 MapStruct 进行类复制](https://blog.csdn.net/lrb0677/article/details/127838138)
