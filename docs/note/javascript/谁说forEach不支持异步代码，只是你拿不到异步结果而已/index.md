@@ -42,7 +42,7 @@ Array.prototype.customForEach = function (callback) {
 ### ECMAScript 中 forEach 规范
 继续去往 javascript 底层探究，我们都知道执行 js 代码是需要依靠 js 引擎，去将我们写的代码解释翻译成计算机能理解的机器码才能执行的，所有 js 引擎都需要参照 ECMAScript 规范来具体实现，所以这里我们先去看下 ECMAScript 上关于 forEach 的标准规范：
 
-<img src="1.png" />
+<img src="./1.png" />
 
 ### 谷歌 V8 的 forEach 实现
 常见的 js 引擎有：谷歌的 V8、火狐 FireFox 的 SpiderMonkey、苹果 Safari 的 JavaScriptCore、微软 Edge 的 ChakraCore...后台都很硬，这里我们就选其中最厉害的谷歌浏览器和 nodejs 依赖的 V8 引擎，V8 中对于 forEach 实现的主要源码：
