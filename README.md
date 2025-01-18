@@ -86,8 +86,11 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [苹果app开发apple-app-site-association文件配置](./docs/note/ios/苹果app开发apple-app-site-association文件配置/index.md)
 
 ### java
+* [DDD架构中assembler和converter的区别](./docs/note/java/DDD架构中assembler和converter的区别/index.md)
+* [java代码优化：判断内聚到实体对象中和构造上下文对象传递参数](./docs/note/java/java代码优化：判断内聚到实体对象中和构造上下文对象传递参数/index.md)
 * [java常用数据判空、比较和类型转换](./docs/note/java/java常用数据判空、比较和类型转换/index.md)
 * [java开发问题记录](./docs/note/java/java开发问题记录/index.md)
+* [java日常开发中如何写出优雅可维护的代码](./docs/note/java/java日常开发中如何写出优雅可维护的代码/index.md)
 * [java日常开发笔记](./docs/note/java/java日常开发笔记/index.md)
 * [java本地开发环境搭建](./docs/note/java/java本地开发环境搭建/index.md)
 * [java练习项目记录笔记](./docs/note/java/java练习项目记录笔记/index.md)
@@ -135,6 +138,7 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [适配最新微信小程序隐私协议开发指南，兼容uniapp版本](./docs/note/miniapp/适配最新微信小程序隐私协议开发指南，兼容uniapp版本/index.md)
 
 ### node
+* [mac和windows上安装nvm管理node版本](./docs/note/node/mac和windows上安装nvm管理node版本/index.md)
 * [node_modules目录中的bin文件夹](./docs/note/node/node_modules目录中的bin文件夹/index.md)
 * [node学习笔记记录](./docs/note/node/node学习笔记记录/index.md)
 * [从0到1开发一个自己的npm包完整过程](./docs/note/node/从0到1开发一个自己的npm包完整过程/index.md)
@@ -202,6 +206,7 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [vue的data函数中访问this的坑](./docs/note/vue/vue的data函数中访问this的坑/index.md)
 * [vue老项目sass和element-ui开发踩坑](./docs/note/vue/vue老项目sass和element-ui开发踩坑/index.md)
 * [vue自定义指令监听元素是否进入父元素视窗内](./docs/note/vue/vue自定义指令监听元素是否进入父元素视窗内/index.md)
+* [抛弃node和vscode，如何用记事本开发出一个完整的vue前端项目](./docs/note/vue/抛弃node和vscode，如何用记事本开发出一个完整的vue前端项目/index.md)
 * [用vitepress搭建文档网站踩坑记录](./docs/note/vue/用vitepress搭建文档网站踩坑记录/index.md)
 * [用vuepress2搭建自己的github网站](./docs/note/vue/用vuepress2搭建自己的github网站/index.md)
 
