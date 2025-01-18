@@ -310,4 +310,88 @@ div {
 - element-ui 的 menu 菜单组件需要在 computed 中设置下 default-active，否则通过路由跳转或者刷新页面不会保持菜单的选中状态
 - 想要直接在 id 为 app 的 div 下全局使用的组件，都需要自己用 app.component 全局注册，局部组件可以直接定义在对应组件的 components 中
 
+### 用 node 将 html 部署到服务器上
+上面我们开发好的完整 vue 项目其实就是一个 html 文件，在本地我们可以直接在浏览器中打开，但是如果想要给其他人展示效果，那就需要部署到服务器上。其实要部署到服务器上也很简单，什么 npm、docker、jenkins、express、nginx...这些通通都不需要，只需要依赖 node 就可以了（需要提前在服务器上安装好 node），然后用 node 自带的 http 库就可以启动一个服务器了。
+
+#### 1、进入服务器上新建目录
+在服务器中 /data 目录中找个地方新建一个目录，比如我们这里就叫 node-demo
+```shell
+mkdir node-demo
+```
+
+#### 2、新建 index.html 文件
+在 node-demo 目录下新建 index.html 文件
+```shell
+# 1. 进入目录
+cd node-demo
+
+# 2. 新建文件
+touch index.html
+
+# 3. 编辑文件
+vim index.html
+
+# 4. 在键盘上输入 i 进入编辑模式
+# 5. 按 ctrl + v 粘贴进去你本地 html 文件中的所有内容
+# 6. 按键盘上的 Esc 退出编辑模式
+# 7. 输入 :wq 保存文件
+```
+
+#### 3、新建 server.js 文件
+在 node-demo 目录下新建 server.js 文件
+```shell
+# 1. 新建文件
+touch server.js
+
+# 2. 编辑文件
+vim server.js
+
+# 3. 在键盘上输入 i 进入编辑模式
+# 4. 按 ctrl + v 粘贴进去下方 server.js 文件中的内容
+# 5. 按键盘上的 Esc 退出编辑模式
+# 6. 输入 :wq 保存文件
+```
+
+server.js
+```javascript
+/**
+ * 原生 node 服务器脚本
+ *
+ * @author cafehaus
+ * @date 2025-01-18
+ */
+const http = require('node:http')
+const fs = require('node:fs')
+const path = require('node:path')
+
+const hostname = '127.0.0.1'
+const port = 3000
+
+const server = http.createServer((req, res) => {
+  fs.readFile(path.join(__dirname, 'index.html'), (err, data) => {
+    if (err) {
+      res.statusCode = 500
+      res.setHeader('Content-Type', 'text/plain')
+      res.end('Error loading index.html')
+    } else {
+      res.statusCode = 200
+      res.setHeader('Content-Type', 'text/html')
+      res.end(data)
+    }
+  })
+})
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`)
+})
+```
+
+#### 4、启动 node 服务
+在当前目录下输入命令：
+```shell
+node server.js
+```
+
+这样就成功在 3000 端口上启动了服务，注意在电脑上访问或分享给别人时，地址中的 127.0.0.1 这个 ip 要换成你服务器的 ip，在浏览器中打开就可以访问到我们开发的这个 vue 前端页面了，是不是很简单，主打的就是一个快速省事效率第一。
+
 本文的目的并不是让大家放弃 node 和 vscode，也不是让大家日常中就真的用上面的方式来开发，上面提供的完整模板基本囊括了前端中常用的一些东西，可以用来帮助我们简单快速地搭建出前端页面，快速实现我们的一些想法。
