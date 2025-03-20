@@ -39,7 +39,7 @@ cafe123.cn/api/user file:///c:/Users/cafehaus/Desktop/user.json
 ### 本地 localhost 127.0.0.1 不同端口之间代理
 在whistle的代理面板中默认是看不到127.0.0.1、localhost的请求的，但在实际开发中我们有可能需要转发一个本地服务的需求，这个时候就需要从127.0.0.1:xxxx代理到127.0.0.1:zzzz，如果你直接在whistle中按这样的端口配置代理会发现是没用的，并不能将本地某个端口代理到另一个端口上。
 
-解决办法是需要修改一下浏览器SwitchyOmega插件的不代理地址列表配饰：
+解决办法是需要修改一下浏览器SwitchyOmega插件的不代理地址列表配置：
 ```bash
 # 默认是
 127.0.0.1
