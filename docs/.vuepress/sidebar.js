@@ -40,7 +40,8 @@ menuList.map(m => {
     posts.map(async (n) => {
       if (!IGNORE_FILE.includes(n)) {
         // guideContent += `* [${n}](./${m}/${n}/index.md)\n`
-        readmeContent += `* [${n}](./docs/note/${m}/${n}/index.md)\n`
+        // 注意：这里后面链接里要的空格要转义，否则会导致markdown解析错误
+        readmeContent += `* [${n}](./docs/note/${m}/${n.replace(/\s+/g, '%20')}/index.md)\n`
 
         children.push({
           text: n,
