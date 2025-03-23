@@ -111,7 +111,6 @@
 
       <el-container>
         <el-header>
-          <span>抛弃node和vscode，如何用记事本开发出一个完整的vue前端项目</span>
           <el-button type="text" @click="handleNavigate('/home')">cafehaus</el-button>
         </el-header>
 
@@ -285,20 +284,22 @@ div {
 }
 
 .layout {
-  height: 100vh
+  height: 100vh;
+  background: #F5F7F7;
 }
 
-.layout .el-scrollbar,
-.layout .el-scrollbar__view,
+.layout .el-aside .el-scrollbar,
+.layout .el-aside .el-scrollbar__view,
 .layout .el-menu {
   height: 100%;
 }
 
 .layout .el-header {
+  background: #FFF;
   border-bottom: 1px solid #EEE;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   font-size: 13px;
 }
 </style>
@@ -309,6 +310,7 @@ div {
 - element-ui 组件库的图标组件需要单独引入和注册
 - element-ui 的 menu 菜单组件需要在 computed 中设置下 default-active，否则通过路由跳转或者刷新页面不会保持菜单的选中状态
 - 想要直接在 id 为 app 的 div 下全局使用的组件，都需要自己用 app.component 全局注册，局部组件可以直接定义在对应组件的 components 中
+- 如果是直接写在上面 body 标签中的 html 代码，注意有的不能按照平时写在 vue template 中的语法来写，因为没有经过 vue 编译器有可能会导致解析错误，如我们想直接用 v-html 来渲染内容直接把 div 标签写成自闭合标签，会导致解析出现错误
 
 ### 用 node 将 html 部署到服务器上
 上面我们开发好的完整 vue 项目其实就是一个 html 文件，在本地我们可以直接在浏览器中打开，但是如果想要给其他人展示效果，那就需要部署到服务器上。其实要部署到服务器上也很简单，什么 npm、docker、jenkins、express、nginx...这些通通都不需要，只需要依赖 node 就可以了（需要提前在服务器上安装好 node），然后用 node 自带的 http 库就可以启动一个服务器了。
