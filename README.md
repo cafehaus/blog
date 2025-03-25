@@ -10,6 +10,18 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 
 ## 文章目录
 
+### HarmonyOS
+* [HarmonyOS鸿蒙应用开发初体验](./docs/note/HarmonyOS/HarmonyOS鸿蒙应用开发初体验/index.md)
+
+### UItools
+* [element-ui下拉框el-select多选出现滚动条闪现](./docs/note/UItools/element-ui下拉框el-select多选出现滚动条闪现/index.md)
+* [element-ui图标偶现乱码问题的原因和修复方法](./docs/note/UItools/element-ui图标偶现乱码问题的原因和修复方法/index.md)
+* [element-ui表格组件el-table多选时报错](./docs/note/UItools/element-ui表格组件el-table多选时报错/index.md)
+* [iview数字输入组件InputNumber](./docs/note/UItools/iview数字输入组件InputNumber/index.md)
+* [iview组件踩坑记](./docs/note/UItools/iview组件踩坑记/index.md)
+* [iview组件默认样式覆盖](./docs/note/UItools/iview组件默认样式覆盖/index.md)
+* [t-design组件踩坑记](./docs/note/UItools/t-design组件踩坑记/index.md)
+
 ### animation
 * [前端开发中web和移动端动画的常见实现方式](./docs/note/animation/前端开发中web和移动端动画的常见实现方式/index.md)
 * [旋转边框头像放大出现和不断向上漂浮出现表情动画](./docs/note/animation/旋转边框头像放大出现和不断向上漂浮出现表情动画/index.md)
@@ -57,6 +69,7 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [flutter初体验demo踩坑指南](./docs/note/flutter/flutter初体验demo踩坑指南/index.md)
 
 ### frontEnd
+* [前端后端测试程序员必备的查看后端日志技巧](./docs/note/frontEnd/前端后端测试程序员必备的查看后端日志技巧/index.md)
 * [前端团队协作](./docs/note/frontEnd/前端团队协作/index.md)
 * [前端常用vue组件代码](./docs/note/frontEnd/前端常用vue组件代码/index.md)
 * [前端常用代码片段](./docs/note/frontEnd/前端常用代码片段/index.md)
@@ -64,6 +77,7 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [前端常用技能](./docs/note/frontEnd/前端常用技能/index.md)
 * [前端常用正则表达式](./docs/note/frontEnd/前端常用正则表达式/index.md)
 * [前端常见避坑](./docs/note/frontEnd/前端常见避坑/index.md)
+* [前端开发中使用whistle代理工具](./docs/note/frontEnd/前端开发中使用whistle代理工具/index.md)
 * [前端开发常用英文单词](./docs/note/frontEnd/前端开发常用英文单词/index.md)
 * [前端开发效率](./docs/note/frontEnd/前端开发效率/index.md)
 * [前端开发规范](./docs/note/frontEnd/前端开发规范/index.md)
@@ -75,9 +89,6 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [我的书签bookmark](./docs/note/frontEnd/我的书签bookmark/index.md)
 * [每日好文推荐](./docs/note/frontEnd/每日好文推荐/index.md)
 
-### HarmonyOS
-* [HarmonyOS鸿蒙应用开发初体验](./docs/note/HarmonyOS/HarmonyOS鸿蒙应用开发初体验/index.md)
-
 ### html
 * [前端框架中index.html中的变量语法](./docs/note/html/前端框架中index.html中的变量语法/index.md)
 
@@ -86,7 +97,9 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [苹果app开发apple-app-site-association文件配置](./docs/note/ios/苹果app开发apple-app-site-association文件配置/index.md)
 
 ### java
+* [DDD四层架构个人理解和学习笔记](./docs/note/java/DDD四层架构个人理解和学习笔记/index.md)
 * [DDD架构中assembler和converter的区别](./docs/note/java/DDD架构中assembler和converter的区别/index.md)
+* [SpringBoot本地上传文件到resources目录永久保存下载的最佳实践](./docs/note/java/SpringBoot本地上传文件到resources目录永久保存下载的最佳实践/index.md)
 * [java代码优化：判断内聚到实体对象中和构造上下文对象传递参数](./docs/note/java/java代码优化：判断内聚到实体对象中和构造上下文对象传递参数/index.md)
 * [java常用数据判空、比较和类型转换](./docs/note/java/java常用数据判空、比较和类型转换/index.md)
 * [java开发问题记录](./docs/note/java/java开发问题记录/index.md)
@@ -96,10 +109,9 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [java练习项目记录笔记](./docs/note/java/java练习项目记录笔记/index.md)
 * [java项目中使用protobuf扫盲笔记](./docs/note/java/java项目中使用protobuf扫盲笔记/index.md)
 * [mybatis动态SQL常用语法总结](./docs/note/java/mybatis动态SQL常用语法总结/index.md)
-* [SpringBoot本地上传文件到resources目录永久保存下载的最佳实践](./docs/note/java/SpringBoot本地上传文件到resources目录永久保存下载的最佳实践/index.md)
 * [公司SpringBoot微服务java项目本地运行笔记](./docs/note/java/公司SpringBoot微服务java项目本地运行笔记/index.md)
-* [用docker和nginx部署前端项目访问本地java网关gateway服务](./docs/note/java/用docker和nginx部署前端项目访问本地java网关gateway服务/index.md)
 * [用SpringBoot开发java程序和部署笔记](./docs/note/java/用SpringBoot开发java程序和部署笔记/index.md)
+* [用docker和nginx部署前端项目访问本地java网关gateway服务](./docs/note/java/用docker和nginx部署前端项目访问本地java网关gateway服务/index.md)
 
 ### javascript
 * [axios拦截器封装：await遇上reject时catch的优雅处理方式](./docs/note/javascript/axios拦截器封装：await遇上reject时catch的优雅处理方式/index.md)
@@ -112,6 +124,7 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [toFixed和Math.round既不是四舍五入也不是银行家舍入法](./docs/note/javascript/toFixed和Math.round既不是四舍五入也不是银行家舍入法/index.md)
 * [一篇文章搞懂TypeScript](./docs/note/javascript/一篇文章搞懂TypeScript/index.md)
 * [代码注释利器jsDoc](./docs/note/javascript/代码注释利器jsDoc/index.md)
+* [关于JavaScript性能问题的误解](./docs/note/javascript/关于JavaScript性能问题的误解/index.md)
 * [前端pdf预览下载和图片下载压缩](./docs/note/javascript/前端pdf预览下载和图片下载压缩/index.md)
 * [前端导出下载excel表格](./docs/note/javascript/前端导出下载excel表格/index.md)
 * [前端跨浏览器标签页数据共享解决方案](./docs/note/javascript/前端跨浏览器标签页数据共享解决方案/index.md)
@@ -122,7 +135,7 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [日期字符串直接比较的坑](./docs/note/javascript/日期字符串直接比较的坑/index.md)
 * [根据字符串中的范围判断当前值](./docs/note/javascript/根据字符串中的范围判断当前值/index.md)
 * [用reduce高阶函数组装查询表单分隔字符数据](./docs/note/javascript/用reduce高阶函数组装查询表单分隔字符数据/index.md)
-* [用有限状态机实现一个简版 html 解析器](./docs/note/javascript/用有限状态机实现一个简版 html 解析器/index.md)
+* [用有限状态机实现一个简版 html 解析器](./docs/note/javascript/用有限状态机实现一个简版%20html%20解析器/index.md)
 * [解析excel表格数据并自定义校验](./docs/note/javascript/解析excel表格数据并自定义校验/index.md)
 * [谁说forEach不支持异步代码，只是你拿不到异步结果而已](./docs/note/javascript/谁说forEach不支持异步代码，只是你拿不到异步结果而已/index.md)
 * [遍历请求后端数据引出的数组forEach异步操作的坑](./docs/note/javascript/遍历请求后端数据引出的数组forEach异步操作的坑/index.md)
@@ -150,6 +163,8 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [Docker踩坑记录](./docs/note/project/Docker踩坑记录/index.md)
 * [Git使用技巧](./docs/note/project/Git使用技巧/index.md)
 * [PATH系统环境变量](./docs/note/project/PATH系统环境变量/index.md)
+* [git rebase合并多条提交记录](./docs/note/project/git%20rebase合并多条提交记录/index.md)
+* [github和npm开启2FA双重身份验证无法登陆](./docs/note/project/github和npm开启2FA双重身份验证无法登陆/index.md)
 * [vscode编辑器Volar插件导致vue自定义标签不变颜色](./docs/note/project/vscode编辑器Volar插件导致vue自定义标签不变颜色/index.md)
 * [工作中常用工具和技术合集](./docs/note/project/工作中常用工具和技术合集/index.md)
 * [日常工作每日记录](./docs/note/project/日常工作每日记录/index.md)
@@ -171,18 +186,9 @@ ZHOU的[技术博客](https://cafehaus.github.io/blog/)
 * [京东轻量云主机测评体验](./docs/note/server/京东轻量云主机测评体验/index.md)
 
 ### test
-* [用Jest做前端单元测试](./docs/note/test/用Jest做前端单元测试/index.md)
 * [用JMeter做接口压力测试](./docs/note/test/用JMeter做接口压力测试/index.md)
+* [用Jest做前端单元测试](./docs/note/test/用Jest做前端单元测试/index.md)
 * [胖仙测试课程目录](./docs/note/test/胖仙测试课程目录/index.md)
-
-### UItools
-* [element-ui下拉框el-select多选出现滚动条闪现](./docs/note/UItools/element-ui下拉框el-select多选出现滚动条闪现/index.md)
-* [element-ui图标偶现乱码问题的原因和修复方法](./docs/note/UItools/element-ui图标偶现乱码问题的原因和修复方法/index.md)
-* [element-ui表格组件el-table多选时报错](./docs/note/UItools/element-ui表格组件el-table多选时报错/index.md)
-* [iview数字输入组件InputNumber](./docs/note/UItools/iview数字输入组件InputNumber/index.md)
-* [iview组件踩坑记](./docs/note/UItools/iview组件踩坑记/index.md)
-* [iview组件默认样式覆盖](./docs/note/UItools/iview组件默认样式覆盖/index.md)
-* [t-design组件踩坑记](./docs/note/UItools/t-design组件踩坑记/index.md)
 
 ### uniapp
 * [uniapp中scroll-view局部滚动的各种场景](./docs/note/uniapp/uniapp中scroll-view局部滚动的各种场景/index.md)
