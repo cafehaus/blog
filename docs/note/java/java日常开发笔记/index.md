@@ -1,14 +1,18 @@
 # java日常开发笔记
 
-### IntelliJ IDEA 快捷键
-* 全局搜索：双击 shift、ctrl + shit + F
-* 当前搜索：ctrl + F
-* 当前替换：ctrl + R
-* 代码向后缩进：选中需要缩进的代码 + tab键
-* 代码向前缩进：选中需要缩进的代码 + shift + tab键
+### Bean 对象中的属性都定义成包装类型
+比如整型定义成 Integer 而不是 int，Integer 可以为 null，可以区分出未赋值 null 和 0 的情况，而 int 是基本类型不能赋值为 null，除非是确定知道值或者定义枚举里（方便直接用 == 比较）。
 
-### IDEA避免包被自动引入全部
-IDEA导入包时避免编辑器自动引入全部 import xxx.xx.*，将 Settings - Editor - Code Style - Java - Imports 中的 Class count to use import with '*' 和 Names count to use static import with '*' 默认的5、3改大点比如：50、30
+如果是 Integer 即使为 null 也可以直接set值的，而如果是 int 设置为 null 的值时就会报 NullPointerException 空指针异常。所以平时定义 Bean 对象时，本身 Bean 就需要经常 get、set，直接定义成包装类型可以避免报错和每次 set 前额外的判断。
 
-### IDEA多个文件Tab显示成多行
-IDEA默认的打开文件Tab是单行显示的，文件名太长时同时打开多个文件时切换会很不方便，可以设置 File - Settings - Editor -Editor Tabs，去掉 Show tabs in single row 勾选，下面的 Tab limit 可以调整显示的 tab 数量，一般可以调到 20，这样多个 Tab 时会直接多行排列，切换和查找的时候都很方便
+### DO对象额外字段
+数据库 DO 对象一般会跟数据库字段一一对应，但是比如特殊的查询条件、联表查询之类的，可能想要往 DO 里存一些在当前表中不存在的字段，这种情况就可以借助如下注解：@TableField(exist = false) 来定义额外的字段。
+
+### maven 部署快照版本
+开发调试中的时候定义一个模块为快照版本，需要在版本号后面加上-SNAPSHOT(必须是大写)，如果小写snapshot，maven会认为其是releases版本。
+
+### 数据库操作
+不要循环去查db，禁止在 for 循环中去查db。多表查询建议不要联表，sql尽量建单化，需要联表的场景可以自己单个查出来再到代码中去做关联。
+
+### 跑项目里的所有单测
+可以直接在 test 目录下右键 run 'Tests' in xx 就可以跑所有的用例，还可以跑代码覆盖率。

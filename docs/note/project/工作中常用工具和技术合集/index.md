@@ -20,6 +20,19 @@
 4. uView
 5. LinUI
 
+## 前端框架
+1. Vue
+2. React
+3. Angular
+4. Next
+5. Nuxt
+6. Svelte
+7. Solid
+8. Astro
+9. Marko
+10. Fresh
+11. Remix
+12. Qwik
 
 ## 跨端框架
 
