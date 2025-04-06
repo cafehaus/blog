@@ -84,6 +84,22 @@ sudo rm -rf ~/.npm
 sudo rm -rf /usr/local/lib/node_modules
 ```
 
+### 关闭终端后node不能用
+用 nvm use xx.xx.x 设置了node版本后，关闭终端发现，node、npm 都是：
+```bash
+zsh: command not found: node
+zsh: command not found: npm
+
+# 或者
+bash: node: command not found
+bash: npm: command not found
+```
+
+通过 nvm list 查看发现有个 default 默认的版本，直接在终端 nvm use 设置的只对当前终端有效，关闭终端后就失效了，解决办法可以通过如下命令直接设置 default 的版本：
+```bash
+nvm alias default 16.20.2
+```
+
 ## 在 windows 上安装 nvm
 
 windows 上我们可以直接下载安装文件然后点点就行了，没有 mac 上那么麻烦。直接在[官方下载地址](https://github.com/coreybutler/nvm-windows/releases)中下载 nvm-setup.exe 这个文件：
