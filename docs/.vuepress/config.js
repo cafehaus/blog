@@ -46,8 +46,12 @@ module.exports = {
             link: 'https://github.com/cafehaus/wordpress-cafehaus-api',
           },
           {
-            text: 'vant-tree-shaking',
+            text: 'vant-tree-shaking小程序按需引入vant',
             link: 'https://www.npmjs.com/package/vant-tree-shaking',
+          },
+          {
+            text: 'markdown-web-nav制作网址导航',
+            link: 'https://cafehaus.github.io/markdown-web-nav',
           }
         ]
       },
