@@ -1,5 +1,12 @@
 # 日常工作每日记录
 
+## 2025年05月10日
+mac 上执行项目里的 npm 的 scripts 脚本报错：
+```bash
+env: node\r: No such file or directory
+```
+是因为windows伤的 CRLF 换行符导致的，可以自己打开 node_modules 下的 .bin 目录选中要执行的脚本文件，就可以在 vscode 底部看到会显示 CRLF，一般删掉 node_modules 重新安装下依赖再重新执行下就行了。
+
 ## 2025年04月17日
 如果网页超过一屏需要滚动才能截屏完整的，可以通过命令让chrome浏览器自动截屏整个网页：
 
