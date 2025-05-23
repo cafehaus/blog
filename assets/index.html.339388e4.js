@@ -1,0 +1,52 @@
+import{r as s,o as t,c as a,a as e,d as r,F as l,h as i,g as d}from"./app.c91e4ae6.js";import{_ as p}from"./plugin-vue_export-helper.21dcd24c.js";const u={},o=i(`<h1 id="java\u9879\u76EE\u4E2D\u4F7F\u7528protobuf\u626B\u76F2\u7B14\u8BB0" tabindex="-1"><a class="header-anchor" href="#java\u9879\u76EE\u4E2D\u4F7F\u7528protobuf\u626B\u76F2\u7B14\u8BB0" aria-hidden="true">#</a> java\u9879\u76EE\u4E2D\u4F7F\u7528protobuf\u626B\u76F2\u7B14\u8BB0</h1><p>\u6700\u8FD1\u516C\u53F8 Java \u9879\u76EE\u4E2D\u6709\u7528\u5230 protobuf\uFF0C\u67E5\u4E86\u4E9B\u8D44\u6599\u8FD8\u662F\u4E00\u8138\u8FF7\u832B\u3002\u4E3B\u8981\u7EB3\u95F7\u8FD9\u73A9\u610F\u5230\u5E95\u6709\u5565\u7528\u5462\uFF1F\u76F4\u63A5\u81EA\u5DF1\u5199 class\u3001interface \u4E0D\u662F\u66F4\u65B9\u4FBF\uFF0C\u8FD8\u9700\u8981\u5148\u5199\u4E2A .proto \u6587\u4EF6\u7F16\u8BD1\u6210 java \u6587\u4EF6\u518D\u6765\u8C03\u7528\uFF0C\u8FD9\u4E0D\u662F\u8131\u4E86\u88E4\u5B50\u653E\u5C41\u5417\uFF1F</p><blockquote><p>Protocal Buffers(\u7B80\u79F0protobuf)\u662F\u8C37\u6B4C\u5F00\u6E90\u7684\u4E00\u79CD\u6570\u636E\u4F20\u8F93\u534F\u8BAE\uFF0C\u7C7B\u4F3C\u4E8E XML\u3001JSON \u7B49\u6280\u672F\uFF0C\u7528\u4E8E\u7ED3\u6784\u5316\u7684\u6570\u636E\u5E8F\u5217\u5316\u3001\u53CD\u5E8F\u5217\u5316\u3002\u9002\u5408\u9AD8\u6027\u80FD\uFF0C\u5BF9\u54CD\u5E94\u901F\u5EA6\u6709\u8981\u6C42\u7684\u6570\u636E\u4F20\u8F93\u573A\u666F\uFF0C\u751F\u6210\u7684\u662F\u5B57\u8282\u7801\uFF0C\u4E8C\u8FDB\u5236\u6570\u636E\u683C\u5F0F\u9700\u8981\u7F16\u7801\u548C\u89E3\u7801\uFF0C\u4E0D\u5177\u6709\u53EF\u8BFB\u6027\uFF0C\u4F46\u662F\u6BD4 XML\u3001JSON \u5C0F\uFF0C\u4F20\u8F93\u901F\u5EA6\u66F4\u5FEB\uFF1A</p></blockquote><ul><li>protobuf\uFF1A\u4E00\u822C\u7528\u4E8E\u540E\u7AEF\u670D\u52A1\u4E4B\u95F4\u7684\u6570\u636E\u4F20\u8F93(\u540E\u7AEF\u6570\u636E\u4EA4\u4E92\u4E00\u822C\u662F\u4E3A\u4E86\u5E8F\u5217\u5316\u548C\u53CD\u5E8F\u5217\u5316\uFF0C\u9700\u8981\u8003\u8651\u5E76\u53D1\u3001\u5E26\u5BBD\u8FD9\u4E9B)\uFF0C\u4E0D\u5177\u53EF\u8BFB\u6027</li><li>JSON\uFF1A\u4E00\u822C\u7528\u4E8Eweb\u9879\u76EE\u524D\u540E\u7AEF\u4EA4\u4E92\u4E2D\uFF0C\u53EF\u8BFB\u6027\u597D\u3002</li><li>XML\uFF1A\u5728WebService\u4E2D\u5E7F\u6CDB\u4F7F\u7528\uFF0C\u4F46\u662F\u8FC7\u4E8E\u5197\u4F59\uFF0C\u53EF\u8BFB\u6027\u8F83\u597D\u3002</li></ul><h2 id="protobuf-\u8BED\u6CD5" tabindex="-1"><a class="header-anchor" href="#protobuf-\u8BED\u6CD5" aria-hidden="true">#</a> protobuf \u8BED\u6CD5</h2><h3 id="\u5E38\u7528\u6570\u636E\u7C7B\u578B" tabindex="-1"><a class="header-anchor" href="#\u5E38\u7528\u6570\u636E\u7C7B\u578B" aria-hidden="true">#</a> \u5E38\u7528\u6570\u636E\u7C7B\u578B</h3><table><thead><tr><th style="text-align:left;">protobuf \u7C7B\u578B</th><th style="text-align:left;">java \u7C7B\u578B</th><th style="text-align:left;">\u9ED8\u8BA4\u503C</th></tr></thead><tbody><tr><td style="text-align:left;">double</td><td style="text-align:left;">double</td><td style="text-align:left;">0.0</td></tr><tr><td style="text-align:left;">float</td><td style="text-align:left;">float</td><td style="text-align:left;">0.0</td></tr><tr><td style="text-align:left;">int32</td><td style="text-align:left;">int</td><td style="text-align:left;">0</td></tr><tr><td style="text-align:left;">int64</td><td style="text-align:left;">long</td><td style="text-align:left;">0</td></tr><tr><td style="text-align:left;">bool</td><td style="text-align:left;">boolean</td><td style="text-align:left;">false</td></tr><tr><td style="text-align:left;">string</td><td style="text-align:left;">String</td><td style="text-align:left;">\u7A7A\u5B57\u7B26\u4E32</td></tr><tr><td style="text-align:left;">enum</td><td style="text-align:left;">enum</td><td style="text-align:left;">\u7B2C 1 \u4E2A\u679A\u4E3E\u503C</td></tr><tr><td style="text-align:left;">bytes</td><td style="text-align:left;">ByteString</td><td style="text-align:left;">\u7A7A\u5B57\u8282\u6570\u7EC4</td></tr></tbody></table><h3 id="\u5B57\u6BB5\u9650\u5236" tabindex="-1"><a class="header-anchor" href="#\u5B57\u6BB5\u9650\u5236" aria-hidden="true">#</a> \u5B57\u6BB5\u9650\u5236</h3><p>1\u3001required\uFF1A\u5B57\u6BB5\u53EA\u80FD\u4E5F\u5FC5\u987B\u51FA\u73B0 1 \u6B21\uFF0C\u591A\u7528\u4E8E\u5FC5\u586B\u9879\uFF0C\u5FC5\u987B\u8D4B\u503C\u7684\u5B57\u7B26</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>required int32 id = 1 [default = 0];
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br></div></div><p>2\u3001optional\uFF1A\u5B57\u6BB5\u53EF\u51FA\u73B0 0 \u6B21\u6216\u591A\u6B21\uFF0C\u53EF\u6709\u53EF\u65E0\u7684\u5B57\u6BB5\uFF0C\u53EF\u4EE5\u4F7F\u7528[default = xxx]\u8BBE\u7F6E\u9ED8\u8BA4\u503C</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>optional string name = 1 [default = &quot;\u5468\u5C0F\u9ED1&quot;];
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br></div></div><p>3\u3001repeated\uFF1A\u5B57\u6BB5\u53EF\u51FA\u73B0\u4EFB\u610F\u591A\u6B21\uFF08\u5305\u62EC 0\uFF09\uFF0C\u591A\u7528\u4E8E Java List \u5C5E\u6027</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code># list String
+repeated string strList = 5;
+
+# list \u5BF9\u8C61
+repeated User userList = 6;
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="\u8BED\u6CD5\u89C4\u5219" tabindex="-1"><a class="header-anchor" href="#\u8BED\u6CD5\u89C4\u5219" aria-hidden="true">#</a> \u8BED\u6CD5\u89C4\u5219</h3><ul><li>message\uFF1A\u6D88\u606F\u7C7B\u578B\uFF0C\u5B9A\u4E49\u5C5E\u6027\uFF0C\u652F\u6301\u5D4C\u5957</li></ul><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>message User {
+    message Friend {
+        required string name = 1;
+        required string gender = 2 [default = &quot;\u5973&quot;];
+    }
+    required int32 id = 1;
+    required string name = 2;
+    required int32 age = 3;
+    repeated Friend friends = 4;
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><ul><li>service\uFF1A\u7528\u4E8E RPC \u7CFB\u7EDF\u8FDC\u7A0B\u8C03\u7528\u4E2D\uFF08eg:gRPC\u3001trpc\uFF09\uFF0C\u5B9A\u4E49\u65B9\u6CD5\uFF0Cprotobuf \u7F16\u8BD1\u5668\u4F1A\u751F\u6210\u5BF9\u5E94\u8BED\u8A00\u7684\u670D\u52A1\u63A5\u53E3\u4EE3\u7801\u53CA\u5B58\u6839</li></ul><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>message QueryRequest {
+    required int32 id = 1;
+}
+
+message QueryResponse {
+    required string code = 1;
+    required string msg = 2;
+    required User data = 3;
+}
+
+service UserService {
+    // rpc\u5173\u952E\u5B57  \u51FD\u6570\u540D(\u53C2\u6570) \u8FD4\u56DE\u503C(\u8FD4\u56DE\u53C2\u6570)
+    rpc Query(QueryRequest) returns(QueryResponse);
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="protobuf-\u5DE5\u4F5C\u539F\u7406" tabindex="-1"><a class="header-anchor" href="#protobuf-\u5DE5\u4F5C\u539F\u7406" aria-hidden="true">#</a> protobuf \u5DE5\u4F5C\u539F\u7406</h3><ul><li>\u9996\u5148\u6211\u4EEC\u9700\u8981\u7F16\u5199\u4E00\u4E2A .protot \u6587\u4EF6\u6765\u5B9A\u4E49\u5E8F\u5217\u5316\u6570\u636E\u7ED3\u6784</li><li>\u8FD0\u884C protobuf \u7F16\u8BD1\u5668 protoc \u751F\u6210\u5BF9\u5E94\u8BED\u8A00\u7684\u4EE3\u7801\uFF0C\u5982 java \u4F1A\u751F\u6210 .java \u6587\u4EF6\uFF08\u6BCF\u4E2A\u6D88\u606F\u5BF9\u5E94\u4E00\u4E2A\u7C7B\uFF0C\u540C\u65F6\u8FD8\u6709\u4E00\u4E2A\u7279\u6B8A\u7684Builder\u7C7B\u7528\u4E8E\u521B\u5EFA\u6D88\u606F\u63A5\u53E3\uFF09</li><li>\u901A\u8FC7 protobuf API \u6765\u8BFB\u5199\u6D88\u606F</li></ul><p>.protot \u6587\u4EF6\u6A21\u677F\uFF1A</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>// \u4F7F\u7528 proto3 \u8BED\u6CD5\uFF0C\u672A\u6307\u5B9A\u5219\u4F7F\u7528 proto2
+syntax = &quot;proto3&quot;;
+
+// \u751F\u6210 proto \u6587\u4EF6\u6240\u5728\u5305\u540D
+option java_package = &quot;cn.cafe123.protobuf.proto&quot;;
+
+// \u751F\u6210 proto \u6587\u4EF6\u540D
+option java_outer_classname=&quot;HelloProto&quot;;
+
+message HelloRequest {
+    required string name = 1;
+}
+
+message HelloResponse {
+    required string message = 1;
+}
+
+service HelloWord {
+    rpc Say(HelloRequest) returns (HelloResponse) {}
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div>`,23),b={href:"https://protobuf.dev/overview/",target:"_blank",rel:"noopener noreferrer"},c=d("protobuf \u5B98\u65B9\u6587\u6863");function m(g,f){const n=s("ExternalLinkIcon");return t(),a(l,null,[o,e("p",null,[e("a",b,[c,r(n)])])],64)}var v=p(u,[["render",m]]);export{v as default};

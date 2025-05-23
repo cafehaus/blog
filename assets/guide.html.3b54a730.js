@@ -1,0 +1,1 @@
+import{r,o as e,f as t}from"./app.c91e4ae6.js";import{_ as c}from"./plugin-vue_export-helper.21dcd24c.js";const n={};function a(_,s){const o=r("bookmark");return e(),t(o)}var p=c(n,[["render",a]]);export{p as default};
